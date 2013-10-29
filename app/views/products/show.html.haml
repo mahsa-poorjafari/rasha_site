@@ -5,7 +5,8 @@
   = @product.title
 %p
   %b تصویر محصول:
-  = image_tag @product.photo.url(:small)
+  -@product.pictures.each do |picture|
+    = image_tag picture.photo.url
 %p
   %b توضیحات:
   = @product.description

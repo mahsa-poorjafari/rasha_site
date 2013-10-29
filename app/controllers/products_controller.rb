@@ -25,7 +25,9 @@ class ProductsController < ApplicationController
   # GET /products/new.json
   def new
     @product = Product.new
-
+    2.times do 
+      @product.pictures.build
+    end  
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @product }

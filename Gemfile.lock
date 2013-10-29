@@ -135,7 +135,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   mysql2
-  paperclip (= 3.5.2)
+  paperclip (~> 3.0)
   pg
   rails (= 3.2.14)
   rspec-rails (~> 2.0)
