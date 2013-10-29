@@ -14,7 +14,7 @@
 				%br
 				%tr
 					%td= product.title
-					%td= image_tag product.pictures.count
+					%td= image_tag product.pictures.first.image(:small) if product.pictures.present?
 					%td
 					%td= link_to 'مشاهده', product
 					%td= link_to 'اعمال تغییرات', edit_product_path(product)

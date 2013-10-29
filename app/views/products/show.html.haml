@@ -6,7 +6,7 @@
 %p
   %b تصویر محصول:
   -@product.pictures.each do |picture|
-    = image_tag picture.photo.url
+    = image_tag picture.image(:small)
 %p
   %b توضیحات:
   = @product.description
