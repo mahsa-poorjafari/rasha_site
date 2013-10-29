@@ -27,7 +27,9 @@ gem 'paperclip', '3.5.2'
 gem 'rspec-rails', '~> 2.0'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
-
+group :development do 
+  gem "mysql2"
+end
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
