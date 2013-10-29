@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b عنوان محصول:
+  = @product.title
+%p
+  %b تصویر محصول:
+  = image_tag @product.photo.url(:small)
+%p
+  %b توضیحات:
+  = @product.description
+
+= link_to 'اعمال تغییرات', edit_product_path(@product)
+\|
+= link_to 'برگشت', products_path

@@ -1,0 +1,26 @@
+%div.newP_page
+	%h1 لیست محصولات
+	%div
+		%table
+			%tr
+				%th عنوان محصول
+				%th نمونه عکس 
+				%th
+				%th
+				%th
+				%th
+
+			-@products.each do |product|
+				%br
+				%tr
+					%td= product.title
+					%td= image_tag product.photo.url(:small)
+					%td
+					%td= link_to 'مشاهده', product
+					%td= link_to 'اعمال تغییرات', edit_product_path(product)
+					%td= link_to 'حذف', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+				
+		%br
+	
+		%div.div_btn
+			= link_to 'تعریف محصول جدید', new_product_path, :id => "new_btn"

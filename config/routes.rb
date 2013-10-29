@@ -1,5 +1,13 @@
 IndustiralSite::Application.routes.draw do
+  resources :services
+
+
+  resources :products
+
+
   resources :users
+
+get 'home' => 'home#home'
 
 
   # The priority is based upon order of creation:

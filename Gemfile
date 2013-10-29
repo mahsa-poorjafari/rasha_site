@@ -22,8 +22,8 @@ end
 
 gem 'jquery-rails'
 
-gem "haml", "~> 4.0.3"
-
+gem 'haml-rails'
+gem 'paperclip', '3.5.2'
 gem 'rspec-rails', '~> 2.0'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
