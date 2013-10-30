@@ -1,23 +1,25 @@
-%h1 Listing services
+%div.newP_page
+	%h1 لیست خدمات
+	%div
+		%table
+			%tr
+				%th عنوان
+				%th نمونه تصویر
+				%th 
+				%th
+				%th
+				%th
+				
+			- @services.each do |service|
+				%tr
+					%td= service.title
+					%td= image_tag service.pictures.first.image(:small)
+					%td
+					%td= link_to 'مشاهده', service
+					%td= link_to 'اعمال تغییرات', edit_service_path(service)
+					%td= link_to 'حذف', service, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%table
-  %tr
-    %th Title
-    %th Img url
-    %th Description
-    %th
-    %th
-    %th
-
-  - @services.each do |service|
-    %tr
-      %td= service.title
-      %td= service.img_url
-      %td= service.description
-      %td= link_to 'Show', service
-      %td= link_to 'Edit', edit_service_path(service)
-      %td= link_to 'Destroy', service, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Service', new_service_path
+		%br
+			
+		%div.div_btn
+			= link_to 'تعریف خدمات جدید', new_service_path, :id => "new_btn"

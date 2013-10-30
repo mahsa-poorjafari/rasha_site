@@ -1,16 +1,21 @@
 %p#notice= notice
+%div.newP_page
+  %p
+    %b عنوان محصول
+    = @product.title
+  
+  %div.des
+    %b توضیحات:
+    = raw @product.description
+  %div
+    %br
+    %div.div_pic	  
+      -@product.pictures.each do |photo|
+        = image_tag photo.image(:small), :class => "pic_service"
+  
+  %div.cr
+  %div.footer_Link
+    = link_to 'اعمال تغییرات', edit_product_path(@product)
+    \|
+    = link_to 'بازگشت', products_path
 
-%p
-  %b عنوان محصول:
-  = @product.title
-%p
-  %b تصویر محصول:
-  -@product.pictures.each do |picture|
-    = image_tag picture.image(:small)
-%p
-  %b توضیحات:
-  = @product.description
-
-= link_to 'اعمال تغییرات', edit_product_path(@product)
-\|
-= link_to 'برگشت', products_path
