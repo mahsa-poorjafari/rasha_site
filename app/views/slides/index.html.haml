@@ -1,20 +1,18 @@
-%h1 Listing slides
+%h1 اسلاید شو
 
-%table
-  %tr
-    %th Description
-    %th
-    %th
-    %th
-    %th
-  - @slides.each do |slide|
-    %tr
-      %td= slide.description
-      %td= image_tag slide.image(:small)
-      %td= link_to 'Show', slide
-      %td= link_to 'Edit', edit_slide_path(slide)
-      %td= link_to 'Destroy', slide, :method => :delete, :data => { :confirm => 'Are you sure?' }
+= link_to 'افزودن تصویر جدید', new_slide_path
 
-%br
-
-= link_to 'New Slide', new_slide_path
+#slideshow
+  #slideshowWindow
+    - @slides.each do |slide|
+      %div
+        = link_to (image_tag slide.image(:medium), :id =>  slide.id ), slide, :class => "slide"
+      #descrip
+        = slide.description
+        %div
+          %div.links
+            = link_to 'اعمال تغییرات', edit_slide_path(slide)
+          \|
+          %div.links
+            = link_to 'حذف تصویر', slide, :method => :delete, :data => { :confirm => 'Are you sure?' }
+  

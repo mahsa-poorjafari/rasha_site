@@ -12,7 +12,11 @@
   .field
     = f.label  "توضیحات" 
     %br
-    = f.text_area :description 
+      %div.editor
+        %br
+        = f.text_area :description, :class => "ckeditor"
+        :javascript
+          CKEDITOR.replace( 'service_description' );
     .field
     =f.fields_for :pictures do |picture|  
       .field

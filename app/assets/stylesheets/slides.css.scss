@@ -1,3 +1,18 @@
 // Place all the styles related to the slides controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.slider_show {border:black solid 1px; margin-right:200px; width:900px; height:250px}
+.slide_pic {float:right; margin-right:5px}
+.slide_des {float:right; margin-right:10px}
+.links {float:right; width:80px}
+.links:hover {background-color:yellow; }
+.hiden_slide {width:1500px; position:relative; overflow:hidden;}
+.hiden_slide img {filter: alpha(opacity=50);		opacity: 0.5;	}
+.hiden_slide img:hover { opacity:1.0;
+filter:alpha(opacity=100); /* For IE8 and earlier */}
+#descrip {display:none; color:#fff; position:fix;}
+
+#currentPosition {display:none}
+#slideshow #slideshowWindow { width:500px; height:257px; margin:0; padding:0; position:relative; overflow:hidden; } 
+#slideshow #slideshowWindow .slide { margin:0; padding:0; width:500px; height:257px; float:left; position:relative; }

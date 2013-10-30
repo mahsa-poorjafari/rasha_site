@@ -1,9 +1,13 @@
-%p#notice= notice
-
-%p
-  %b Description:
-  = @slide.description
-
-= link_to 'Edit', edit_slide_path(@slide)
-\|
-= link_to 'Back', slides_path
+%div.slider_show{:align => "center"}
+  %p#notice= notice
+  %div.slide_pic
+    = image_tag @slide.image.url(:medium)
+  %p.slide_des
+    %b توضیحات
+    %br
+    = @slide.description
+  %div.cr
+  %div.footer_Link
+    = link_to 'اعمال تغییرات', edit_slide_path(@slide)
+    \|
+    = link_to 'بازگشت', slides_path
