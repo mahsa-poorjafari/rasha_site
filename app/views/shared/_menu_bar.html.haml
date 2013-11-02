@@ -1,0 +1,23 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{href: "#"} company name
+      .nav-collapse.collapse
+        %ul.nav
+          %li.active
+            =link_to "Home page", root_path
+          %li
+            %a{href: "#about"} about us
+          %li
+            %a{href: "#contact"} contact us
+          %li
+            =link_to "services", services_path  
+          %li
+            =link_to "products", products_path    
+      .pull-left
+        =image_tag "en.png", :class => "language-icon"
+        =image_tag "fa.png", :class => "language-icon"

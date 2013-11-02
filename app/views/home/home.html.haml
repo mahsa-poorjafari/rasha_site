@@ -9,19 +9,24 @@
 .row
   .span4
     %h2 products
-    %p products will be here
-    %p
-      %a.btn{href: "#"} جزئیات بیشتر »
+    -Product.all.each do |product|
+      %p
+        =link_to product.title, product
   .span4
     %h2 services
-    %p services will be here
-    %p
-      %a.btn{href: "#"} جزئیات بیشتر »
+    -Service.all.each do |service|
+      %p
+        =link_to service.title, service 
   .span4
     %h2 news
-    %p will find something for here
-    %p
-      %a.btn{href: "#"} جزئیات بیشتر »
+    %p 
+      will find something for here
+      we should ask the client for somthing to put here
+      I'm putting this here to check the long texts here
+      we should ask the client for somthing to put here
+      I'm putting this here to check the long texts here
+      we should ask the client for somthing to put here
+      I'm putting this here to check the long texts here
 :javascript
   $(".item").first().addClass("active");
   $('.carousel').carousel();
