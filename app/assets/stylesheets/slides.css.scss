@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.slider_show {border:black solid 1px; margin-right:200px; width:900px; height:250px}
+.slider_show {border:black solid 1px; margin-right:200px; width:900px; height:500px}
 .slide_pic {float:right; margin-right:5px}
 .slide_des {float:right; margin-right:10px}
 .links {float:right; width:80px}
@@ -16,3 +16,14 @@ filter:alpha(opacity=100); /* For IE8 and earlier */}
 #currentPosition {display:none}
 #slideshow #slideshowWindow { width:500px; height:257px; margin:0; padding:0; position:relative; overflow:hidden; } 
 #slideshow #slideshowWindow .slide { margin:0; padding:0; width:500px; height:257px; float:left; position:relative; }
+
+#slide_des { height:100px; width:300px; margin:20px }
+#slide_img {margin:20px}
+
+.new_form {border: red solid 1px; margin-right:30px;  width:500px; float:right}
+.crop_image {border:yellow solid 1px; width:500px; float:right ;margin-right:20px; }
+
+img .cropImage {display: inline; width: 480px; height: 300px; left: 0px; top: 0px;}
+
+.Crop_valude {width:100px; float:right; border: blue solid 1px}
+

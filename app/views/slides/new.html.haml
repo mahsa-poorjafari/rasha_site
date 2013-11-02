@@ -1,5 +1,10 @@
-%h1 New slide
+%div
+  %div
+    %h1 افزودن تصویر جدید برای اسلایدر
+    .new_form
+      = render 'form'
 
-= render 'form'
+  .cr
+  .footer_Link
+    = link_to 'بازگشت', slides_path
 
-= link_to 'Back', slides_path

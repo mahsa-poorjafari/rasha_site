@@ -7,8 +7,10 @@
           %li= msg
 
   .field
-    = f.label :description
-    = f.text_area :description
-    = f.file_field :image
+    = f.file_field :image, :id => "slide_img"
+    = f.label :توضیحات
+    = f.text_area :description, :id => "slide_des"
+    
   .actions
-    = f.submit 'Save'
+    .div_btn
+      = f.submit 'ثبت تصویر'
