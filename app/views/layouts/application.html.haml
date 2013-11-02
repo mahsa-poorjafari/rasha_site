@@ -1,0 +1,49 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:name => "keywords", :content => @keywords || "industrial website keywords"}
+    %meta{:name => "description", :content => @page_desc || "industrial website!"}
+    = yield(:refresh_meta) if content_for?(:refresh_meta)
+    %title
+      industrial web site | #{@head.fetch(:title, '') if @head}
+    =stylesheet_link_tag "application", :media => "all"
+    =javascript_include_tag "application"
+    =csrf_meta_tags
+  %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", type: "button"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{href: "#"} company name
+          .nav-collapse.collapse
+            %ul.nav
+              %li.active
+                =link_to "Home page", root_path
+              %li
+                %a{href: "#about"} about us
+              %li
+                %a{href: "#contact"} contact us
+              %li.dropdown
+                %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                  services and products
+                  %b.caret
+                %ul.dropdown-menu
+                  %li
+                    %a{href: "#"} services
+                  %li
+                    %a{href: "#"} products
+                  %li.divider
+                  %li.nav-header تیتر ناوبری
+                  %li
+                    %a{href: "#"} پیوند جداشده
+                  %li
+                    %a{href: "#"} یک پیوند جداشده دیگر
+    .container
+      =yield
+      %hr/
+      %footer
+        %p © شرکت ۱۳۹۱

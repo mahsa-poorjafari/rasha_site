@@ -1,23 +1,18 @@
-%div.main{:align => "center"}
-	%div.header
-		%div.logo
-			LoGo 
-		%div.menu 
-			search...
-			%div.item 
-				Contact us
-			%div.item
-				About us
-			%div.item
-				other-item
-		%div.clear_float
-		%div.slider
-			%img{:src => "/images/2006-manufactured02.jpg"}/
-		%div.footer{:align => "center"}
-			%div.product_ser
-				Product
-			%div.product_ser
-				Services
-			%div.product_ser
-				Other-details
-	
+.hero-unit
+  =image_tag Slide.last.image
+.row
+  .span4
+    %h2 products
+    %p products will be here
+    %p
+      %a.btn{href: "#"} جزئیات بیشتر »
+  .span4
+    %h2 services
+    %p services will be here
+    %p
+      %a.btn{href: "#"} جزئیات بیشتر »
+  .span4
+    %h2 news
+    %p will find something for here
+    %p
+      %a.btn{href: "#"} جزئیات بیشتر »
