@@ -1,5 +1,11 @@
 .hero-unit
-  =image_tag Slide.last.image
+  .carousel.slide
+    .carousel-inner
+      -Slide.all.each do |slide|
+        .item
+          =image_tag slide.image
+    %a.carousel-control.left{"data-slide" => "prev", href: "#myCarousel"} ›
+    %a.carousel-control.right{"data-slide" => "next", href: "#myCarousel"}‹     
 .row
   .span4
     %h2 products
@@ -16,3 +22,6 @@
     %p will find something for here
     %p
       %a.btn{href: "#"} جزئیات بیشتر »
+:javascript
+  $(".item").first().addClass("active");
+  $('.carousel').carousel();
