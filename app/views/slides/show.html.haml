@@ -1,62 +1,8 @@
 %div.slider_show{:align => "center"}
   %p#notice= notice
   
-  .crop_image
-    %script{defer: "defer", type: "text/javascript"}
-      $( function () {
-      $( '.crop' ).each( function () {
-      var image     = $( this )
-      , results = image.next( '.results' )
-      , x       = $( '.cropX', results )
-      , y       = $( '.cropY', results )
-      , w       = $( '.cropW', results )
-      , h       = $( '.cropH', results )
-      , crop    = image
-      \.crop( {
-      controls : 'Drag to move, scroll to zoom'
-      } )
-      \.on( 'crop', function( event ) {
-      x.text( event.cropX );
-      y.text( event.cropY );
-      w.text( event.cropW );
-      h.text( event.cropH );
-      } )
-      \.data( 'crop' );
-      image
-      \//.on( 'dblclick', $.proxy( crop.zoomIn, crop ) )
-      \.on( 'mousewheel', function ( event ) {
-      return event.originalEvent.wheelDelta < 0 ?
-      crop.zoomIn() :
-      crop.zoomOut();
-      } );
-      } );
-      } );
-    %div
-      
-      = image_tag @slide.image.url(:large), :class => "crop cropImage", :height => "300", :width => "400", :alt => "loading..."
-      
-      
-      .cropControls
-        %span Drag to move, scroll to zoom
-        %a.cropZoomIn
-        %a.cropZoomOut
-      
-      .results
-        %br
-        %form
-          %h4.cropX.Crop_valude X
-          %input{type: "text", class: "Crop_valude"}/
-          %h4.cropY.Crop_valude Y
-          %input{type: "text", class: "Crop_valude"}/
-          .cr
-          %h4.cropW.Crop_valude W
-          %input{type: "text", class: "Crop_valude"}/
-          %h4.cropH.Crop_valude H
-          %input{type: "text", class: "Crop_valude"}/
-          .cr
-          %input{type: "submit", value: "save"}/
-
-    
+  .slide_pic
+    = image_tag @slide.image.url(:large)
   %p.slide_des
     %b توضیحات
     %br
