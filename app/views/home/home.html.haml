@@ -3,7 +3,7 @@
     .carousel-inner
       -Slide.all.each do |slide|
         .item
-          =image_tag slide.image
+          =image_tag slide.image(:gallery_size)
     %a.carousel-control.left{"data-slide" => "prev", href: "#myCarousel"} ›
     %a.carousel-control.right{"data-slide" => "next", href: "#myCarousel"}‹     
 .row
