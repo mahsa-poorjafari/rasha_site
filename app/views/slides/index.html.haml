@@ -1,18 +1,16 @@
 %h1 اسلاید شو
 
-= link_to 'افزودن تصویر جدید', new_slide_path
+= link_to 'add new image', new_slide_path, :class => "btn"
 
-#slideshow
-  #slideshowWindow
-    - @slides.each do |slide|
-      %div
-        = link_to (image_tag slide.image(:gallery_size), :id =>  slide.id ), slide, :class => "slide"
-      #descrip
-        = slide.description
-        %div
-          %div.links
-            = link_to 'اعمال تغییرات', edit_slide_path(slide)
-          \|
-          %div.links
-            = link_to 'حذف تصویر', slide, :method => :delete, :data => { :confirm => 'Are you sure?' }
-  
+- @slides.each do |slide|
+  %div
+    = link_to (image_tag slide.image(:gallery_size), :id =>  slide.id ), slide, :class => "slide"
+  #descrip
+    = slide.description
+    %div
+      %div.links
+        = link_to 'اعمال تغییرات', edit_slide_path(slide)
+      \|
+      %div.links
+        = link_to 'حذف تصویر', slide, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
