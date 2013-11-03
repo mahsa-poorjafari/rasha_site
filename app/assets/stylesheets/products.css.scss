@@ -3,8 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .product-row{
   height: 60px;
+  position: relative;
 }
-.row-controls{
-  width: 60px;
-  
+.row-controls{  
+  visibility:hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 60px;
+}
+
+.product-row:hover .row-controls {
+ visibility:visible;
+}
+.product-row:hover{
+  border: 1px yellow solid;
 }

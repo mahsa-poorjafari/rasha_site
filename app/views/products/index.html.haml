@@ -10,13 +10,13 @@
 				.span4	
 					= product.description
 				
-				.well.pull-left.row-controls
-					%i.icon-edit	
-					%i.icon-edit
-						= link_to '', edit_product_path(product)
-					%i.icon-trash
-						= link_to '', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+				.row-controls
+					= link_to edit_product_path(product) do
+						%i.icon-edit
+					= link_to  product, :method => :delete, :data => { :confirm => 'Are you sure?' }	do
+						%i.icon-trash
+						
 				
 				
 		
-		= link_to 'تعریف محصول جدید', new_product_path, :id => "new_btn"
+		= link_to 'new products', new_product_path, :id => "new_btn"

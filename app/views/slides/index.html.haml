@@ -6,7 +6,7 @@
   #slideshowWindow
     - @slides.each do |slide|
       %div
-        = link_to (image_tag slide.image(:large), :id =>  slide.id ), slide, :class => "slide"
+        = link_to (image_tag slide.image(:gallery_size), :id =>  slide.id ), slide, :class => "slide"
       #descrip
         = slide.description
         %div
