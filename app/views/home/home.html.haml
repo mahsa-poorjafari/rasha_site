@@ -1,11 +1,11 @@
 .hero-unit
-  .carousel.slide
+  #myCarousel.carousel.slide
     .carousel-inner
       -Slide.all.each do |slide|
         .item
           =image_tag slide.image(:gallery_size)
-    %a.carousel-control.left{"data-slide" => "prev", href: "#myCarousel"} ›
-    %a.carousel-control.right{"data-slide" => "next", href: "#myCarousel"}‹     
+    %a.carousel-control.left{"data-slide" => "prev", href: ".carousel"} ›
+    %a.carousel-control.right{"data-slide" => "next", href: ".carousel"}‹             
 .row
   .span4
     %h2 products
