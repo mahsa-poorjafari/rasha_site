@@ -1,26 +1,22 @@
-%div.newP_page
-	%h1 لیست محصولات
-	%div
-		%table
-			%tr
-				%th عنوان محصول
-				%th نمونه عکس 
-				%th
-				%th
-				%th
-				%th
-
-			-@products.each do |product|
-				%br
-				%tr
-					%td= product.title
-					%td= image_tag product.pictures.first.image(:small) if product.pictures.present?
-					%td
-					%td= link_to 'مشاهده', product
-					%td= link_to 'اعمال تغییرات', edit_product_path(product)
-					%td= link_to 'حذف', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+%div
+	%h1 product list
+	.well
+		-@products.each do |product|
+			.well.product-row
+				.span2
+					= image_tag product.pictures.first.image(:small) if product.pictures.present?		
+				.span3
+					= product.title
+				.span4	
+					= product.description
 				
-		%br
-	
-		%div.div_btn
-			= link_to 'تعریف محصول جدید', new_product_path, :id => "new_btn"
+				.well.pull-left.row-controls
+					%i.icon-edit	
+					%i.icon-edit
+						= link_to '', edit_product_path(product)
+					%i.icon-trash
+						= link_to '', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+				
+				
+		
+		= link_to 'تعریف محصول جدید', new_product_path, :id => "new_btn"
