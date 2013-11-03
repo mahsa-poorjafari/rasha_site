@@ -1,20 +1,16 @@
-%h1 ثبت تغییرات
-
-
-%div
-  .crop_image    
-    = form_for @slide, :html => {:multipart => true} do |f| 
-      
-      = f.label :توضیحات
-      = f.text_area :description, :id => "slide_des"
-    
-      = image_tag @slide.image.url(:original), :class => "crop cropImage", :height => "360", :width => "950"
-      = f.text_field :crop_x
-      = f.text_field :crop_y
-      = f.text_field :crop_w
-      = f.text_field :crop_h
-      .div_btn
-        = f.submit 'ثبت تصویر'
+%h1 Edit Slide
+.form-holder    
+  = form_for @slide, :html => {:multipart => true} do |f| 
+    = image_tag @slide.image.url(:original), :class => "crop cropImage", :height => "360", :width => "950"
+    = f.hidden_field :crop_x
+    = f.hidden_field :crop_y
+    = f.hidden_field :crop_w
+    = f.hidden_field :crop_h
+    .field
+      = f.label :description
+      = f.text_area :description, :cols => '80', :rows => "3", :class => "slide-description"
+    .div_btn
+      = f.submit 'update'
       
 .footer_Link
   = link_to 'Show', @slide

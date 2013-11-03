@@ -1,16 +1,20 @@
 %h1 اسلاید شو
 
 = link_to 'add new image', new_slide_path, :class => "btn"
+.hero-unit
+  .carousel.slide
+    .carousel-inner
+      -@slides.each do |slide|
+        .item-row.item
+          = link_to (image_tag slide.image(:gallery_size), :id =>  slide.id ), slide, :class => "slide"
+          .row-controls
+            = link_to edit_slide_path(slide) do
+              %i.icon-edit
+            = link_to  slide, :method => :delete, :data => { :confirm => 'Are you sure?' }  do
+              %i.icon-trash
+          #descrip
+            = slide.description
 
-- @slides.each do |slide|
-  %div
-    = link_to (image_tag slide.image(:gallery_size), :id =>  slide.id ), slide, :class => "slide"
-  #descrip
-    = slide.description
-    %div
-      %div.links
-        = link_to 'اعمال تغییرات', edit_slide_path(slide)
-      \|
-      %div.links
-        = link_to 'حذف تصویر', slide, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
+:javascript
+  $(".item").first().addClass("active");
+  $('.carousel').carousel();
