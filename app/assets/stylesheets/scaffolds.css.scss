@@ -68,16 +68,18 @@ div {
   }
 }
 
-.newP_page { margin-right:200px;border:yellow solid 1px; width:900px; direction:rtl; }
-.submit { text-align:center}
-.title { text-align:center;}
 
-#new_btn { background-color:yellow; text-decoration:none;  }
-#new_btn:hover {background-color:#a3c;}
+.image-des-holder {
+  position: relative;
+  top: -40px;
+  background-color: #ffffff;
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier */;
+  height: 40px;
+  p {     
+    opacity:1;
+    filter:alpha(opacity=100); /* For IE8 and earlier */;
+    }
 
-.div_btn { text-align:left; margin-left:10px }
-a { text-decoration:none;}
-.editor {width:700px; margin-right:100px}
-
-.footer_Link {text-align:center}
-.cr {clear:both}
+}
+ #myCarousel {height:335px}

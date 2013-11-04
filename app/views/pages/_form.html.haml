@@ -1,0 +1,27 @@
+= form_for @page do |f|
+  - if @page.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@page.errors.count, "error")} prohibited this page from being saved:"
+      %ul
+        - @page.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :page_title
+    = f.text_field :page_title
+  .field
+    = f.label :page_html_en
+    %br
+      %div.editor
+      = f.text_area :page_html_en, :class => "ckeditor"
+      :javascript
+        CKEDITOR.replace( 'page_html_en' );
+  .field
+    = f.label :page_html_fa
+    %br
+      %div.editor
+      = f.text_area :page_html_fa, :class => "ckeditor"
+      :javascript
+        CKEDITOR.replace( 'page_html_fa' );
+  .actions
+    = f.submit 'Save'

@@ -10,10 +10,9 @@
         %ul.nav
           %li.active
             =link_to "Home page", root_path
-          %li
-            %a{href: "#about"} about us
-          %li
-            %a{href: "#contact"} contact us
+          - Page.all.each do |page|
+            %li
+              = link_to page.page_title, page
           %li
             =link_to "services", services_path  
           %li
