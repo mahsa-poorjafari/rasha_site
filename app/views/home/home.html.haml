@@ -1,9 +1,15 @@
 #slider-holder.hero-unit
   #myCarousel.carousel.slide
     .carousel-inner
-      -Slide.all.each do |slide|
+      - @slides.each do |slide|
         .item
           =image_tag slide.image(:gallery_size)
+    .carousel-controls
+      .center
+        %ol.carousel-indicator-list.carousel-indicators
+          - if  @slides.count != 1
+            -  @slides.each_with_index do |slide, index|
+              %li{"data-slide-to" => "#{index}", "data-target" => "#homeCarousel", :class => "slide-indicator"}      
     %a.carousel-control.left{"data-slide" => "prev", href: ".carousel"} ›
     %a.carousel-control.right{"data-slide" => "next", href: ".carousel"}‹             
 .row
@@ -29,4 +35,5 @@
       I'm putting this here to check the long texts here
 :javascript
   $(".item").first().addClass("active");
+  $(".slide-indicator").first().addClass("active");
   $('.carousel').carousel();
