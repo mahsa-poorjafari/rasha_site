@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20131103103033) do
   end
 
   create_table "pages", :force => true do |t|
-    t.string   "page_title"
+    t.string   "title"
     t.text     "page_html_en"
     t.text     "page_html_fa"
     t.datetime "created_at",   :null => false
