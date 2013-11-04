@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Page title:
+  = @page.page_title
+%p
+  %b Page html en:
+  =raw @page.page_html_en
+%p
+  %b Page html fa:
+  = @page.page_html_fa
+
+= link_to 'Edit', edit_page_path(@page)
+\|
+= link_to 'Back', pages_path
