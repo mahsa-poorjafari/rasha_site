@@ -67,3 +67,19 @@ div {
     list-style: square;
   }
 }
+
+
+.image-des-holder {
+  position: relative;
+  top: -40px;
+  background-color: #ffffff;
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier */;
+  height: 40px;
+  p {     
+    opacity:1;
+    filter:alpha(opacity=100); /* For IE8 and earlier */;
+    }
+
+}
+ #myCarousel {height:335px}
