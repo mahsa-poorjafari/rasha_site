@@ -29,12 +29,6 @@ ActiveRecord::Schema.define(:version => 20131103103033) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
-  create_table "mahsas", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.text     "page_html_en"
