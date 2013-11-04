@@ -1,12 +1,17 @@
-#slider-holder.hero-unit
-  #myCarousel.carousel.slide
+.hero-unit
+  .carousel.slide
     .carousel-inner
-      - @slides.each do |slide|
-        .item
-          =image_tag slide.image(:gallery_size)
-          .image-des-holder
-            %p
-              = slide.description
+      -@slides.each do |slide|
+        .item-row.item
+          = link_to (image_tag slide.image(:gallery_size), :id =>  slide.id ), slide, :class => "slide"
+          .row-controls
+            = link_to edit_slide_path(slide) do
+              %i.icon-edit
+            = link_to  slide, :method => :delete, :data => { :confirm => 'Are you sure?' }  do
+              %i.icon-trash
+          -if slide.description.present?
+            .image-des-holder
+              = slide.description 
     .carousel-controls
       .center
         %ol.carousel-indicator-list.carousel-indicators
