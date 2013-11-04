@@ -1,22 +1,23 @@
 %div
-	%h1 product list
-	.well
-		-@products.each do |product|
-			.well.product-row
-				.span2
-					= image_tag product.pictures.first.image(:small) if product.pictures.present?		
-				.span3
-					= product.title
-				.span4	
-					= product.description
-				
-				.well.pull-left.row-controls
-					%i.icon-edit	
-					%i.icon-edit
-						= link_to '', edit_product_path(product)
-					%i.icon-trash
-						= link_to '', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
-				
-				
-		
-		= link_to 'تعریف محصول جدید', new_product_path, :id => "new_btn"
+  %h1 product list
+.row-fluid
+  %ul.thumbnails
+    -@products.each do |product|
+      %li.span4
+        .thumbnail.item-row
+          = image_tag product.pictures.first.image(:small) if product.pictures.present?    
+          .caption          
+            %h3
+              =raw product.title
+            %p 
+              =raw product.description
+          .row-controls
+            = link_to edit_product_path(product) do
+              %i.icon-edit
+            = link_to  product, :method => :delete, :data => { :confirm => 'Are you sure?' }  do
+              %i.icon-trash
+              
+        
+        
+    
+    = link_to 'new products', new_product_path, :id => "new_btn"

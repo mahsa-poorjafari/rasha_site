@@ -16,7 +16,7 @@ IndustiralSite::Application.routes.draw do
   resources :users
 
   get 'home' => 'home#home', :as => "home" 
-
+  get 'moh'  => 'home#moh'
 
 
 

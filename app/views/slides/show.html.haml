@@ -2,7 +2,8 @@
   %p#notice= notice
   
   .slide_pic
-    = image_tag @slide.image.url(:large)
+    slider size
+    = image_tag @slide.image(:gallery_size)
   %p.slide_des
     %b توضیحات
     %br
