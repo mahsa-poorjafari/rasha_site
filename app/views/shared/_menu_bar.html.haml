@@ -1,4 +1,4 @@
-.container
+.main
   #head
     #head_cen
       #head_sup.head_height
@@ -15,12 +15,12 @@
           %a{href: "index.html"} M CUBE
         %ul
           %li
-            %a.active{href: "index.html"} Home
+            = link_to "Home", homedesign_path, :class => "active"           
           %li
-            %a{href: "about.html"} ABOUT
+            = link_to "SERVICES", Service
           %li
-            %a{href: "services.html"} SERVICES
+            = link_to "PRODUCTS", Product       
           %li
-            %a{href: "services.html"} PRODUTS
+            = link_to "ABOUT", Page
           %li
-            %a{href: "contact.html"} CONTACT
+            = link_to "CONTACT", Page
