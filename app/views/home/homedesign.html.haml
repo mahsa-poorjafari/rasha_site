@@ -1,58 +1,58 @@
-.div-slider
-  -if Slide.first.image.present?
+.container
+  .div-slider
     = render 'slider'
-  
-#content
-  #content_cen
-    #content_sup
-      #welcom_pan
-        %h2
-          %span> MCUBE
-          Introduction
+    
+  #content
+    #content_cen
+      #content_sup
+        #welcom_pan
+          %h2
+            %span> MCUBE
+            Introduction
+          
+          %p Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus. Curabitur est velit, suscipit eu faucibus eget, aliquam ac enim. per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus.
+        %ul#infoPan
+          %li
+            %h3
+              %span web
+              design
+              %img{alt: "", src: "assets/icon1.png"}/
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            %p.descrip Maecenas ut lacus magna, ut consectetur quam. Etiam pharetra tincidunt massa, vitae pulvinar eros commodo ut. Sed in orci neque. Mauris eros est, auctor vitae.
+          %li
+            %h3
+              %span web
+              coding
+              %img{alt: "", src: "assets/icon2.png"}/
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            %p.descrip Maecenas ut lacus magna, ut consectetur quam. Etiam pharetra tincidunt massa, vitae pulvinar eros commodo ut. Sed in orci neque. Mauris eros est, auctor vitae.
+          %li
+            %h3
+              %span web
+              market
+              %img{alt: "", src: "assets/icon3.png"}/
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            %p.descrip Maecenas ut lacus magna, ut consectetur quam. Etiam pharetra tincidunt massa, vitae pulvinar eros commodo ut. Sed in orci neque. Mauris eros est, auctor vitae.
+  #foot
+    #foot_cen
+      %h6
+        %a{href: "index.html"} mcube
+      %ul
+        %li
+          %a{href: "index.html"} Home
+        %li.space \
+        %li
+          %a{href: "about.html"} ABOUT
+        %li.space /
+        %li
+          %a{href: "services.html"} SERVICES
+        %li.space \
+        %li
+          %a{href: "services.html"} PRODUCTS
+        %li.space /
+        %li
+          %a{href: "contact.html"} CONTACT
         
-        %p Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus. Curabitur est velit, suscipit eu faucibus eget, aliquam ac enim. per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus.
-      %ul#infoPan
-        %li
-          %h3
-            %span web
-            design
-            %img{alt: "", src: "assets/icon1.png"}/
-          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          %p.descrip Maecenas ut lacus magna, ut consectetur quam. Etiam pharetra tincidunt massa, vitae pulvinar eros commodo ut. Sed in orci neque. Mauris eros est, auctor vitae.
-        %li
-          %h3
-            %span web
-            coding
-            %img{alt: "", src: "assets/icon2.png"}/
-          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          %p.descrip Maecenas ut lacus magna, ut consectetur quam. Etiam pharetra tincidunt massa, vitae pulvinar eros commodo ut. Sed in orci neque. Mauris eros est, auctor vitae.
-        %li
-          %h3
-            %span web
-            market
-            %img{alt: "", src: "assets/icon3.png"}/
-          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          %p.descrip Maecenas ut lacus magna, ut consectetur quam. Etiam pharetra tincidunt massa, vitae pulvinar eros commodo ut. Sed in orci neque. Mauris eros est, auctor vitae.
-#foot
-  #foot_cen
-    %h6
-      %a{href: "index.html"} mcube
-    %ul
-      %li
-        %a{href: "index.html"} Home
-      %li.space \
-      %li
-        %a{href: "about.html"} ABOUT
-      %li.space /
-      %li
-        %a{href: "services.html"} SERVICES
-      %li.space \
-      %li
-        %a{href: "services.html"} PRODUCTS
-      %li.space /
-      %li
-        %a{href: "contact.html"} CONTACT
-      
-    %p
-      © Your Copyright Info Here. Designed by:
-      %a{href: "http://www.Raush.net", target: "_blank"} Raush.net
+      %p
+        © Your Copyright Info Here. Designed by:
+        %a{href: "http://www.Raush.net", target: "_blank"} Raush.net
