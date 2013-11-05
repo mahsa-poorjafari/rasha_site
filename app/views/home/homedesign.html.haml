@@ -1,27 +1,7 @@
-#head
-  #head_cen
-    #head_sup.head_height
-      %p.search
-        %label SEARCH
-        %input.txt{name: "search", type: "text"}/
-        %input.btn{name: "search-btn", type: "submit", value: "SEARCH"}/
-      %h1.logo
-        %a{href: "index.html"} M CUBE
-      %ul
-        %li
-          %a.active{href: "index.html"} Home
-        %li
-          %a{href: "about.html"} ABOUT
-        %li
-          %a{href: "services.html"} SERVICES
-        %li
-          %a{href: "services.html"} PRODUTS
-        %li
-          %a{href: "contact.html"} CONTACT
-      .div-slider
-        -if Slide.first.image.present?
-          = render 'slider'  
-        
+.div-slider
+  -if Slide.first.image.present?
+    = render 'slider'
+  
 #content
   #content_cen
     #content_sup

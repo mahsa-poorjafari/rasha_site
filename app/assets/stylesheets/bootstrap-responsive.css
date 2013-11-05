@@ -132,6 +132,7 @@
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
     width: 1170px;
+    background:url(headBg2.png) repeat-x
   }
   .span12 {
     width: 1170px;

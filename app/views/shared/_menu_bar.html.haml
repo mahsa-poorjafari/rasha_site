@@ -1,22 +1,26 @@
-.navbar.navbar-inverse.navbar-fixed-top
-  .navbar-inner
-    .container
-      %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", type: "button"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      =link_to "company name", root_path , :class => "brand"
-      .nav-collapse.collapse
-        %ul.nav
-          %li.active
-            =link_to "Home page", root_path
-          - Page.all.each do |page|
-            %li
-              = link_to page.title, page
+.container
+  #head
+    #head_cen
+      #head_sup.head_height
+        .head-serach
+          %p.search
+            %label SEARCH
+            %input.txt{name: "search", type: "text"}/
+            %input.btn{name: "search-btn", type: "submit", value: "SEARCH"}/
+          .pull-left
+            =image_tag "en.png", :class => "language-icon"
+            =image_tag "fa.png", :class => "language-icon"
+          .clrear-float
+        %h1.logo
+          %a{href: "index.html"} M CUBE
+        %ul
           %li
-            =link_to "services", services_path  
+            %a.active{href: "index.html"} Home
           %li
-            =link_to "products", products_path    
-      .pull-left
-        =image_tag "en.png", :class => "language-icon"
-        =image_tag "fa.png", :class => "language-icon"
+            %a{href: "about.html"} ABOUT
+          %li
+            %a{href: "services.html"} SERVICES
+          %li
+            %a{href: "services.html"} PRODUTS
+          %li
+            %a{href: "contact.html"} CONTACT
