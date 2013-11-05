@@ -14,4 +14,11 @@ class HomeController < ApplicationController
 			format.js
 		end 
 	end
+
+  def change_language
+    language = params[:language]
+    I18n.locale = language if language == "fa" or language == "en"
+    
+    redirect_to :back and return
+  end
 end

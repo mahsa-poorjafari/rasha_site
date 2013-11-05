@@ -16,8 +16,9 @@ IndustiralSite::Application.routes.draw do
   resources :users
 
   get 'home' => 'home#home', :as => "home" 
+  get "change_language" => "home#change_language"
   get 'homedesign'  => 'home#homedesign'
-
+  get "moh" => "home#moh"
 
 
   # The priority is based upon order of creation:
