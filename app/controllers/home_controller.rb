@@ -6,5 +6,12 @@ class HomeController < ApplicationController
 			format.js
 		end 
 	end
-
+  
+  def homedesign
+    @slides = Slide.all
+		respond_to do |format|
+			format.html # home.html.erb
+			format.js
+		end 
+	end
 end

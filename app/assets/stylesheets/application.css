@@ -11,10 +11,6 @@
  *= require_self
  *= require_tree .
  */
-body{
-  padding-top: 23px;
-  padding-bottom: 40px;
-}
 .language-icon{
   width: 24px;
   height:20px;
