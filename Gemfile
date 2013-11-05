@@ -42,4 +42,4 @@ end
 
 # To use debugger
 # gem 'debugger'
-
+gem 'i18n'

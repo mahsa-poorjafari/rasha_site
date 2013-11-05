@@ -138,6 +138,7 @@ DEPENDENCIES
   ckeditor
   coffee-rails (~> 3.2.1)
   haml-rails
+  i18n
   jquery-rails
   mysql2
   paperclip (~> 3.0)

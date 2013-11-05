@@ -1,0 +1,11 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+fa:
+  back: "بازگشت"
+  products_section:
+    title: "محصولات"
+    new_product: "ایجاد محصول"
+    edit_product: "ویرایش محصول"
+    product_title: "عنوان"
+    product_description: "توضیحات"
