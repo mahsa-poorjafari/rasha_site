@@ -2,4 +2,10 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  back: "back"
+  products_section:
+    title: "Products"
+    new_product: "New Product"
+    edit_product: "Edit Product"
+    product_title: "Title"
+    product_description: "Descriptions"

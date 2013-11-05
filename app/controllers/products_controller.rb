@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    I18n.locale = 'fa'
     @products = Product.all
 
     respond_to do |format|
