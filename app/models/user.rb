@@ -3,4 +3,6 @@ class User < ActiveRecord::Base
   
   validates :name, :uniqueness => true
   validates :name, :presence => {:message => 'The user name must be informed.'}
+  extend FriendlyId  
+  friendly_id :name
 end

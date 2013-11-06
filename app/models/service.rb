@@ -5,4 +5,6 @@ class Service < ActiveRecord::Base
   
   validates :title, :uniqueness => true
   validates :title, :presence => {:message => 'The sevice title must be informed.'}
+  extend FriendlyId  
+  friendly_id :title
 end

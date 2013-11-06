@@ -43,3 +43,4 @@ end
 # To use debugger
 # gem 'debugger'
 gem 'i18n'
+gem "friendly_id", "~> 4.0.0.beta8"

@@ -3,5 +3,6 @@ class Page < ActiveRecord::Base
 
   validates :title, :uniqueness => true
   validates :title, :presence => {:message => 'The page title must be informed.'}
-
+  extend FriendlyId  
+  friendly_id :title
 end
