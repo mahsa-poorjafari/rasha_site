@@ -8,8 +8,8 @@
             %input.txt{name: "search", type: "text"}/
             %input.btn{name: "search-btn", type: "submit", value: "SEARCH"}/
           .pull-left
-            =image_tag "en.png", :class => "language-icon"
-            =image_tag "fa.png", :class => "language-icon"
+            =link_to (image_tag "en.png", :class => "language-icon"), change_language_path(:language => "en")
+            =link_to (image_tag "fa.png", :class => "language-icon"), change_language_path(:language => "fa")
           .clrear-float
         %h1.logo
           %a{href: "index.html"} M CUBE
