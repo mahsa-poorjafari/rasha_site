@@ -1,15 +1,16 @@
-%div.slider_show{:align => "center"}
-  %p#notice= notice
-  
-  .slide_pic
-    slider size
+.list-div
+  #welcom_pan   
+    %h2 
+      %span
+        Demo
+      Company
+    %p#notice= notice
     = image_tag @slide.image(:gallery_size)
-  %p.slide_des
-    %b توضیحات
-    %br
-    = @slide.description
-  %div.cr
-  %div.footer_Link
-    = link_to 'اعمال تغییرات', edit_slide_path(@slide)
+    .show-des-fa
+      =raw @slide.description   
+    
+      
+  #quotPan     
+    = link_to 'Edit', edit_slide_path(@slide), :class => "btn", :name => "btn"
     \|
-    = link_to 'بازگشت', slides_path
+    = link_to 'back', homedesign_path, :class => "btn", :name => "btn"
