@@ -1,40 +1,38 @@
 .div-slider
   = render 'slider'
   
-#content
-  #content_cen
-    #content_sup
-      #welcom_pan
-        %h2
-          %span> MCUBE
-          Introduction
+.content1
+  #welcom_pan
+    %h2
+      %span> MCUBE
+      Introduction
+    
+    %p Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus. Curabitur est velit, suscipit eu faucibus eget, aliquam ac enim. per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus.
+  %ul#infoPan
+    %li
+      %h3
+        %span 
+        Products
+        %img{alt: "", src: "assets/icon1.png"}/
+      .show-title.TA
+        -Product.all.each do |product|
+          %p
+            =link_to product.title, product              
+    %li
+      %h3
+        %span
+        Sevices
+        %img{alt: "", src: "assets/icon2.png"}/
+      .show-title
+        -Service.all.each do |service|
+          %p
+            =link_to service.title, service             
+    %li
+      %h3
+        %span web
+        market
+        %img{alt: "", src: "assets/icon3.png"}/
         
-        %p Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus. Curabitur est velit, suscipit eu faucibus eget, aliquam ac enim. per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus.
-      %ul#infoPan
-        %li
-          %h3
-            %span 
-            Products
-            %img{alt: "", src: "assets/icon1.png"}/
-          .show-title.TA
-            -Product.all.each do |product|
-              %p
-                =link_to product.title, product              
-        %li
-          %h3
-            %span
-            Sevices
-            %img{alt: "", src: "assets/icon2.png"}/
-          .show-title.TA
-            -Service.all.each do |service|
-              %p
-                =link_to service.title, service             
-        %li
-          %h3
-            %span web
-            market
-            %img{alt: "", src: "assets/icon3.png"}/
-            
-          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          %p.descrip Maecenas ut lacus magna, ut consectetur quam. Etiam pharetra tincidunt massa, vitae pulvinar eros commodo ut. Sed in orci neque. Mauris eros est, auctor vitae.
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      %p.descrip Maecenas ut lacus magna, ut consectetur quam. Etiam pharetra tincidunt massa, vitae pulvinar eros commodo ut. Sed in orci neque. Mauris eros est, auctor vitae.
 
