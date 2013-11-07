@@ -1,7 +1,4 @@
-.div-slider
-  = render 'slider'
-  
-.content1
+.text-div
   #welcom_pan
     %h2
       %span> MCUBE
@@ -14,7 +11,7 @@
         %span 
         Products
         %img{alt: "", src: "assets/icon1.png"}/
-      .show-title.TA
+      .show-title
         -Product.all.each do |product|
           %p
             =link_to product.title, product              
@@ -27,12 +24,9 @@
         -Service.all.each do |service|
           %p
             =link_to service.title, service             
-    %li
-      %h3
-        %span web
-        market
-        %img{alt: "", src: "assets/icon3.png"}/
-        
-      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      %p.descrip Maecenas ut lacus magna, ut consectetur quam. Etiam pharetra tincidunt massa, vitae pulvinar eros commodo ut. Sed in orci neque. Mauris eros est, auctor vitae.
+    
+  :javascript
+    $(".item").first().addClass("active");
+    $(".slide-indicator").first().addClass("active");
+    $('.carousel').carousel();
 
