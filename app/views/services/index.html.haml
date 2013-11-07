@@ -8,13 +8,13 @@
       .table
         - @services.each do |service|
           .tr            
-            .td= link_to (image_tag service.pictures.first.image(:small)), service
+            .td= link_to (image_tag service.pictures.first.image(:medium)), service
             .td= link_to service.title, service
             .td
               = link_to 'اعمال تغییرات', edit_service_path(service)
               = link_to 'حذف', service, :method => :delete, :data => { :confirm => 'Are you sure?' }
           .clrear-float
           
-  #quotPan        
-    = link_to 'New Services', new_service_path, :class => "btn", :name => "btn"
+    #quotPan        
+      = link_to 'New Services', new_service_path, :class => "btn", :name => "btn"
 

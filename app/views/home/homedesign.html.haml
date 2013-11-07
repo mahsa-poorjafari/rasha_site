@@ -16,16 +16,16 @@
             %span 
             Products
             %img{alt: "", src: "assets/icon1.png"}/
-          .show-title
+          .show-title.TA
             -Product.all.each do |product|
               %p
                 =link_to product.title, product              
         %li
           %h3
-            %span.show-title 
+            %span
             Sevices
             %img{alt: "", src: "assets/icon2.png"}/
-          .show-title
+          .show-title.TA
             -Service.all.each do |service|
               %p
                 =link_to service.title, service             

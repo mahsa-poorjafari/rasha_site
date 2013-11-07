@@ -39,7 +39,7 @@
   padding: 7px;
   margin-bottom: 10px;
 }
-.list-div {width:900px; margin-right:10px}
+.list-div {width:85%; margin-right:20px}
 .show-list {margin-top:50px}
 
 .clrear-float {clear:both}
@@ -47,6 +47,7 @@
 .show-des-en {width:700px; margin-top:60px; text-align:left; float:left;}
 .show-des-fa {width:700px; margin-top:60px; text-align:right; float:right; margin-right:100px}
 
-.container1 {width:100%; background:url(headBg.png) repeat-x; margin-top:-160px}
+.total-division {width:100%; background:url(headBg.png) repeat-x; }
 .sliderr {margin-top:100px}
  
+

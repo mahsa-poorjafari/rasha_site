@@ -1,25 +1,22 @@
 #head
   #head_cen
     #head_sup.head_height
-      .head-serach
-        %p.search
-          %label SEARCH
-          %input.txt{name: "search", type: "text"}/
-          %input.btn{name: "search-btn", type: "submit", value: "SEARCH"}/
+      .head-serach        
         .pull-left
           =link_to (image_tag "en.png", :class => "language-icon"), change_language_path(:language => "en")
           =link_to (image_tag "fa.png", :class => "language-icon"), change_language_path(:language => "fa")
         .clrear-float
-      %h1.logo
-        %a{href: "index.html"} M CUBE
-      %ul
-        %li
-          = link_to "Home", homedesign_path, :class => "active"           
-        %li
-          = link_to "SERVICES", Service
-        %li
-          = link_to "PRODUCTS", Product       
-        %li
-          = link_to "ABOUT", Page.first
-        %li
-          = link_to "CONTACT", Page.last
+      #head-menu
+        %h1.logo
+          %a{href: "index.html"} M CUBE
+        %ul
+          %li
+            = link_to "Home", homedesign_path, :class => "active"           
+          %li
+            = link_to "SERVICES", Service
+          %li
+            = link_to "PRODUCTS", Product       
+          %li
+            = link_to "ABOUT", Page.first
+          %li
+            = link_to "CONTACT", Page.last
