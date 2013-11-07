@@ -12,7 +12,8 @@
     %div.div_pic	  
       -@service.pictures.each do |photo|
         = image_tag photo.image(:small), :class => "pic_service"
-  
+        = photo.description
+          
   %div.cr
   %div.footer_Link
     = link_to 'اعمال تغییرات', edit_service_path(@service)
