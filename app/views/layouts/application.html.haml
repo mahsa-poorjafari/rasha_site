@@ -8,12 +8,14 @@
     %title
       industrial web site | #{@head.fetch(:title, '') if @head}
     =stylesheet_link_tag "application", :media => "all"
+    =stylesheet_link_tag "application", :media => "all"
+    =favicon_link_tag 'rails.png', rel:'shortcut icon', type: 'image/png'
     =stylesheet_link_tag "styles", :media => "all"
     =javascript_include_tag "application"
     =csrf_meta_tags
   %body
-    .container
+    .total-division
       = render "shared/menu_bar" 
-      =yield      
-      = render 'shared/footer'  
-      
+      #content
+        =yield      
+    
