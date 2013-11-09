@@ -8,12 +8,8 @@
       .table
         - @products.each do |product|
           .tr            
-            .td= link_to (image_tag product.pictures.first.image(:small)), product
-            .td= link_to product.title, product
-            .td
-              = link_to 'اعمال تغییرات', edit_product_path(product)
-              = link_to 'حذف', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
-          .clrear-float
+            .td= link_to content_tag(:div, product.title, :class => "pro-title"), product
+            .td= link_to (image_tag product.pictures.first.image(:medium)), product
             
     #quotPan        
       = link_to content_tag("span", "New Products"), new_product_path, :class => "brochure"
