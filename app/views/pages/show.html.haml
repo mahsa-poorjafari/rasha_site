@@ -8,10 +8,9 @@
     .show-des-en     
       =raw @page.page_html_en
     .show-des-fa
-      =raw @page.page_html_fa
-      
-    #quotPan     
-      = link_to 'Edit', edit_page_path(@page), :class => "btn", :name => "btn"
-      \|
-      = link_to 'back', homedesign_path, :class => "btn", :name => "btn"
+      =raw @page.page_html_fa  
+    #quotPan   
+      = link_to content_tag("span", "Edit"), edit_page_path(@page), :class => "brochure"            
+      = link_to content_tag("span", "Back"), homedesign_path, :class => "brochure"    
+  
 
