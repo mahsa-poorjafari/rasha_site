@@ -5,25 +5,32 @@
       Introduction
     
     %p Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus. Curabitur est velit, suscipit eu faucibus eget, aliquam ac enim. per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus.
-  %ul#infoPan
-    %li
-      %h3
-        %span 
+    
+    %h3
+      %span
         Products
-        %img{alt: "", src: "assets/icon1.png"}/
-      .show-title
+      =image_tag "icon1.png"
+    #service_pan
+      %ul
         -Product.all.each do |product|
-          %p
-            =link_to product.title, product              
-    %li
-      %h3
-        %span
-        Sevices
-        %img{alt: "", src: "assets/icon2.png"}/
-      .show-title
+          %li                                        
+            %h5= product.title
+            %p
+              = strip_tags(product.description)
+              =link_to "More", product  
+    
+    %h3
+      %span
+        Services
+      =image_tag "icon2.png"
+    #service_pan
+      %ul
         -Service.all.each do |service|
-          %p
-            =link_to service.title, service             
+          %li                                        
+            %h5= service.title
+            %p
+              = strip_tags(service.description)
+              =link_to "More", service   
     
   :javascript
     $(".item").first().addClass("active");
