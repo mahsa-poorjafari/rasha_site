@@ -10,7 +10,7 @@
       =raw @slide.description   
     
       
-  #quotPan     
-    = link_to 'Edit', edit_slide_path(@slide), :class => "btn", :name => "btn"
-    \|
-    = link_to 'back', homedesign_path, :class => "btn", :name => "btn"
+    #quotPan   
+      = link_to content_tag("span", "Edit"), edit_slide_path(@slide), :class => "brochure"            
+      = link_to content_tag("span", "Back"), homedesign_path, :class => "brochure"    
+    
