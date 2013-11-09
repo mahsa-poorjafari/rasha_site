@@ -1,10 +1,8 @@
 %h1 Listing pages
-
 %table
   %tr
     %th Page title
-    %th Page html en
-    %th Page html fa
+    %th Page html
     %th
     %th
     %th
@@ -12,8 +10,7 @@
   - @pages.each do |page|
     %tr
       %td= page.title
-      %td=raw page.page_html_en
-      %td=raw page.page_html_fa
+      %td=raw page.page_html
       %td= link_to 'Show', page
       %td= link_to 'Edit', edit_page_path(page)
       %td= link_to 'Destroy', page, :method => :delete, :data => { :confirm => 'Are you sure?' }
