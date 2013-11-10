@@ -1,26 +1,25 @@
 IndustiralSite::Application.routes.draw do
-  resources :pages
 
+scope "(:locale)", :locale => /en|fa/,  defaults: {locale: "fa"} do
+  get 'home' => 'home#home', :as => "home" 
+  resources :pages
+  resources :services
+  resources :products
+end
+
+  resources :users
+  resources :slides
 
   mount Ckeditor::Engine => '/ckeditor'
 
-  resources :slides
 
 
-  resources :services
 
-
-  resources :products
-
-
-  resources :users
-
-  get 'home' => 'home#home', :as => "home" 
   get "change_language" => "home#change_language"
   get 'homedesign'  => 'home#homedesign'
-  get "moh" => "home#moh"
+  get ":locale/moh" => "home#moh"
 
-
+root :to => 'home#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -70,7 +69,7 @@ IndustiralSite::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#home'
+  
 
   # See how all your routes lay out with "rake routes"
 

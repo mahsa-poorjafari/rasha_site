@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  before_filter :set_locale, :except => [:change_language]
 	def home
     @slides = Slide.all
 		respond_to do |format|
@@ -17,8 +18,15 @@ class HomeController < ApplicationController
 
   def change_language
     language = params[:language]
-    I18n.locale = language if language == "fa" or language == "en"
-    
-    redirect_to :back and return
+    ref_url = request.referer
+    if language == "fa" 
+      ref_url = ref_url.gsub("/en/","/fa/")
+      I18n.locale = :fa
+    elsif language == "en"
+      ref_url = ref_url.gsub("/fa/","/en/")
+      I18n.locale = :en
+    end 
+
+    redirect_to ref_url
   end
 end

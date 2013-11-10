@@ -3,9 +3,16 @@
 
 fa:
   back: "بازگشت"
+  home: "خانه"
   products_section:
     title: "محصولات"
     new_product: "ایجاد محصول"
     edit_product: "ویرایش محصول"
     product_title: "عنوان"
     product_description: "توضیحات"
+  services_section:
+    title: "خدمات"
+    new_service: "ایجاد خدمات"
+    edit_service: "ویرایش خدمات"
+    serviec_title: "عنوان"
+    serviec_description: "توضیحات"  

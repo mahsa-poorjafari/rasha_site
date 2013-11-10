@@ -11,8 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131107061738) do
-
+ActiveRecord::Schema.define(:version => 20131109060828) do
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
     t.string   "data_content_type"
@@ -37,10 +36,11 @@ ActiveRecord::Schema.define(:version => 20131107061738) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
-    t.text     "page_html_en"
     t.text     "page_html_fa"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.string   "title_fa"
+    t.string   "page_html"
   end
 
   create_table "pictures", :force => true do |t|

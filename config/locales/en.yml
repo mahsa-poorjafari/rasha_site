@@ -3,6 +3,7 @@
 
 en:
   back: "back"
+  home: "home"
   products_section:
     title: "Products"
     new_product: "New Product"
