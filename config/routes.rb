@@ -1,10 +1,15 @@
 IndustiralSite::Application.routes.draw do
 
-scope "(:locale)", :locale => /en|fa/,  defaults: {locale: "fa"} do
+scope "(:locale)", :locale => /en|fa/ do
   get 'home' => 'home#home', :as => "home" 
   resources :pages
   resources :services
   resources :products
+
+  get 'homedesign'  => 'home#homedesign'
+  get ":locale/moh" => "home#moh"
+
+  root :to => 'home#home'
 end
 
   resources :users
@@ -12,14 +17,8 @@ end
 
   mount Ckeditor::Engine => '/ckeditor'
 
-
-
-
   get "change_language" => "home#change_language"
-  get 'homedesign'  => 'home#homedesign'
-  get ":locale/moh" => "home#moh"
-
-root :to => 'home#home'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

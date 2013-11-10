@@ -3,8 +3,8 @@
     .head_height
       .head-serach        
         .pull-left
-          =link_to (image_tag "en.png", :class => "language-icon"), change_language_path(:language => "en")
-          =link_to (image_tag "fa.png", :class => "language-icon"), change_language_path(:language => "fa")
+          =link_to (image_tag "en.png", :class => "language-icon"), locale: :en
+          =link_to (image_tag "fa.png", :class => "language-icon"), locale: :fa
         .clrear-float
       #head-menu
         %h1.logo
