@@ -15,9 +15,10 @@
           .td= photo.description
           
     .clrear-float
-    .footer_Link
-      = link_to 'اعمال تغییرات', edit_service_path(@service)
-      \|
-      = link_to 'بازگشت', services_path
-      \|
-      = link_to 'Destroy', @service, method: :delete, data: { confirm: 'Are you sure?'}
+    #quotPan
+      .footer_Link
+        = link_to 'اعمال تغییرات', edit_service_path(@service)
+        \|
+        = link_to 'بازگشت', services_path
+        \|
+        = link_to 'Destroy', @service, method: :delete, data: { confirm: 'Are you sure?'}

@@ -3,7 +3,7 @@
     %h2 
       %span
         Company
-      Services List 
+      Products List 
     %h3.t= @product.title
     .clrear-float
     .description                  
@@ -14,10 +14,11 @@
           = image_tag photo.image(:large), :class => "pic_service"
           .td= photo.description          
     .clrear-float
-    .footer_Link
-      = link_to 'اعمال تغییرات', edit_product_path(@product)
-      \|
-      = link_to 'بازگشت', products_path
-      \|
-      = link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?'}
+    #quotPan
+      .footer_Link
+        = link_to 'اعمال تغییرات', edit_product_path(@product)
+        \|
+        = link_to 'بازگشت', products_path
+        \|
+        = link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?'}
 
