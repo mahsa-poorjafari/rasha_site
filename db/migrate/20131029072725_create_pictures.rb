@@ -4,6 +4,7 @@ class CreatePictures < ActiveRecord::Migration
       t.text :description
       t.integer :service_id
       t.integer :product_id
+      
       t.timestamps
     end
   end

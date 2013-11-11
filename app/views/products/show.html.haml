@@ -10,8 +10,9 @@
       .details
         = raw @product.description
       .div_pic
+        = image_tag @product.pictures.Where([is_sample=1]).image(:large), :class => "pic_service"
         -@product.pictures.each do |photo|
-          = image_tag photo.image(:large), :class => "pic_service"
+          = image_tag photo.image(:medium), :class => "pic_service"
           .td= photo.description          
     .clrear-float
     #quotPan

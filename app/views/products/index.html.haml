@@ -7,7 +7,7 @@
     .show-list
       .table
         - @products.each do |product|
-          .tr            
+          .tr
             .td= link_to content_tag(:div, product.title, :class => "pro-title"), product
             .td= link_to (image_tag product.pictures.first.image(:medium)), product
             
