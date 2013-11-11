@@ -1,7 +1,7 @@
 class Service < ActiveRecord::Base
   has_many :pictures, :dependent => :destroy
   attr_accessible :description, :title, :pictures_attributes, :description_fa, :title_fa
-  accepts_nested_attributes_for :pictures
+  accepts_nested_attributes_for :pictures, :allow_destroy => true
   
   validates :title, :uniqueness => true
   validates :title, :presence => {:message => 'The sevice title must be informed.'}

@@ -25,9 +25,6 @@ class ServicesController < ApplicationController
   # GET /services/new.json
   def new
     @service = Service.new
-	2.times do 
-		@service.pictures.build
-	end
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @service }

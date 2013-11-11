@@ -45,3 +45,4 @@ end
 gem 'i18n'
 gem "friendly_id", "~> 4.0.0.beta8"
 gem "nav_link_to", "~> 0.0.4"
+gem "nested_form"
