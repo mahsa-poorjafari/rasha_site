@@ -4,7 +4,7 @@ class Page < ActiveRecord::Base
   validates :title, :uniqueness => true
   validates :title, :presence => {:message => 'The page title must be informed.'}
   extend FriendlyId  
-  friendly_id :title
+  friendly_id :title_fa
 
   def title
     I18n.locale == :fa ? self.read_attribute("title_fa") : self.read_attribute("title")
