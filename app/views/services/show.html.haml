@@ -1,21 +1,23 @@
-%p#notice= notice
-%div.newP_page
-  %p
-    %b عنوان خدمات:
-    = @service.title
-  
-  %div.des
-    %b توضیحات:
-    = raw @service.description
-  %div
-    %br
-    %div.div_pic	  
-      -@service.pictures.each do |photo|
-        = image_tag photo.image(:small), :class => "pic_service"
-        = photo.description
+.list-div
+  #welcom_pan  
+    %h2 
+      %span
+        Company
+      Services List 
+    %h3.t= @service.title
+    .clrear-float
+    .description                  
+      .details
+        = raw @service.description
+      .div_pic
+        -@service.pictures.each do |photo|
+          = image_tag photo.image(:large), :class => "pic_service"
+          .td= photo.description
           
-  %div.cr
-  %div.footer_Link
-    = link_to 'اعمال تغییرات', edit_service_path(@service)
-    \|
-    = link_to 'بازگشت', services_path
+    .clrear-float
+    .footer_Link
+      = link_to 'اعمال تغییرات', edit_service_path(@service)
+      \|
+      = link_to 'بازگشت', services_path
+      \|
+      = link_to 'Destroy', @service, method: :delete, data: { confirm: 'Are you sure?'}

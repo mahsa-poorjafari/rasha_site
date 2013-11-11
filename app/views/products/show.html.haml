@@ -1,22 +1,23 @@
-%p#notice= notice
-%div.newP_page
-  %p
-    %b عنوان محصول
-    = @product.title
-  
-  %div.des
-    %b توضیحات:
-    = raw @product.description
-  %div
-    %br
-    %div.div_pic	  
-      -@product.pictures.each do |photo|
-        = image_tag photo.image(:small), :class => "pic_service"
-        =photo.description
-  
-  %div.cr
-  %div.footer_Link
-    = link_to 'اعمال تغییرات', edit_product_path(@product)
-    \|
-    = link_to 'بازگشت', products_path
+.list-div
+  #welcom_pan  
+    %h2 
+      %span
+        Company
+      Services List 
+    %h3.t= @product.title
+    .clrear-float
+    .description                  
+      .details
+        = raw @product.description
+      .div_pic
+        -@product.pictures.each do |photo|
+          = image_tag photo.image(:large), :class => "pic_service"
+          .td= photo.description          
+    .clrear-float
+    .footer_Link
+      = link_to 'اعمال تغییرات', edit_product_path(@product)
+      \|
+      = link_to 'بازگشت', products_path
+      \|
+      = link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?'}
 

@@ -2,7 +2,7 @@ class Picture < ActiveRecord::Base
   attr_accessible :description, :description_fa,  :image
   belongs_to :product
   belongs_to :service
-  has_attached_file :image, :styles => { :small => "150x150>", :medium => "300X300" }
+  has_attached_file :image, :styles => { :small => "150x150#", :medium => "200X200#", :large => "300X300#" }
   
   
   def description
