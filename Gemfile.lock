@@ -70,6 +70,7 @@ GEM
     multi_json (1.8.2)
     mysql2 (0.3.13)
     nav_link_to (0.0.4)
+    nested_form (0.3.1)
     orm_adapter (0.4.0)
     paperclip (3.5.2)
       activemodel (>= 3.0.0)
@@ -146,6 +147,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   nav_link_to (~> 0.0.4)
+  nested_form
   paperclip (~> 3.0)
   pg
   rails (= 3.2.14)
