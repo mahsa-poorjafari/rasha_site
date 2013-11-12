@@ -5,12 +5,17 @@
         Company
       Page
     .show-list 
-    - @pages.each do |page|      
-      %h3.t=  link_to page.title, page       
-      .footer_Link
-        = link_to 'Show', page
-        = link_to 'Edit', edit_page_path(page)
-        = link_to 'Destroy', page, :method => :delete, :data => { :confirm => 'Are you sure?' }     
+      .table
+        .tr
+        - @pages.each do |page| 
+          .tr
+            .td= link_to content_tag(:div, page.title, :class => "pro-title"), page          
+            .td
+              .footer_Link
+                = link_to 'Show', page
+                = link_to 'Edit', edit_page_path(page)
+                = link_to 'Destroy', page, :method => :delete, :data => { :confirm => 'Are you sure?' }     
     .clrear-float
     #quotPan       
       = link_to content_tag("span", "New Page"), new_page_path, :class => "brochure"
+

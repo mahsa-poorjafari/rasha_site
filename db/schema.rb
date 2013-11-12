@@ -29,6 +29,12 @@ ActiveRecord::Schema.define(:version => 20131112080100) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
+  create_table "mahsas", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.text     "page_html_fa"
@@ -49,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20131112080100) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "description_fa"
+    t.integer  "is_sample"
   end
 
   create_table "products", :force => true do |t|
@@ -58,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20131112080100) do
     t.datetime "updated_at",     :null => false
     t.string   "title_fa"
     t.string   "description_fa"
+    t.integer  "imgsample"
     t.integer  "is_sample"
   end
 
