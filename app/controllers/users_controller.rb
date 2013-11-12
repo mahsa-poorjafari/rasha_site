@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   layout "pages"
+  
+  before_filter :check_autentication, :except => [:login, :create_session]
   # GET /users
   # GET /users.json
   def index

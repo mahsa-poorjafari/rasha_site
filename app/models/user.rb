@@ -2,5 +2,8 @@ class User < ActiveRecord::Base
   attr_accessible :name, :password
   
   validates :name, :uniqueness => true
-  validates :name, :password,  :presence => {:message => "can't be empty"}
+  validates :name,  :presence => {:message => "can't be empty"}
+  validates :password, :presence =>true,
+                    :length => { :minimum => 5, :maximum => 40 },
+                    :confirmation =>true
 end

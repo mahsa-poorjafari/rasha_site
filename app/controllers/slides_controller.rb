@@ -1,4 +1,7 @@
 class SlidesController < ApplicationController
+  layout "pages"
+  
+  before_filter :check_autentication
   # GET /slides
   # GET /slides.json
   def index

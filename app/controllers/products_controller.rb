@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  layout "pages"
+
+  before_filter :check_autentication, :except => [:show, :index]
   # GET /products
   # GET /products.json
   def index
