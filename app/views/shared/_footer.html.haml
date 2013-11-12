@@ -2,21 +2,20 @@
   #foot_cen
     %h6
       %a{href: "index.html"} mcube
-    %ul
-      %li.space /
+    %ul      
       %li
-        = link_to "HOME", homedesign_path
-      %li.space \      
+        = link_to "HOME", home_path
+      %li.space -      
       %li
         = link_to "SERVICES", Service
-      %li.space /
+      %li.space -
       %li
         = link_to "PRODUCTS", Product
-      %li.space \
+      %li.space -
       -Page.all.each do |page|  
         %li
           = link_to page.title.upcase, page_path(page), :class => ('active' if current_page?(page_path(page)))    
-        %li.space /
+        %li.space -
       
     %p
       © Your Copyright Info Here. Designed by:

@@ -1,26 +1,39 @@
-= render 'slider'        
-.row
-  .span4
-    %h2 products
-    -Product.all.each do |product|
-      %p
-        =link_to product.title, product
-  .span4
-    %h2 services
-    -Service.all.each do |service|
-      %p
-        =link_to service.title, service 
-  .span4
-    %h2 news
-    %p 
-      will find something for here
-      we should ask the client for somthing to put here
-      I'm putting this here to check the long texts here
-      we should ask the client for somthing to put here
-      I'm putting this here to check the long texts here
-      we should ask the client for somthing to put here
-      I'm putting this here to check the long texts here
-:javascript
-  $(".item").first().addClass("active");
-  $(".slide-indicator").first().addClass("active");
-  $('.carousel').carousel();
+.text-div
+  #welcom_pan
+    %h2
+      %span> MCUBE
+      Introduction
+    
+    %p Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus. Curabitur est velit, suscipit eu faucibus eget, aliquam ac enim. per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus.
+    
+    %h3
+      %span
+        Products
+      =image_tag "icon1.png"
+    #service_pan
+      %ul
+        -Product.all.each do |product|
+          %li                                        
+            %h5= product.title
+            %p
+              = strip_tags(product.description)
+              =link_to "More", product  
+    
+    %h3
+      %span
+        Services
+      =image_tag "icon2.png"
+    #service_pan
+      %ul
+        -Service.all.each do |service|
+          %li                                        
+            %h5= service.title
+            %p
+              = strip_tags(service.description)
+              =link_to "More", service   
+    
+  :javascript
+    $(".item").first().addClass("active");
+    $(".slide-indicator").first().addClass("active");
+    $('.carousel').carousel();
+

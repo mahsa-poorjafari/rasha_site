@@ -1,14 +1,7 @@
 class HomeController < ApplicationController
   before_filter :set_locale, :except => [:change_language]
-	def home
-    @slides = Slide.all
-		respond_to do |format|
-			format.html # home.html.erb
-			format.js
-		end 
-	end
   
-  def homedesign
+  def home
     @slides = Slide.all
 		respond_to do |format|
 			format.html # home.html.erb
