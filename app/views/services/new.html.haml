@@ -1,6 +1,10 @@
-%div.newP_page
-	%h1 تعریف خدمات جدید
-
-	= render 'form'
-
-	= link_to 'بازگشت', services_path
+#welcom_pan   
+  %h2 
+    %span
+      Company
+    Add Service
+  .show-list
+    = render 'form'
+  #quotPan
+    .footer_Link
+      = link_to 'بازگشت', services_path

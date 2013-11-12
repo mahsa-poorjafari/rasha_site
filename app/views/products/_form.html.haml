@@ -8,7 +8,7 @@
 
   .field
     = f.label :title
-    = f.text_field :title
+    = f.text_field :title    
   .field
     = f.label :title_fa
     = f.text_field :title_fa
@@ -26,12 +26,14 @@
       = f.text_area :description_fa, :class => "ckeditor"    
       
   .field
+    
+  .field
     =f.fields_for :pictures do |picture|  
       .field
         =picture.file_field :image
         =picture.text_area :description, :rows => 3
         =picture.text_area :description_fa, :rows => 3
-        =picture.link_to_remove "Remove this task"
+        =picture.link_to_remove "Remove this task"      
   = f.link_to_add "Add a picture", :pictures
   .actions
     = f.submit 'ثبت'

@@ -1,7 +1,10 @@
-%h1 Editing product
+#welcom_pan   
+    %h2 
+      %span
+        Company
+      Edit Product
+  = render 'form'
 
-= render 'form'
-
-= link_to 'مشاهده', @product
-\|
-= link_to 'بازگشت', products_path
+  = link_to 'مشاهده', @product
+  \|
+  = link_to 'بازگشت', products_path

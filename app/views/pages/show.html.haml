@@ -7,8 +7,10 @@
     %p#notice= notice
     .show-des-en     
       =raw @page.page_html
-    #quotPan   
-      = link_to content_tag("span", "Edit"), edit_page_path(@page), :class => "brochure"            
-      = link_to content_tag("span", "Back"), homedesign_path, :class => "brochure"    
+    #quotPan 
+      .footer_Link
+        = link_to content_tag("span", "Edit"), edit_page_path(@page)
+        \|
+        = link_to content_tag("span", "Back"), homedesign_path
   
 
