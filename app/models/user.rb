@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :password
   
   validates :name, :uniqueness => true
-  validates :name, :presence => {:message => 'The user name must be informed.'}
-  extend FriendlyId  
-  friendly_id :name
+  validates :name, :password,  :presence => {:message => "can't be empty"}
 end

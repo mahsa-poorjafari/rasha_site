@@ -1,7 +1,10 @@
 #head
   #head_cen
     .head_height
-      .head-serach        
+      .head-serach
+        -if is_admin?
+          =link_to current_user.name, current_user
+          =link_to "sign out", delete_session_path
         .pull-left
           =link_to (image_tag "en.png", :class => "language-icon"), locale: :en
           =link_to (image_tag "fa.png", :class => "language-icon"), locale: :fa

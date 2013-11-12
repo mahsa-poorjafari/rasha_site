@@ -1,0 +1,10 @@
+= flash[:notice]
+= form_tag create_session_path do 
+  .field
+    User name:
+    = text_field_tag :name
+  .field
+    password
+    = password_field_tag :password  
+  .actions
+    = submit_tag "login"

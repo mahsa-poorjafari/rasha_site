@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  layout "pages"
   # GET /users
   # GET /users.json
   def index
@@ -80,4 +81,24 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def create_session
+    user = User.where(:name => params[:name]).first
+    if user.present? and user.password == params[:password]
+      session[:admin] = user
+      redirect_to :root and return
+    else
+      session[:admin] = nil
+      flash[:notice] = "user name or password is incorrect!"
+      render "login"
+    end
+
+  end
+
+  def delete_session
+    session[:admin] = nil
+    redirect_to :root
+  end
+
+
 end

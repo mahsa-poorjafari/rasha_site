@@ -1,5 +1,8 @@
 module ApplicationHelper
   def is_admin? 
-    false
+    session[:admin].present?
+  end
+  def current_user
+    session[:admin]
   end
 end
