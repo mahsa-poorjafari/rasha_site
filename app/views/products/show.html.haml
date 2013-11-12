@@ -14,11 +14,12 @@
           = image_tag photo.image(:medium), :class => "pic_service"
           .td= photo.description          
     .clrear-float
-    #quotPan
-      .footer_Link
-        = link_to 'اعمال تغییرات', edit_product_path(@product)
-        \|
-        = link_to 'بازگشت', products_path
-        \|
-        = link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?'}
+    -if is_admin?
+      #quotPan
+        .footer_Link
+          = link_to 'اعمال تغییرات', edit_product_path(@product)
+          \|
+          = link_to 'بازگشت', products_path
+          \|
+          = link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?'}
 

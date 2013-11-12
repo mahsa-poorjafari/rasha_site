@@ -10,6 +10,6 @@
           .tr
             .td= link_to content_tag(:div, product.title, :class => "pro-title"), product
             .td= link_to (image_tag product.pictures.first.image(:medium)), product
-            
-    #quotPan        
-      = link_to content_tag("span", "New Products"), new_product_path, :class => "brochure"
+    -if is_admin?        
+      #quotPan        
+        = link_to content_tag("span", "New Products"), new_product_path, :class => "brochure"

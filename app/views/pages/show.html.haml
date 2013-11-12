@@ -7,10 +7,11 @@
     %p#notice= notice
     .show-des-en     
       =raw @page.page_html
-    #quotPan 
-      .footer_Link
-        = link_to content_tag("span", "Edit"), edit_page_path(@page)
-        \|
-        = link_to content_tag("span", "Back"), homedesign_path
+    -if is_admin?
+      #quotPan 
+        .footer_Link
+          = link_to content_tag("span", "Edit"), edit_page_path(@page)
+          \|
+          = link_to content_tag("span", "Back"), homedesign_path
   
 

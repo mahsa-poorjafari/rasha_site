@@ -1,20 +1,16 @@
-%h1 Listing pages
-%table
-  %tr
-    %th Page title
-    %th Page html
-    %th
-    %th
-    %th
-
-  - @pages.each do |page|
-    %tr
-      %td= page.title
-      %td=raw page.page_html
-      %td= link_to 'Show', page
-      %td= link_to 'Edit', edit_page_path(page)
-      %td= link_to 'Destroy', page, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Page', new_page_path
+.list-div
+  #welcom_pan  
+    %h2 
+      %span
+        Company
+      Page
+    .show-list 
+    - @pages.each do |page|      
+      %h3.t=  link_to page.title, page       
+      .footer_Link
+        = link_to 'Show', page
+        = link_to 'Edit', edit_page_path(page)
+        = link_to 'Destroy', page, :method => :delete, :data => { :confirm => 'Are you sure?' }     
+    .clrear-float
+    #quotPan       
+      = link_to content_tag("span", "New Page"), new_page_path, :class => "brochure"

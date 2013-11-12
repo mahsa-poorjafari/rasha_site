@@ -10,6 +10,6 @@
           .tr
             .td= link_to content_tag(:div, service.title, :class => "pro-title"), service
             .td= link_to (image_tag service.pictures.first.image(:medium)), service
-                              
-    #quotPan        
-      = link_to content_tag("span", "New Service"), new_service_path, :class => "brochure"
+    -if is_admin?                          
+      #quotPan        
+        = link_to content_tag("span", "New Service"), new_service_path, :class => "brochure"
