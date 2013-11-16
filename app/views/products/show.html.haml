@@ -9,11 +9,13 @@
     .description                  
       .details
         = raw @product.description    
-      .div_pic        
-        %h4= @sample.first
+      .sample-pic=image_tag Picture.samplepic.first.image(:large)
+      .clrear-float
+      .div_pic                
         -@product.pictures.each do |photo|
-          = image_tag photo.image(:medium), :class => "pic_service"
-          .td= photo.description          
+          .tr
+            = image_tag photo.image(:medium), :class => "pic_service"
+            .td= photo.description          
     .clrear-float
     -if is_admin?
       #quotPan

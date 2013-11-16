@@ -25,6 +25,8 @@
       %div.editor
       = f.text_area :description_fa, :class => "ckeditor"    
   .field
+    =f.pictures.file_field :image
+  .field
     =f.fields_for :pictures do |picture|  
       .field
         =picture.file_field :image

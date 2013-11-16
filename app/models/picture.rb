@@ -11,4 +11,8 @@ class Picture < ActiveRecord::Base
   def description
     I18n.locale == :fa ? self.read_attribute("description_fa") : self.read_attribute("description")
   end
+  def self.samplepic
+    self.find_by_sql(["select pictures.* from pictures, products"+
+                         " where pictures.id=28" ])
+  end
 end
