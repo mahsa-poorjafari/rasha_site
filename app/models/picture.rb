@@ -1,5 +1,6 @@
 class Picture < ActiveRecord::Base
-  attr_accessible :description, :description_fa,  :image
+  attr_accessible :description, :description_fa,  :image, :is_sample
+  attr_accessor :is_sample
   has_one :product
   has_one :service
   
@@ -13,6 +14,6 @@ class Picture < ActiveRecord::Base
   end
   def self.samplepic
     self.find_by_sql(["select pictures.* from pictures, products"+
-                         " where pictures.id=28" ])
+                         " where pictures.id=28" ]).first
   end
 end

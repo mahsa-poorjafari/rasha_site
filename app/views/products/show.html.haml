@@ -9,7 +9,7 @@
     .description                  
       .details
         = raw @product.description    
-      .sample-pic=image_tag Picture.samplepic.first.image(:large)
+      .sample-pic=image_tag Picture.samplepic.image(:large)
       .clrear-float
       .div_pic                
         -@product.pictures.each do |photo|
