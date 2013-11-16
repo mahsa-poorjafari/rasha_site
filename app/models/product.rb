@@ -16,6 +16,8 @@ class Product < ActiveRecord::Base
   def description
     I18n.locale == :fa ? self.read_attribute("description_fa") : self.read_attribute("description")
   end
-  
+  def sample_pic
+    Picture.where(product_id:self.id).first
+  end
 end
 
