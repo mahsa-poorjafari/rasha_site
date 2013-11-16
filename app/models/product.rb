@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
   has_many :pictures, :dependent => :destroy
+
   attr_accessible :description, :title, :description_fa, :title_fa, :pictures_attributes
   accepts_nested_attributes_for :pictures, :allow_destroy => true
  
@@ -15,4 +16,11 @@ class Product < ActiveRecord::Base
   def description
     I18n.locale == :fa ? self.read_attribute("description_fa") : self.read_attribute("description")
   end
+  def samplepic
+    Picture.where(:id => self.sample_pic_id).first
+  end
+  def samplepic=(picture)
+    self.sample_pic_id = picture.id
+  end
 end
+

@@ -15,8 +15,7 @@
       -Page.all.each do |page|  
         %li
           = link_to page.title.upcase, page_path(page), :class => ('active' if current_page?(page_path(page)))    
-        %li.space -
-      
+        %li.space -      
     %p
       © Your Copyright Info Here. Designed by:
       %a{href: "http://www.Raush.net", target: "_blank"} Raush.net

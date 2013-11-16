@@ -8,8 +8,9 @@
     .clrear-float
     .description                  
       .details
-        = raw @product.description
+        = raw @product.description    
       .div_pic        
+        %h4= @sample.first
         -@product.pictures.each do |photo|
           = image_tag photo.image(:medium), :class => "pic_service"
           .td= photo.description          
