@@ -26,8 +26,8 @@
       = f.text_area :description_fa, :class => "ckeditor"    
   
   .field
-    =f.fields_for :pictures do |picture|      
-      .field        
+    =f.fields_for :pictures do |picture|  
+      .field
         =picture.file_field :image
         =picture.text_area :description, :rows => 3
         =picture.text_area :description_fa, :rows => 3        
