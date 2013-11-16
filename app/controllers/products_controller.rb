@@ -49,7 +49,7 @@ class ProductsController < ApplicationController
     
     respond_to do |format|
       if @product.save
-        @product.sample_pic_id = @product.pictures.first if @product.pictures.present?
+        @product.sample_pic_id = @product.pictures.first.id if @product.pictures.present?
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render json: @product, status: :created, location: @product }
       else
