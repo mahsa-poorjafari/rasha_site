@@ -1,13 +1,14 @@
 #welcom_pan
+  %h2
+    %span>  ورود به سایت/ 
+    بخش مدیریت
+
   #quotPan
-    %h3
-      %span="ورود مدیریت به"
-      سایت
     = flash[:notice]
     = form_tag create_session_path do 
       .field
-        = text_field_tag :name, "نام کاربری را وارد کنید",:class => "txt"      
-        = password_field_tag :password,"رمز عبور خود را وارد کنید" ,{:class => "txt"}      
+        = text_field_tag :name, "",:class => "txt", :placeholder => "نام کاربری را وارد کنید"
+        = password_field_tag :password, "", {:class => "txt"}      
         = submit_tag "ورود", {:class => "btn"}
     
-   
+ 

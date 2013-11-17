@@ -7,28 +7,30 @@
           %li= msg
 
   .field
-    = f.label :title
+    = f.label "عنوان محصول به انگلیسی"
     = f.text_field :title    
   .field
-    = f.label :title_fa
+    = f.label "عنوان محصول به فارسی"
     = f.text_field :title_fa
 
   .field
-    = f.label :description
+    = f.label "توضیحات به انگلیسی"
     %br
       %div.editor
       = f.text_area :description, :class => "ckeditor"
 
   .field
-    = f.label :description_fa
+    = f.label "توضیحات به فارسی"
     %br
       %div.editor
       = f.text_area :description_fa, :class => "ckeditor"    
+
+  .field
+    =f.fields_for :pictures do |picture|  
+      = render "shared/upload_image_form", :picture => picture
+  .clrear-float    
+  = f.link_to_add content_tag(:span, "افزودن تصویر"), :pictures, :id => "add_new_picture"
   
-  .field    
-    = render "shared/upload_image_form" 
-      
-  = f.link_to_add "Add a picture", :pictures, :id => "add_new_picture"
   .actions
     = f.submit 'ثبت', :class => "btn"
     
