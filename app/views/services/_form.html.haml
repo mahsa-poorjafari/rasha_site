@@ -26,11 +26,26 @@
       = f.text_area :description_fa, :class => "ckeditor"          
   .field
     =f.fields_for :pictures do |picture|  
-      .field
-        =picture.file_field :image
+      .field        
+        =picture.file_field :image, :class => "hide"
+        =image_tag (picture.object.image.present? ? picture.object.image(:medium) : "missing.png"), :class => "enable_file_select" 
         =picture.text_area :description, :rows => 3
-        =picture.text_area :description_fa, :rows => 3
+        =picture.text_area :description_fa, :rows => 3        
         =picture.link_to_remove "Remove this task"
-    = f.link_to_add "Add a picture", :pictures    
+        
+    = f.link_to_add "Add a picture", :pictures 
   .actions
-    = f.submit 'ثبت'
+    = f.submit 'ثبت', :class => "btn"
+    
+:javascript
+  function enable_file_select(){
+  $(".enable_file_select").unbind('click').click(function(){
+  $(this).parent().find("input:file").click();
+  });}
+  enable_file_select();
+  $("#add_new_picture").click(function(){
+    console.log('h11');
+    $(".enable_file_select").unbind('click');
+    window.setTimeout('enable_file_select()', 1000);
+  });
+

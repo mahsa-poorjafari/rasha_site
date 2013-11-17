@@ -9,12 +9,12 @@
     .description                  
       .details
         = raw @service.description
-      .sample-pic=image_tag Picture.samplepic.first.image(:large)
+      .sample-pic=image_tag @service.sample_picture.image(:large)
       .clrear-float
       .div_pic
         -@service.pictures.each do |photo|
           .tr
-            = image_tag photo.image(:large), :class => "pic_service"
+            = image_tag photo.image(:medium), :class => "pic_service"
             .td= photo.description          
     .clrear-float
     -if is_admin?

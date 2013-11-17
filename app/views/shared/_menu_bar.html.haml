@@ -4,6 +4,7 @@
       .head-serach
         -if is_admin?
           =link_to current_user.name, current_user
+          \|
           =link_to "sign out", delete_session_path
         .pull-left
           =link_to (image_tag "en.png", :class => "language-icon"), locale: :en

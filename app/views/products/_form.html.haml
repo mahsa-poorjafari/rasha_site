@@ -25,19 +25,13 @@
       %div.editor
       = f.text_area :description_fa, :class => "ckeditor"    
   
-  .field
-    =f.fields_for :pictures do |picture|  
-      .field
-        
-        =picture.file_field :image, :class => "hide"
-        =image_tag (picture.object.image.present? ? picture.object.image(:medium) : "missing.png"), :class => "enable_file_select" 
-        =picture.text_area :description, :rows => 3
-        =picture.text_area :description_fa, :rows => 3        
-        =picture.link_to_remove "Remove this task"
+  .field    
+    = render "shared/upload_image_form" 
       
   = f.link_to_add "Add a picture", :pictures, :id => "add_new_picture"
   .actions
-    = f.submit 'ثبت'
+    = f.submit 'ثبت', :class => "btn"
+    
 :javascript
   function enable_file_select(){
   $(".enable_file_select").unbind('click').click(function(){
