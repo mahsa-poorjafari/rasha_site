@@ -8,7 +8,6 @@
     %title
       industrial web site | #{@head.fetch(:title, '') if @head}
     =stylesheet_link_tag "application", :media => "all"
-    =stylesheet_link_tag "styles", :media => "all"
     =favicon_link_tag 'favicon.png', rel:'shortcut icon', type: 'image/png'
     =javascript_include_tag "application"
     =csrf_meta_tags
