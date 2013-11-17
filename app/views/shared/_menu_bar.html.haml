@@ -17,11 +17,11 @@
             %li
               = link_to page.title, page_path(page), :class => ('active' if current_page?(page_path(page)))    
           %li
-            = link_to "SERVICES", Service, :class => ('active' if current_page?(Service))    
+            = link_to t("services_section.title"), Service, :class => ('active' if current_page?(Service))    
           %li
-            = link_to "PRODUCTS", Product,  :class => ('active' if current_page?(Product))                               
+            = link_to t("products_section.title"), Product,  :class => ('active' if current_page?(Product))
           %li
-            = link_to "Home", home_path, :class => ('active' if current_page?( home_path))          
+            = link_to t("home"), home_path, :class => ('active' if current_page?( home_path))          
           
           
 

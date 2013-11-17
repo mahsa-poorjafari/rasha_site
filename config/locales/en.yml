@@ -10,3 +10,9 @@ en:
     edit_product: "Edit Product"
     product_title: "Title"
     product_description: "Descriptions"
+  services_section:
+    title: "Services"
+    new_service: "new Service"
+    edit_service: "edit Service"
+    serviec_title: "Title"
+    serviec_description: "Descriptions"    
