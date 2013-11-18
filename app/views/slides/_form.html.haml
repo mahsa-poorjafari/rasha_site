@@ -7,12 +7,16 @@
           %li= msg
 
   .field
-    = f.file_field :image, :id => "slide_img"
-    = f.label :dscription
-    = f.text_area :description, :id => "slide_des"
-    = f.label :description_fa
-    = f.text_area :description_fa, :id => "slide_des"
+    .s-upload-img
+      = f.file_field :image, :id => "slide_img"    
+    .s-description
+      = f.label :dscription
+      = f.text_area :description, :id => "slide_des"
+    .s-description
+      = f.label :description_fa
+      = f.text_area :description_fa, :id => "slide_des"
+  .clrear-float
     
   .actions
     .div_btn
-      = f.submit 'ثبت تصویر'
+      = f.submit 'ثبت تصویر', :class => "btn"

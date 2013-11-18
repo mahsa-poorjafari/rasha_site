@@ -4,8 +4,9 @@ class Product < ActiveRecord::Base
   attr_accessible :description, :title, :description_fa, :title_fa, :pictures_attributes
   accepts_nested_attributes_for :pictures, :allow_destroy => true
  
-  validates :title, :uniqueness => true
-  validates :title, :presence => {:message => 'The product title must be informed.'}
+  validates :title, :title_fa, :uniqueness => true
+  validates :title, :title_fa, :presence => {:message => 'The product title must be informed.'}
+  
   extend FriendlyId  
   friendly_id :title_fa
 

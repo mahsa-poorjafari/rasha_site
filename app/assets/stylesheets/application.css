@@ -41,7 +41,7 @@
 }
 .list-div {width:85%; margin-top:10px; margin-bottom:20px}
 .show-list {margin-top:70px; margin-bottom:20px}
-
+.show.slider {margin-top:100px; margin-bottom:20px; width:90%}
 .clrear-float {clear:both}
 .tr {float:left; width:300px; height:300px; margin-left:10px; text-align:center}
 .td {width:300px; margin:10px; text-align:center;}
