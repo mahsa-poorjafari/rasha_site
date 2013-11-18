@@ -126,6 +126,8 @@ ul#infoPan li p.descrip						{margin-top:13px; font-size:12px; line-height:16px;
 .div_pic {margin-top:20px;width:100%;  height:250px; }
 
 .head-serach {width:100%; background:url(headsearch.png) repeat-x}
+.head-serach a {color:#31a1ff; margin:2px; }
+.head-serach a:hover {color:#fff;  }
 .pull-left {margin-left :30px; margin-top:5px; height:25px}
 .main { width:100%;  }
 .show-title {overflow-y:scroll; overflow-x:hidden; visibility: visible;
@@ -138,7 +140,9 @@ scrollbar-shadow-color: #fff; scrollbar-highlight-color: #fff;  width:100%; heig
 .text-div {width:90%; margin-top:20px; margin-right:20px}
 .title {float:left; font-family:Arial, Helvetica, sans-serif; font-size:26px; color:#31a1ff; font-weight:bold; line-height:30px; letter-spacing:-1.7px}
 .des-title {float:right; width:250px; height:200px; text-align:center}
-
+#slide_des {width:300px; height:200px}
+.s-upload-img {width:60%;}
+.s-description {float:right; width:40%; margin-top:30px}
 .upload-pic {height:100px}
 .add-picture {float:left;border:#444 solid .5px;}
 

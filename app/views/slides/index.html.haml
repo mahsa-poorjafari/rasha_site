@@ -1,8 +1,14 @@
-%h1 اسلاید شو
-
-= link_to 'add new image', new_slide_path, :class => "btn"
-= render 'home/slider'            
-
+.list-div
+  #welcom_pan   
+    %h2 
+      %span
+        IDM Co
+      Slider
+    .show.slider  
+      = render 'home/slider'            
+    #quotPan
+      = link_to content_tag("span", "Add new image"), new_slide_path, :class => "brochure"
+      
 :javascript
   $(".item").first().addClass("active");
   $('.carousel').carousel();
