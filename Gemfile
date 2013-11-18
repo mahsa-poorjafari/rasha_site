@@ -30,6 +30,8 @@ gem 'rspec-rails', '~> 2.0'
 # gem 'bcrypt-ruby', '~> 3.0.0'
 group :development do 
   gem "mysql2"
+  # To use debugger
+  gem 'debugger'
 end
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
@@ -40,8 +42,7 @@ end
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'debugger'
+
 gem 'i18n'
 gem "friendly_id", "~> 4.0.0.beta8"
 gem "nav_link_to", "~> 0.0.4"
