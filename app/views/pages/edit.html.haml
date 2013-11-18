@@ -1,7 +1,11 @@
-%h1 Editing page
-
-= render 'form'
-
-= link_to 'Show', @page
-\|
-= link_to 'Back', pages_path
+.list-div
+  #welcom_pan   
+    %h2 
+      %span
+        IDM Co
+      Edit Pages
+    .show-list
+      = render 'form'
+    #quotPan
+      .footer_Link
+        = link_to 'بازگشت', pages_path

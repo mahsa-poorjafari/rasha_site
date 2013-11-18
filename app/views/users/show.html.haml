@@ -1,16 +1,17 @@
-#welcom_pan
-  %h2 
-    %span
-      Admin
-    Profile
-  %p#notice= notice
-  %p
-    %b Name:
-    = @user.name
+.list-div
+  #welcom_pan
+    %h2 
+      %span
+        Admin
+      Profile
+    %p#notice= notice
+    %p
+      %b Name:
+      = @user.name
 
-  #quotPan
-    .footer_Link
-      = link_to 'اعمال تغییرات', edit_user_path(@user)
-      \|
-      = link_to 'بازگشت', users_path
+    #quotPan
+      .footer_Link
+        = link_to 'اعمال تغییرات', edit_user_path(@user)
+        \|
+        = link_to 'بازگشت', users_path
     

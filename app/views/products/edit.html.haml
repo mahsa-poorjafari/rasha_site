@@ -1,10 +1,11 @@
-#welcom_pan   
-  %h2 
-    %span
-      Company
-    Edit Product
-  = render 'form'
-
-  = link_to 'مشاهده', @product
-  \|
-  = link_to 'بازگشت', products_path
+.list-div
+  #welcom_pan   
+    %h2 
+      %span
+        IDM Co
+      Edit Product
+    .show-list
+      = render 'form'
+    #quotPan
+      .footer_Link
+        = link_to 'بازگشت', products_path
