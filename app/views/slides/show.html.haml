@@ -2,13 +2,15 @@
   #welcom_pan   
     %h2 
       %span
-        Demo
-      Company
+        IDM Co
+      Slider Demo
     %p#notice= notice
     = image_tag @slide.image(:gallery_size)
     .show-des-fa
       =raw @slide.description
-    #quotPan   
-      = link_to content_tag("span", "Edit"), edit_slide_path(@slide), :class => "brochure"            
-      = link_to content_tag("span", "Back"), home_path, :class => "brochure"    
+    #quotPan
+      .footer_Link
+        = link_to content_tag("span", "Edit"), edit_slide_path(@slide)
+        \|
+        = link_to content_tag("span", "Back"), home_path
     

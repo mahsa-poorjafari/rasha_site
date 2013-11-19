@@ -91,7 +91,7 @@ class UsersController < ApplicationController
       redirect_to :root and return
     else
       session[:admin] = nil
-      flash[:notice] = "user name or password is incorrect!"
+      flash[:partial] = "error"
       render "login"
     end
 

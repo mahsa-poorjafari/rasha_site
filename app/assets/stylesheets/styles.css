@@ -76,7 +76,7 @@ ul#infoPan li p.descrip						{margin-top:13px; font-size:12px; line-height:16px;
 
 #quotPan									{width:100%; text-align:center; height:80px; margin-top:20px; float:right; position:relative;  border-top:#c9c9c9 solid 1px; background:url(pat.png) repeat }
 #quotPan h3									{width:274px; margin:14px 0 0 24px; float:right; line-height:45px}
-
+#quotPan p.error {text-align:center; color:red; margin-top:0px; float:left; width:50%}
 #quotPan input.txt							{width:176px; margin:20px 20px 0 0; padding:3px 5px; height:30px; float:right; font-family:Arial, Helvetica, sans-serif; font-size:17px; color:#bfbfbf; font-weight:bold; border:#cbcbcb solid 1px; background:#ffffff}
 
 #quotPan input.btn							{width:113px; height:42px; margin-top:18px; float:right; font-family:Arial, Helvetica, sans-serif; font-size:17px; color:#ffffff; font-weight:bold; text-align:center; cursor:pointer; border:0; background:url(submitBtn.png) no-repeat}
@@ -142,7 +142,7 @@ scrollbar-shadow-color: #fff; scrollbar-highlight-color: #fff;  width:100%; heig
 .des-title {float:right; width:250px; height:200px; text-align:center}
 #slide_des {width:300px; height:200px}
 .s-upload-img {width:60%;}
-.s-description {float:right; width:40%; margin-top:30px}
+.s-description {float:right; width:40%; margin-top:30px; }
 .upload-pic {height:100px}
 .add-picture {float:left;border:#444 solid .5px;}
 
@@ -151,3 +151,4 @@ scrollbar-shadow-color: #fff; scrollbar-highlight-color: #fff;  width:100%; heig
 .remove-task {float:right; width:30px; height:25px; margin-top:30px}
 .enable_file_select {width:100px; height:130px; float:right; }
 
+.login-form {float:right}

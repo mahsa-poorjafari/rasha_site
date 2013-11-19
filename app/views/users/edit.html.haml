@@ -1,6 +1,14 @@
-<h1>Editing user</h1>
+.list-div
+  #welcom_pan   
+    %h2 
+      %span
+        IDM Co
+      Edit Profile
+    .show-list
+      = render 'form' 
+      
+    #quotPan
+      .footer_Link
+        = link_to 'بازگشت',  users_path
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>

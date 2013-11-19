@@ -15,5 +15,9 @@
     = f.label :password
     %br/
     = f.password_field :password  
+  .field
+    = f.label "Confirm password"
+    %br/
+    = f.password_field "password_confirmation"
   .actions
-    = f.submit
+    = f.submit "ثبت", :class => "btn"

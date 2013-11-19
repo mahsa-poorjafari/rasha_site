@@ -3,7 +3,7 @@
     .head_height
       .head-serach
         -if is_admin?
-          =link_to current_user.name, current_user
+          =link_to current_user.name, edit_user_path(current_user)
           \|
           =link_to "sign out", delete_session_path
         .pull-left

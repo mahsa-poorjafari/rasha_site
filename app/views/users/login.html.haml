@@ -4,10 +4,12 @@
     بخش مدیریت
 
   #quotPan
-    = flash[:notice]
-    = form_tag create_session_path do 
-      .field
-        = text_field_tag :name, "",:class => "txt", :placeholder => "نام کاربری را وارد کنید"
-        = password_field_tag :password, "", {:class => "txt"}      
-        = submit_tag "ورود", {:class => "btn"}   
+    - if flash[:partial]
+      = render partial: "shared/#{flash[:partial]}"
+    .login-form
+      = form_tag create_session_path do 
+        .field
+          = text_field_tag :name, "",:class => "txt", :placeholder => "نام کاربری را وارد کنید"
+          = password_field_tag :password, "", {:class => "txt"}      
+          = submit_tag "ورود", {:class => "btn"}   
 
