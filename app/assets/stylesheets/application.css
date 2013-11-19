@@ -41,7 +41,7 @@
 }
 .list-div {width:85%; margin-top:10px; margin-bottom:20px; margin-left:5%; margin-right:5%;}
 .show-list {margin-top:70px; margin-bottom:20px}
-.show.slider {margin-top:100px; margin-bottom:20px; width:90%}
+.index_slider {margin-top:100px; margin-bottom:20px; width:100%}
 .clrear-float {clear:both}
 .tr {float:left; width:300px; height:300px; margin-left:10px; text-align:center}
 .td {width:300px; margin:10px; text-align:center;}
@@ -53,8 +53,8 @@
 
 .total-division {width:100%; background:url(headBg.png) repeat-x; }
  
-.above-menu {margin-top:-48px; margin-right:5px;width:450px;height:25px; background:url(bannerBgh.png) repeat-x;position: relative; }
-.below-menu{margin-top:-10px;margin-right:-25px;width:950px;height:50px; background:url(bannerBgf.png) repeat-x;position: relative; }
+.above-menu {margin-top:-48px; margin-right:5px;width:50%;height:25px; background:url(bannerBgh.png) repeat-x;position: relative; }
+.below-menu{margin-top:-10px;margin-right:-25px;width:105.5%;height:50px; background:url(bannerBgf.png) repeat-x;position: relative; }
 
 .text{float:left;margin-right:50px; width:300px}
 .newP_page {margin-top:50px}
