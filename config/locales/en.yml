@@ -7,6 +7,10 @@ en:
   Products: "Products"
   Services: "Services"
   Introduction: "Flat=3 No.38, Nobakht St., Apadana Ave., Tehran, Iran  Tel=+982188529565 telefax=+982188529864"
+  welcom_pan: "IDM Co"
+  Index_Page: "IDM Co"
+  IDM: "Introduction"
+  IDM_Page: "Pages"
   
   products_section:
     title: "Products"
