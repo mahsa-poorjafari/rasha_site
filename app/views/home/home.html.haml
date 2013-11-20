@@ -1,14 +1,15 @@
 .text-div
   #welcom_pan
     %h2
-      %span> MCUBE
+      %span> IDM Co
       Introduction
     
-    %p Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus. Curabitur est velit, suscipit eu faucibus eget, aliquam ac enim. per inceptos himenaeos. Nulla vitae diam magna, eget fringilla tellus.
+    %p 
+      = t("Introduction")
     
     %h3
       %span
-        Products
+        = t("Products")
       =image_tag "icon1.png"
     #service_pan
       %ul
@@ -20,8 +21,8 @@
               =link_to "More", product  
     
     %h3
-      %span
-        Services
+      %span 
+        = t("Services")
       =image_tag "icon2.png"
     #service_pan
       %ul

@@ -4,6 +4,10 @@
 en:
   back: "back"
   home: "home"
+  Products: "Products"
+  Services: "Services"
+  Introduction: "Flat=3 No.38, Nobakht St., Apadana Ave., Tehran, Iran  Tel=+982188529565 telefax=+982188529864"
+  
   products_section:
     title: "Products"
     new_product: "New Product"
