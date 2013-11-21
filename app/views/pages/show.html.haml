@@ -1,17 +1,17 @@
 .list-div
   #welcom_pan   
     %h2 
+      = t("Page")
       %span
-        = @page.title
-      = t("IDM_Co")      
+        = t("IDM_Page")   
     %p#notice= notice
     .show-des-en     
       =raw @page.page_html
     -if is_admin?
       #quotPan 
         .footer_Link
-          = link_to content_tag("span", "Edit"), edit_page_path(@page)
+          = link_to content_tag("span", "اعمال تغییرات"), edit_page_path(@page)
           \|
-          = link_to content_tag("span", "Back"), home_path
+          = link_to content_tag("span", "بازگشت"), home_path
   
 

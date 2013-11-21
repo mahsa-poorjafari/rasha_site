@@ -53,7 +53,7 @@
 
 .total-division {width:100%; background:url(headBg.png) repeat-x; }
  
-.above-menu {margin-top:-48px; margin-right:5px;width:50%;height:25px; background:url(bannerBgh.png) repeat-x;position: relative; }
+.above-menu {margin-top:-48px; margin-right:5px;width:62%;height:25px; background:url(bannerBgh.png) repeat-x;position: relative; }
 .below-menu{margin-top:-10px;margin-right:-25px;width:105.5%;height:50px; background:url(bannerBgf.png) repeat-x;position: relative; }
 
 .text{float:left;margin-right:50px; width:300px}

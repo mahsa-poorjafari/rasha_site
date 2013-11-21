@@ -8,15 +8,15 @@
         - @user.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :name
+    = f.label "نام کاربری"
     %br/
     = f.text_field :name
   .field
-    = f.label :password
+    = f.label "رمز عبور"
     %br/
     = f.password_field :password  
   .field
-    = f.label "Confirm password"
+    = f.label "تکرار رمز عبور"
     %br/
     = f.password_field "password_confirmation"
   .actions

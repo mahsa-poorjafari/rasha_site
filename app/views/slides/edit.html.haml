@@ -1,9 +1,9 @@
 .list-div
   #welcom_pan   
     %h2 
+      = t("Slider")
       %span
-        IDM Co
-      Edit Slider
+        = t("IDM_Slider")
     .show-list
       .form-holder    
         = form_for @slide, :html => {:multipart => true} do |f| 
@@ -24,7 +24,7 @@
           .clrear-float
           .actions
             .div_btn
-              = f.submit 'update', :class => "btn"
+              = f.submit 'ثبت', :class => "btn"
     #quotPan
       .footer_Link
         = link_to 'بازگشت', slides_path

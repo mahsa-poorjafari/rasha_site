@@ -1,7 +1,7 @@
 .list-div
   #welcom_pan  
     %h2 
-      = t("Index_Page")
+      = t("Page")
       %span
         = t("IDM_Page")      
     .show-list 
@@ -12,10 +12,11 @@
             .td= link_to content_tag(:div, page.title, :class => "pro-title"), page          
             .td
               .footer_Link
-                = link_to 'Show', page
-                = link_to 'Edit', edit_page_path(page)
-                = link_to 'Destroy', page, :method => :delete, :data => { :confirm => 'Are you sure?' }     
+               
+                = link_to 'اعمال تغییرات', edit_page_path(page)
+                \|
+                = link_to 'حذف', page, :method => :delete, :data => { :confirm => 'Are you sure?' }     
     .clrear-float
     #quotPan       
-      = link_to content_tag("span", "New Page"), new_page_path, :class => "brochure"
+      = link_to content_tag("span", "صفحه جدید"), new_page_path, :class => "brochure"
 

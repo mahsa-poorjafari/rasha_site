@@ -1,9 +1,9 @@
 .list-div
   #welcom_pan   
     %h2 
+      = t("Product")
       %span
-        IDM Co
-      Products List
+        = t("IDM_Product")
     .show-list
       .table
         - @products.each do |product|
@@ -12,4 +12,4 @@
             .td= link_to (image_tag product.pictures.first.image(:medium)), product
     -if is_admin?        
       #quotPan        
-        = link_to content_tag("span", "New Products"), new_product_path, :class => "brochure"
+        = link_to content_tag("span", "محصول جدید"), new_product_path, :class => "brochure"
