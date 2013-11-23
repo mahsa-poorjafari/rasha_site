@@ -17,14 +17,10 @@
     %br
       %div.editor
       = f.text_area :page_html, :class => "ckeditor"
-      :javascript
-        CKEDITOR.replace( 'page_html_en' );
   .field
     = f.label "توضیحات به فارسی"
     %br
       %div.editor
       = f.text_area :page_html_fa, :class => "ckeditor"
-      :javascript
-        CKEDITOR.replace( 'page_html_fa' );
   .actions
     = f.submit 'ثبت', :class => "btn"
