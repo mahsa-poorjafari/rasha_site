@@ -11,6 +11,6 @@ class Page < ActiveRecord::Base
   end
   
   def page_html
-    I18n.locale == :fa ? self.read_attribute("page_html_fa") : self.read_attribute("page_html_en")
+    I18n.locale == :fa ? self.read_attribute("page_html_fa") : self.read_attribute("page_html")
   end
 end
