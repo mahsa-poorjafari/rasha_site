@@ -1,13 +1,13 @@
 .text-div
   #welcom_pan
-    %h2
+    %h2.heading2
       = t("welcom_pan")
       %span 
         = t("IDM")         
-    %p 
+    %p.homepage 
       = t("Introduction")
     
-    %h3
+    %h3.heading3
       %span
         = t("Products")
       =image_tag "icon1.png"
@@ -20,7 +20,7 @@
               = strip_tags(product.description)
               =link_to "More", product  
     
-    %h3
+    %h3.heading3
       %span 
         = t("Services")
       =image_tag "icon2.png"
@@ -37,4 +37,5 @@
     $(".item").first().addClass("active");
     $(".slide-indicator").first().addClass("active");
     $('.carousel').carousel();
+        
 
