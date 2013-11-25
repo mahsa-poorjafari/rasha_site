@@ -1,12 +1,12 @@
 .list-div
-  #welcom_pan  
+  #welcom_pan{:class => I18n.locale}  
     %h2.heading2 
       = t("Page")
       %span
         = t("IDM_Page")      
     .show-list 
-      .table
-        .tr
+      .table{:class => I18n.locale}
+        .tr{:class => I18n.locale}
         - @pages.each do |page| 
           .tr
             .td= link_to content_tag(:div, page.title, :class => "pro-title"), page          

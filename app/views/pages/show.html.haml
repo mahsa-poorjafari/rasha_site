@@ -1,11 +1,11 @@
 .list-div
-  #welcom_pan   
+  #welcom_pan{:class => I18n.locale}   
     %h2.heading2 
-      = t("Page")
+      = @page.title
       %span
         = t("IDM_Page")   
     %p#notice= notice
-    .show-des-en     
+    .show-des-en{:class => I18n.locale}     
       =raw @page.page_html
     -if is_admin?
       #quotPan 

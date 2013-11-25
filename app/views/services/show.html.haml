@@ -1,12 +1,12 @@
 .list-div
-  #welcom_pan  
+  #welcom_pan{:class => I18n.locale} 
      %h2.heading2 
       = t("Service")
       %span
         = t("IDM_Service")
     %h3.t= @service.title
     .clrear-float
-    .description                  
+    .description{:class => I18n.locale}                  
       .details
         = raw @service.description
       .sample-pic=image_tag @service.sample_picture.image(:large)

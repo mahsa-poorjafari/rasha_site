@@ -1,13 +1,13 @@
 .list-div
-  #welcom_pan   
+  #welcom_pan{:class => I18n.locale}
     %h2.heading2 
       = t("Product")
       %span
         = t("IDM_Product")
     .show-list
-      .table
+      .table{:class => I18n.locale}
         - @products.each do |product|
-          .tr
+          .tr{:class => I18n.locale}
             .td= link_to content_tag(:div, product.title, :class => "pro-title"), product
             .td= link_to (image_tag product.pictures.first.image(:medium)), product
     -if is_admin?        

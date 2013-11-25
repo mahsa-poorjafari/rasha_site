@@ -48,7 +48,7 @@
 .td a div.pro-title {margin-top:20px; text-decoration:none;}
 .tr:hover div.pro-title { background:url(slideBg1.png) repeat-x; color:#fff; } 
 .td:hover a {text-decoration:none;}
-.show-des-en {width:100%; margin-top:60px; text-align:right; float:right;}
+.show-des-en {width:100%; margin-top:60px;float:right;}
 
 .total-division {width:100%; background:url(headBg.png) repeat-x; }
  

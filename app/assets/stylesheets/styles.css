@@ -39,14 +39,14 @@ img.ban_bg									{width:auto; float:left; position:absolute; top:117px; right:
 #welcom_pan #quotPan a.brochure span					{width:auto; height:54px; padding:0 13px 0 23px; float:left; background:url(buttonBg.png) no-repeat 0 0}
 #welcom_pan p								{width:755px; font-size:12px; color:#4d4d4d; line-height:18px;}
 #welcom_pan .details p {width:100%; margin:0px}
-#welcom_pan .details {float:right; width:55%; text-align:right; margin-top:10px; margin-right:10px}
+#welcom_pan .details {float:right; width:55%; margin-top:10px; margin-right:10px}
 #welcom_pan .sample-pic {float:right; width:40%; text-align:left; margin-top:10px}
 #welcom_pan p.homepage {margin:60px 5px 5px 30px}
-#welcom_pan .div_pic .td {width:90%; margin-right:15px;  text-align:right}
-#welcom_pan .div_pic .tr {width:25%; float:left; margin-right:10px}
+#welcom_pan .div_pic .td {width:90%; margin-right:15px;}
+#welcom_pan .div_pic .tr {width:25%; margin-right:10px}
 #welcom_pan	iframe							{margin:37px 0 0 14px; float:left; border-bottom:#c9c9c9 solid 1px; background:url(crosslines.png) no-repeat right 8px}
 #welcom_pan a.enlarg						{width:auto; margin:15px 0 0 14px; float:left; color:#848484}
-#welcom_pan h3.heading3								{clear:left; width:auto; float:left; font-family:Arial, Helvetica, sans-serif; font-size:26px; color:#31a1ff; font-weight:bold; line-height:60px; letter-spacing:-1.7px}
+#welcom_pan h3.heading3								{ width:auto; font-family:Arial, Helvetica, sans-serif; font-size:26px; color:#31a1ff; font-weight:bold; line-height:60px; letter-spacing:-1.7px}
 #welcom_pan h3.heading3 span										{color:#3b3b3b; margin-right:0px}
 #welcom_pan h3.t								{float:righ; margin-top:60px; }
 
@@ -88,14 +88,14 @@ ul#infoPan li p.descrip						{margin-top:13px; font-size:12px; line-height:16px;
 #foot p										{width:70%; margin-right:100px; margin-top:10px; float:right; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; color:#767676; line-height:18px; text-align:center}
 #foot p	a									{color:inherit}
 
-#service_pan								{width:100%; margin-top:20px; float:left}
-#service_pan ul								{width:100%; float:left}
-#service_pan ul li							{width:325px; height:100px; margin:0 30px; float:left; border-bottom:#c9c9c9 solid 1px}
+#service_pan								{width:100%; margin-top:20px; }
+#service_pan ul								{width:100%; }
+#service_pan ul li							{width:325px; height:100px; margin:0 30px;  border-bottom:#c9c9c9 solid 1px}
 /*#service_pan ul li:first-child				{border:0}
 */#service_pan ul li:hover					{background:#fbfbfb}
-#service_pan ul li h5						{width:auto; margin:10px 0 0 10px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#31a1ff}
+#service_pan ul li h5						{width:100%; margin:10px 0 0 10px; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#31a1ff}
 #service_pan ul li p						{width:300px; margin:5px 0 0 10px; float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#5c5c5c}
-#service_pan ul li p a						{width:auto; float:right; color:#31a1ff; margin-left:10px}
+#service_pan ul li p a						{width:auto; color:#31a1ff; margin-left:10px}
 
 .div-slider {width:70%; margin-right:15%; margin-left:15%; margin-top:-20px}
 .div_pic {margin-top:20px;width:100%;  height:250px; }
@@ -121,7 +121,7 @@ scrollbar-shadow-color: #fff; scrollbar-highlight-color: #fff;  width:100%; heig
 .des-title {float:right; width:250px; height:200px; text-align:center}
 #slide_des {width:300px; height:200px}
 .s-upload-img {width:60%;}
-.s-description {float:right; width:40%; margin-top:30px; }
+.s-description {width:40%; margin-top:30px; }
 .upload-pic {height:100px}
 .add-picture {float:left;border:#444 solid .5px;}
 

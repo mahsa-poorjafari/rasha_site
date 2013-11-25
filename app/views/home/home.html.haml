@@ -7,7 +7,7 @@
     %p.homepage 
       = t("Introduction")
     
-    %h3.heading3
+    %h3.heading3{:class => I18n.locale}
       %span
         = t("Products")
       =image_tag "icon1.png"
@@ -18,20 +18,20 @@
             %h5= product.title
             %p
               = strip_tags(product.description)
-              =link_to "More", product  
+              =link_to t("More"), product, {:class => I18n.locale} 
     
     %h3.heading3
       %span 
         = t("Services")
       =image_tag "icon2.png"
-    #service_pan
+    #service_pan{:class => I18n.locale}
       %ul
         -Service.all.each do |service|
           %li                                        
-            %h5= service.title
+            %h5{:class => I18n.locale}= service.title
             %p
               = strip_tags(service.description)
-              =link_to "More", service   
+              =link_to t("More"), service, {:class => I18n.locale}  
     
   :javascript
     $(".item").first().addClass("active");
