@@ -10,7 +10,7 @@
     %h3.heading3{:class => I18n.locale}
       %span
         = t("Products")
-      =image_tag "icon1.png"
+      =image_tag "products-icon.png"
     #service_pan
       %ul
         -Product.all.each do |product|
@@ -23,7 +23,7 @@
     %h3.heading3
       %span 
         = t("Services")
-      =image_tag "icon2.png"
+      =image_tag "services-icon.png"
     #service_pan{:class => I18n.locale}
       %ul
         -Service.all.each do |service|

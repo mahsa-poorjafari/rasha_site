@@ -121,7 +121,7 @@ scrollbar-shadow-color: #fff; scrollbar-highlight-color: #fff;  width:100%; heig
 .des-title {float:right; width:250px; height:200px; text-align:center}
 #slide_des {width:300px; height:200px}
 .s-upload-img {width:60%;}
-.s-description {width:40%; margin-top:30px; }
+.s-description {width:40%; margin-top:30px;float:right }
 .upload-pic {height:100px}
 .add-picture {float:left;border:#444 solid .5px;}
 
@@ -132,3 +132,4 @@ scrollbar-shadow-color: #fff; scrollbar-highlight-color: #fff;  width:100%; heig
 
 .login-form {float:right}
 
+.lable {float:right; width:100px; margin-top:25px; margin-right:5px; margin-left:-20px}
