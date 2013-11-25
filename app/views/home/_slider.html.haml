@@ -12,7 +12,7 @@
               = link_to  slide, :method => :delete, :data => { :confirm => 'Are you sure?' }  do
                 %i.icon-trash
           -if slide.description.present?
-            .image-des-holder
+            .image-des-holder{:class => I18n.locale}
               = slide.description 
     .carousel-controls
       .center
