@@ -1,12 +1,12 @@
 !!!
-%html{:lang => "en"}
+%html
   %head
     %meta{:charset => "utf-8"}
-    %meta{:name => "keywords", :content => @keywords || "industrial website keywords"}
-    %meta{:name => "description", :content => @page_desc || "industrial website!"}
+    %meta{:name => "keywords", :content => @keywords || "Rasha WebSite keywords"}
+    %meta{:name => "description", :content => @page_desc || "Rasha WebSite!"}
     = yield(:refresh_meta) if content_for?(:refresh_meta)
     %title
-      industrial web site | #{@head.fetch(:title, '') if @head}
+      Rasha Web Site | #{@head.fetch(:title, '') if @head}
     =stylesheet_link_tag "application", :media => "all"
     =favicon_link_tag 'favicon.png', rel:'shortcut icon', type: 'image/png'
     =javascript_include_tag "application"

@@ -1,13 +1,13 @@
 .list-div
-  #welcom_pan{:class => I18n.locale}   
+  #welcom_pan
     %h2.heading2 
       = t("Service")
       %span
         = t("IDM_Service")
     .show-list
-      .table{:class => I18n.locale}
+      .table
         - @services.each do |service|
-          .tr{:class => I18n.locale}
+          .tr
             .td= link_to content_tag(:div, service.title, :class => "pro-title"), service
             .td= link_to (image_tag service.pictures.first.image(:medium)), service
     -if is_admin?                          

@@ -1,21 +1,19 @@
 IndustiralSite::Application.routes.draw do
 
-scope "(:locale)", :locale => /en|fa/ do
-  get 'home' => 'home#home', :as => "home" 
-  resources :pages
-  resources :services
-  resources :products
 
-  get 'homedesign'  => 'home#homedesign'
-  get ":locale/moh" => "home#moh"
+get 'home' => 'home#home', :as => "home" 
+resources :pages
+resources :services
+resources :products
 
-  root :to => 'home#home'
-end
+
+root :to => 'home#home'
+
 
   resources :users
   resources :slides
 
-  get "change_language" => "home#change_language"
+
   get "login" => "users#login"  
   post "create_session" => "users#create_session", :as => :create_session
   get "delete_session" => "users#delete_session", :as => :delete_session

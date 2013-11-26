@@ -60,3 +60,7 @@
 .t {color:#000}
 .description  {width:100%; }
 .footer_Link {text-align:center; margin-top:20px}
+.rezomeh {border-top:#444444 solid 1px;border-right:#444444 solid 1px;border-left:#444444 solid 1px; height:150px; width:90%; margin-right:5%; margin-left:5%; margin-top:100px; margin-bottom:-100px}
+.item-company {float:right; width:150px; height:120px; margin:5px;}
+.item-company span {margin-top:10px; height:20px}
+.himg {height:100px; }

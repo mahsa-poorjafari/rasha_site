@@ -1,9 +1,9 @@
 !!!
-%html{:lang => "en"}
+%html
   %head
     %meta{:charset => "utf-8"}
-    %meta{:name => "keywords", :content => @keywords || "industrial website keywords"}
-    %meta{:name => "description", :content => @page_desc || "industrial website!"}
+    %meta{:name => "keywords", :content => @keywords || "Rasha WebSite keywords"}
+    %meta{:name => "description", :content => @page_desc || "Rasha WebSite!"}
     = yield(:refresh_meta) if content_for?(:refresh_meta)
     %title
       Rasha Web Site | #{@head.fetch(:title, '') if @head}
