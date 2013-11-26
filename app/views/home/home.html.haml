@@ -15,9 +15,9 @@
       %ul
         -Product.all.each do |product|
           %li                                        
-            %h5= product.title
+            %h5= product.title_fa
             %p
-              = strip_tags(product.description)
+              = strip_tags(product.description_fa)
               =link_to "ادامه مطلب", product
     
     %h3.heading3
@@ -28,9 +28,9 @@
       %ul
         -Service.all.each do |service|
           %li                                        
-            %h5= service.title
+            %h5= service.title_fa
             %p
-              = strip_tags(service.description)
+              = strip_tags(service.title_fa)
               =link_to  "ادامه مطلب", service
     .rezomeh
       .item-company
