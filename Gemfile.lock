@@ -149,7 +149,6 @@ DEPENDENCIES
   debugger
   friendly_id (~> 4.0.0.beta8)
   haml-rails
-  i18n
   jquery-rails
   mysql2
   nav_link_to (~> 0.0.4)
