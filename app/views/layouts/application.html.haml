@@ -6,7 +6,7 @@
     %meta{:name => "description", :content => @page_desc || "industrial website!"}
     = yield(:refresh_meta) if content_for?(:refresh_meta)
     %title
-      industrial web site | #{@head.fetch(:title, '') if @head}
+      Rasha Web Site | #{@head.fetch(:title, '') if @head}
     =stylesheet_link_tag "application", :media => "all"
     =favicon_link_tag 'favicon.png', rel:'shortcut icon', type: 'image/png'
     =javascript_include_tag "application"

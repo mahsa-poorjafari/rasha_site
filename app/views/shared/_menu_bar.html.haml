@@ -9,24 +9,20 @@
           =link_to "اسلایدر", slides_path, :id => "admin-link", :class => ('active' if current_page?(slides_path))
           =link_to "صفحه جدید", pages_path, :id => "admin-link", :class => ('active' if current_page?(pages_path))
           
-            
-          
-          
         .pull-left
-          =link_to (image_tag "en.png", :class => "language-icon", :id => "en"), locale: :en
-          =link_to (image_tag "fa.png", :class => "language-icon", :id => "en"), locale: :fa
+          
         .clrear-float
       #head-menu
-        %h1.logo          
+        %h1.logo                    
         %ul
           %li
-            = link_to t("home"), home_path, :class => ('active' if current_page?( home_path))          
+            = link_to "صفحه اصلی", home_path, :class => ('active' if current_page?( home_path))          
           
           -Page.all.each do |page|  
             %li
               = link_to page.title, page_path(page), :class => ('active' if current_page?(page_path(page)))    
           %li
-            = link_to t("services_section.title"), Service, :class => ('active' if current_page?(Service))    
+            = link_to "خدمات", Service, :class => ('active' if current_page?(Service))    
           %li
-            = link_to t("products_section.title"), Product,  :class => ('active' if current_page?(Product))
+            = link_to "محصولات", Product,  :class => ('active' if current_page?(Product))
 

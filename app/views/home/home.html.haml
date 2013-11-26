@@ -1,15 +1,15 @@
 .text-div
-  #welcom_pan{:class => I18n.locale}
+  #welcom_pan
     %h2.heading2
-      = t("welcom_pan")
+      = "شرکت"
       %span 
-        = t("IDM")         
+        = "راشا"         
     %p.homepage 
-      = t("Introduction")
+      
     
-    %h3.heading3{:class => I18n.locale}
+    %h3.heading3
       %span
-        = t("Products")
+        = "محصولات"
       =image_tag "products-icon.png"
     #service_pan
       %ul
@@ -18,20 +18,20 @@
             %h5= product.title
             %p
               = strip_tags(product.description)
-              =link_to t("More"), product, {:class => I18n.locale} 
+              =link_to "ادامه مطلب", product
     
     %h3.heading3
       %span 
-        = t("Services")
+        = "خدمات"
       =image_tag "services-icon.png"
-    #service_pan{:class => I18n.locale}
+    #service_pan
       %ul
         -Service.all.each do |service|
           %li                                        
-            %h5{:class => I18n.locale}= service.title
+            %h5= service.title
             %p
               = strip_tags(service.description)
-              =link_to t("More"), service, {:class => I18n.locale}  
+              =link_to  "ادامه مطلب", service
     
   :javascript
     $(".item").first().addClass("active");

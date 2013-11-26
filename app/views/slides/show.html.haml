@@ -13,4 +13,6 @@
         = link_to content_tag("span", "اعمال تغییرات"), edit_slide_path(@slide)
         \|
         = link_to content_tag("span", "بازگشت"), home_path
+        \|
+        = link_to 'حذف تصویر', @slide, method: :delete, data: { confirm: 'آیا میخواهید این تصویر را حذف کنید?'}
     
