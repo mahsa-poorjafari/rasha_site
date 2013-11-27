@@ -4,8 +4,8 @@ class Service < ActiveRecord::Base
   attr_accessible :description, :title, :pictures_attributes, :description_fa, :title_fa
   accepts_nested_attributes_for :pictures, :allow_destroy => true
   
-  validates :title, :title_fa, :uniqueness => true
-  validates :title, :title_fa, :presence => {:message => 'The sevice title must be informed.'}
+  validates :title_fa, :uniqueness => true
+  validates :title_fa, :presence => {:message => 'The sevice title must be informed.'}
   extend FriendlyId  
   friendly_id :title_fa
 

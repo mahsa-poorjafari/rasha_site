@@ -1,12 +1,12 @@
 .list-div
-  #welcom_pan{:class => I18n.locale}   
+  #welcom_pan
     %h2.heading2 
-      = @page.title
-      %span
-        = t("IDM_Page")   
+      = @page.title_fa
+      %span 
+        = "راشا"         
     %p#notice= notice
-    .show-des-en{:class => I18n.locale}     
-      =raw @page.page_html
+    .show-des-en
+      =raw @page.page_html_fa
     -if is_admin?
       #quotPan 
         .footer_Link

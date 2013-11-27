@@ -1,9 +1,9 @@
 .list-div
   #welcom_pan   
-    %h2.heading2 
-      = t("Slider")
-      %span
-        = t("IDM_Slider")
+    %h2.heading2       
+      = "اسلایدر"
+      %span 
+        = "راشا"      
     .show-list
       .form-holder    
         = form_for @slide, :html => {:multipart => true} do |f| 
@@ -13,12 +13,9 @@
           = f.hidden_field :crop_w
           = f.hidden_field :crop_h
           .field
+            
             .s-description
-              = f.label "توضیحات به انگلیسی"
-              = f.text_area :description, :cols => '80', :rows => "3", :class => "slide-description"
-          
-            .s-description
-              = f.label "توضیحات به فارسی"
+              = f.label "توضیحات"
               = f.text_area :description_fa, :cols => '80', :rows => "3", :class => "slide-description"  
           
           .clrear-float

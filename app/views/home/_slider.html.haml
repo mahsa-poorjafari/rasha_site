@@ -11,9 +11,9 @@
                 %i.icon-edit
               = link_to  slide, :method => :delete, :data => { :confirm => 'Are you sure?' }  do
                 %i.icon-trash
-          -if slide.description.present?
-            .image-des-holder{:class => I18n.locale}
-              = slide.description 
+          -if slide.description_fa.present?
+            .image-des-holder
+              = slide.description_fa 
     .carousel-controls
       .center
         %ol.carousel-indicator-list.carousel-indicators

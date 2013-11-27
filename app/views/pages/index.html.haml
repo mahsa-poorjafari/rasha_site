@@ -1,12 +1,12 @@
 .list-div
-  #welcom_pan{:class => I18n.locale}  
+  #welcom_pan
     %h2.heading2 
-      = t("Page")
-      %span
-        = t("IDM_Page")      
+      = "صفحات متنی"
+      %span 
+        = "راشا"              
     .show-list 
-      .table{:class => I18n.locale}
-        .tr{:class => I18n.locale}
+      .table
+        .tr
         - @pages.each do |page| 
           .tr
             .td= link_to content_tag(:div, page.title, :class => "pro-title"), page          
@@ -18,5 +18,5 @@
                 = link_to 'حذف', page, :method => :delete, :data => { :confirm => 'Are you sure?' }     
     .clrear-float
     #quotPan       
-      = link_to content_tag("span", "صفحه جدید"), new_page_path, :class => "brochure"
+      = link_to content_tag("span", "صفحه جدید"), new_page_path, :class => "btn"
 

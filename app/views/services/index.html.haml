@@ -1,15 +1,15 @@
 .list-div
   #welcom_pan
-    %h2.heading2 
-      = t("Service")
-      %span
-        = t("IDM_Service")
+    %h2.heading2       
+      = "لیست خدمات"
+      %span 
+        = "راشا"        
     .show-list
       .table
         - @services.each do |service|
           .tr
-            .td= link_to content_tag(:div, service.title, :class => "pro-title"), service
+            .td= link_to content_tag(:div, service.title_fa, :class => "pro-title"), service
             .td= link_to (image_tag service.pictures.first.image(:medium)), service
     -if is_admin?                          
       #quotPan        
-        = link_to content_tag("span", "خدمات جدید"), new_service_path, :class => "brochure"
+        = link_to content_tag("span", "خدمات جدید"), new_service_path, :class => "btn"

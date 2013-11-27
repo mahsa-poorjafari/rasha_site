@@ -1,12 +1,12 @@
 .list-div
-  #welcom_pan{:class => I18n.locale} 
-    %h2.heading2 
-      = t("Product")
-      %span
-        = t("IDM_Product")
+  #welcom_pan
+    %h2.heading2
+      ="محصولات"
+      %span 
+        = "راشا"        
     %h3.t= @product.title
     .clrear-float
-    .description{:class => I18n.locale}                  
+    .description
       .details
         = raw @product.description    
       .sample-pic=image_tag @product.sample_picture.image(:large)

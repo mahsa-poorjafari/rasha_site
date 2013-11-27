@@ -1,11 +1,9 @@
 .field.upload-pic      
   =picture.file_field :image, :class => "hide"
   =image_tag (picture.object.image.present? ? picture.object.image(:medium) : "missing.png"), :class => "enable_file_select" 
+  
   .des-title
-    توضیحات به انگلیسی
-    =picture.text_area :description, :rows => 3
-  .des-title
-    توضیحات به فارسی
+    توضیحات 
     =picture.text_area :description_fa, :rows => 3        
   
   =picture.link_to_remove image_tag ("Delete_Icon.png"), :class => "remove-task"

@@ -1,15 +1,16 @@
 .list-div
-  #welcom_pan{:class => I18n.locale}
-    %h2.heading2 
-      = t("Product")
-      %span
-        = t("IDM_Product")
+  #welcom_pan
+    %h2.heading2       
+      = "لیست محصولات"
+      %span 
+        = "راشا"        
+      
     .show-list
       .table{:class => I18n.locale}
         - @products.each do |product|
-          .tr{:class => I18n.locale}
-            .td= link_to content_tag(:div, product.title, :class => "pro-title"), product
+          .tr
+            .td= link_to content_tag(:div, product.title_fa, :class => "pro-title"), product
             .td= link_to (image_tag product.pictures.first.image(:medium)), product
     -if is_admin?        
       #quotPan        
-        = link_to content_tag("span", "محصول جدید"), new_product_path, :class => "brochure"
+        = link_to content_tag("span", "محصول جدید"), new_product_path, :class => "btn"
