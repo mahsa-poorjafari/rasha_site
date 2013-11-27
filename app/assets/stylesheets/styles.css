@@ -66,18 +66,10 @@ ul#infoPan li p.descrip						{margin-top:13px; font-size:12px; line-height:16px;
 #quotPan input.txt							{width:176px; margin:20px 20px 0 0; padding:3px 5px; height:30px; float:right; font-family:Arial, Helvetica, sans-serif; font-size:17px; color:#bfbfbf; font-weight:bold; border:#cbcbcb solid 1px; background:#ffffff}
 #quotPan a {color:#5f5f5f}
 
-.btn							{margin-right:5px; width:auto; height:auto; margin-top:20px; float:right; font-family:"BNAZANIN"; font-size:17px; color:#3B3B3B; font-weight:bold; text-align:center; cursor:pointer; border:0; 
-background: -webkit-linear-gradient(white, #7DDC1F); /* For Safari */
-background: -o-linear-gradient(white, #7DDC1F); /* For Opera 11.1 to 12.0 */
-background: -moz-linear-gradient(white, #7DDC1F); /* For Firefox 3.6 to 15 */
-background: linear-gradient(white, #7DDC1F); /* Standard syntax (must be last) */
-
-}
-.btn:hover					{
-   -webkit-box-shadow: 0 8px 6px -6px black;
-	   -moz-box-shadow: 0 8px 6px -6px black;
-	        box-shadow: 0 8px 6px -6px black;}
-a.btn span{text-decoration:none; color:#3B3B3B;}
+.btn							{margin-right:5px; width:auto; height:30px; margin-top:20px; float:right; font-family:"BNAZANIN"; font-size:17px; color:#fff; font-weight:bold; text-align:center; cursor:pointer; border:0; background:#7ddc1f;}
+.btn:hover					{   -moz-box-shadow: inset -5px 0px 6px #5f5f5f;-webkit-box-shadow: inset -5px 0px 5px #5f5f5f;box-shadow: inset -5px 0px 6px #5f5f5f;}
+a.btn {height:30px;}
+a.btn span{text-decoration:none; color:#3B3B3B; }
 
 .foot-logo { width:70%;  margin-top:0px; height:60px; text-align:center}
 .foot-logo p.h6{background:url(logoft.png) no-repeat; position:relative; height:50px; width:100px; float:right; margin-left:200px; }

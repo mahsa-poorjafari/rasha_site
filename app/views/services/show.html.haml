@@ -1,22 +1,22 @@
 .list-div
   #welcom_pan
     %h2.heading2       
-      = @service.title_fa
+      = @service.title
       %span 
         = "راشا"       
 
-    %h3.t= @service.title_fa
+    %h3.t= @service.title
     .clrear-float
     .description
       .details
-        = raw @service.description_fa
+        = raw @service.description
       .sample-pic=image_tag @service.sample_picture.image(:large)
       .clrear-float
       .div_pic
         -@service.pictures.each do |photo|
           .tr
             = image_tag photo.image(:medium), :class => "pic_service"
-            .td= photo.description_fa          
+            .td= photo.description
     .clrear-float
     -if is_admin?
       #quotPan

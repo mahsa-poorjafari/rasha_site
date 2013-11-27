@@ -1,12 +1,12 @@
 .list-div
   #welcom_pan
     %h2.heading2 
-      = @page.title_fa
+      = @page.title
       %span 
         = "راشا"         
     %p#notice= notice
     .show-des-en
-      =raw @page.page_html_fa
+      =raw @page.page_html
     -if is_admin?
       #quotPan 
         .footer_Link

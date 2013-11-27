@@ -9,7 +9,7 @@
       .table{:class => I18n.locale}
         - @products.each do |product|
           .tr
-            .td= link_to content_tag(:div, product.title_fa, :class => "pro-title"), product
+            .td= link_to content_tag(:div, product.title, :class => "pro-title"), product
             .td= link_to (image_tag product.pictures.first.image(:medium)), product
     -if is_admin?        
       #quotPan        

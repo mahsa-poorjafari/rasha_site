@@ -44,10 +44,11 @@
 .td a div.pro-title {margin-top:20px; text-decoration:none;}
 .tr:hover div.pro-title { background:url(slideBg1.png) repeat-x; color:#fff; } 
 .td:hover a {text-decoration:none;}
+.td a.color-green {color:#7ddc1f;}
 .show-des-en {width:100%; margin-top:60px;float:right;}
 
 .total-division {width:100%; }
- 
+
 .above-menu {margin-top:-48px; margin-right:5px;width:62%;height:25px; background:url(bannerBgh.png) repeat-x;position: relative; }
 .below-menu{margin-top:-10px;margin-right:-25px;width:105.5%;height:30px; background-color:#7ddc1f; position: relative; }
 
@@ -58,6 +59,6 @@
 .footer_Link {text-align:center; margin-top:20px}
 .rezomeh {border-top:#444444 solid 1px;border-right:#444444 solid 1px;border-left:#444444 solid 1px; height:120px; width:90%; margin-right:5%; margin-left:5%; margin-top:100px; }
 .item-company {float:right; width:150px; height:120px; margin:5px;}
-.item-company span {margin-top:-20px; height:20px; background }
+.item-company span {margin-top:-20px; height:20px;  }
 
 .himg {height:100px; }

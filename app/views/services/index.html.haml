@@ -8,7 +8,7 @@
       .table
         - @services.each do |service|
           .tr
-            .td= link_to content_tag(:div, service.title_fa, :class => "pro-title"), service
+            .td= link_to content_tag(:div, service.title, :class => "pro-title"), service
             .td= link_to (image_tag service.pictures.first.image(:medium)), service
     -if is_admin?                          
       #quotPan        

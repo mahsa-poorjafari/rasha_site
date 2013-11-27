@@ -5,17 +5,16 @@
       %span 
         = "راشا"              
     .show-list 
-      .table
-        .tr
+      .table        
         - @pages.each do |page| 
           .tr
             .td= link_to content_tag(:div, page.title, :class => "pro-title"), page          
             .td
               .footer_Link
                
-                = link_to 'اعمال تغییرات', edit_page_path(page)
+                = link_to 'اعمال تغییرات', edit_page_path(page), :class => "color-green"
                 \|
-                = link_to 'حذف', page, :method => :delete, :data => { :confirm => 'Are you sure?' }     
+                = link_to 'حذف', page, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "color-green"     
     .clrear-float
     #quotPan       
       = link_to content_tag("span", "صفحه جدید"), new_page_path, :class => "btn"
