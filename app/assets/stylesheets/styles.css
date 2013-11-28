@@ -31,7 +31,6 @@ img.ban_bg									{width:auto; float:left; position:absolute; top:117px; right:
 #content_cen								{width:800px; margin:0 auto}
 #content_sup								{width:800px; float:left; position:relative}
 
-
 #welcom_pan									{width:85%; margin-left:5%;margin-right:5%; margin-top:27px; float:left;  background:url(crosslines.png) no-repeat left 8px;}
 #welcom_pan h2.heading2											{width:auto; margin-top:9px; font-family:"BNAZANIN"; font-size:26px; color:#7ddc1f; font-weight:bold; line-height:30px; letter-spacing:-1.7px}
 #welcom_pan h2.heading2 span										{color:#3b3b3b; text-transform:lettercase; margin-right:5px}
@@ -66,16 +65,15 @@ ul#infoPan li p.descrip						{margin-top:13px; font-size:12px; line-height:16px;
 #quotPan input.txt							{width:176px; margin:20px 20px 0 0; padding:3px 5px; height:30px; float:right; font-family:Arial, Helvetica, sans-serif; font-size:17px; color:#bfbfbf; font-weight:bold; border:#cbcbcb solid 1px; background:#ffffff}
 #quotPan a {color:#5f5f5f}
 
-.btn							{margin-right:5px; width:auto; height:30px; margin-top:20px; float:right; font-family:"BNAZANIN"; font-size:17px; color:#fff; font-weight:bold; text-align:center; cursor:pointer; border:0; background:#7ddc1f;}
-.btn:hover					{   -moz-box-shadow: inset -5px 0px 6px #5f5f5f;-webkit-box-shadow: inset -5px 0px 5px #5f5f5f;box-shadow: inset -5px 0px 6px #5f5f5f;}
+.btn							{margin-right:5px; width:auto; height:30px; margin-top:20px; float:right; font-family:"BNAZANIN"; font-size:17px; color:#fff; font-weight:bold; text-align:center; cursor:pointer; border:0px; background:#7ddc1f;}
+
+.btn:hover					{   -moz-box-shadow: inset -4px 0px 1px #848484;-webkit-box-shadow: inset -4px 0px 1px #848484;box-shadow: inset -4px 0px 1px #848484;}
 a.btn {height:30px;}
 a.btn span{text-decoration:none; color:#3B3B3B; }
 
 .foot-logo { width:70%;  margin-top:0px; height:60px; text-align:center}
 .foot-logo p.h6{background:url(logoft.png) no-repeat; position:relative; height:50px; width:100px; float:right; margin-left:200px; }
 .foot-link { width:100%;}
-
-
 
 #foot										{width:100%; height:120px; float:left; }
 #foot_cen									{width:800px; margin:5px auto 0 auto}
@@ -125,10 +123,10 @@ scrollbar-shadow-color: #fff; scrollbar-highlight-color: #fff;  width:100%; heig
 .upload-pic {height:100px}
 .add-picture {float:left;border:#444 solid .5px;}
 
-
 .remove-task {float:right; width:30px; height:25px; margin-top:30px}
 .enable_file_select {width:100px; height:130px; float:right; }
 
-.login-form {float:right}
+.login-form {float:right;}
+.login-btn {margin-top:25px; height:30px; width:auto}
 
 .lable {float:right; width:100px; margin-top:25px; margin-right:5px; margin-left:-20px}
