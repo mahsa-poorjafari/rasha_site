@@ -1,5 +1,5 @@
 html{background:#151515; font-family:"BNAZANIN"}
-body										{margin:0; background:#151515; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; }
+body										{margin:0; background:#151515; font-family: BNAZANIN;}
 *											{margin:0; padding:0}
 a											{outline:0; text-decoration:none}
 img											{border:0}
@@ -130,3 +130,5 @@ scrollbar-shadow-color: #fff; scrollbar-highlight-color: #fff;  width:100%; heig
 .login-btn {margin-top:25px; height:30px; width:auto}
 
 .lable {float:right; width:100px; margin-top:25px; margin-right:5px; margin-left:-20px}
+.customer-des {height:100px; width:250px}
+.c-logo {float:right}

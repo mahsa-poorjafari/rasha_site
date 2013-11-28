@@ -1,13 +1,16 @@
 IndustiralSite::Application.routes.draw do
 
 
-get 'home' => 'home#home', :as => "home" 
-resources :pages
-resources :services
-resources :products
+  
 
 
-root :to => 'home#home'
+  get 'home' => 'home#home', :as => "home" 
+  resources :pages
+  resources :services
+  resources :products
+  resources :customers
+
+  root :to => 'home#home'
 
 
   resources :users

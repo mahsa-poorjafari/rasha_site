@@ -1,0 +1,20 @@
+.list-div
+  #welcom_pan
+    %h2.heading2 
+      ="مشتریان"
+      %span 
+        = "راشا"              
+    .show-list 
+      .table        
+        - @customers.each do |customer| 
+          .tr
+            .td= link_to content_tag(:div, customer.name, :class => "pro-title"), customer          
+            .td
+              .footer_Link
+               
+                = link_to 'اعمال تغییرات', edit_customer_path(customer), :class => "color-green"
+                \|
+                = link_to 'حذف', customer, :method => :delete, :data => { :confirm => 'آیا می خواهید این آیتم را حذف کنید؟' }, :class => "color-green"     
+    .clrear-float
+    #quotPan       
+      = link_to content_tag("span", "مشتری جدید"), new_customer_path, :class => "btn"

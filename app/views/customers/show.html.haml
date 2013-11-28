@@ -1,0 +1,20 @@
+.list-div
+  #welcom_pan
+    %h2.heading2 
+      ="مشتریان"
+      %span 
+        = "راشا"         
+    %p#notice= notice
+    %h3.t= @customer.name
+        
+    .div_pic                       
+      .c-logo
+        = image_tag @customer.image(:medium)
+        .td= @customer.description          
+    -if is_admin?
+      #quotPan 
+        .footer_Link
+          = link_to content_tag("span", "اعمال تغییرات"), edit_customer_path(@customer)
+          \|
+          = link_to content_tag("span", "بازگشت"), customers_path
+  

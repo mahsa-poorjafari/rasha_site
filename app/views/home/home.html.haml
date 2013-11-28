@@ -33,20 +33,12 @@
               = strip_tags(service.description)
               =link_to  "ادامه مطلب", service
     .rezomeh
-      .item-company
-        .himg
-          =image_tag "co_logos_mean_09.jpg"
-        .nav-company="توضیحات مربوط"
-      .item-company
-        .himg
-          =image_tag "raush-logo.jpg"
-        .nav-company="توضیحات مربوط"
-      .item-company
-        .himg
-          =image_tag "company_logo.jpg"
-        .nav-company="توضیحات مربوط"
-      
-      
+      - Customer.all.each do |customer| 
+        .item-company
+          .himg
+            =image_tag customer.image(:small)
+          .nav-company= customer.description      
+        
     
   :javascript
     $(".item").first().addClass("active");
