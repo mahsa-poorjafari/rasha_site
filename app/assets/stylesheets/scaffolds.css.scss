@@ -19,13 +19,13 @@ pre {
 }
 
 a {
-  
-  
-  &:hover {
-    color: #fff;
+    color:#7ddc1f;
+  &:hover {    
     text-decoration:none;
+    color:#5f5f5f;
   }
 }
+
 
 div {
   &.field, &.actions {

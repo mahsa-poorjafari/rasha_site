@@ -9,7 +9,7 @@
         
     .div_pic                       
       .c-logo
-        = image_tag @customer.image(:medium)
+        = image_tag (@customer.image.present? ? @customer.image(:medium) : "missing.png")
         .td= @customer.description          
     -if is_admin?
       #quotPan 

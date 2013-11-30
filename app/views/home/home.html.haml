@@ -45,12 +45,12 @@
     $(".slide-indicator").first().addClass("active");
     $('.carousel').carousel();
         
+        
     $(".item-company").mouseover(function(){
-      $(this span).fadeup(100);
+      $( this ).find( "span" ).fadeOut("slow").fadeIn();
     });
     
-    $(".item-company").mouseover(function(){
-    $(this).css("background-color","blue");
+    $(".item-company").mouseout(function(){
+      $(this).find("span").fadeOut("slow").remove();
     });
-  
-
+    
