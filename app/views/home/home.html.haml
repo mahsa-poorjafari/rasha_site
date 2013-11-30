@@ -36,13 +36,21 @@
       - Customer.all.each do |customer| 
         .item-company
           .himg
-            =image_tag customer.image(:small)
-          .nav-company= customer.description      
+            =image_tag customer.image(:small), :id => customer.id
+          %span.des-logo-company{:id => customer.id}= customer.description
         
     
-  :javascript
+  :javascript 
     $(".item").first().addClass("active");
     $(".slide-indicator").first().addClass("active");
     $('.carousel').carousel();
         
+    $(".item-company").mouseover(function(){
+      $(this span).fadeup(100);
+    });
+    
+    $(".item-company").mouseover(function(){
+    $(this).css("background-color","blue");
+    });
+  
 
