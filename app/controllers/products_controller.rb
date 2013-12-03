@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   layout "pages"
-
+  
   before_filter :check_autentication, :except => [:show, :index]
   # GET /products
   # GET /products.json
@@ -48,7 +48,7 @@ class ProductsController < ApplicationController
     @product = Product.new(params[:product])
     
     respond_to do |format|
-      if @product.save
+      if @product.save 
         @product.sample_pic_id = @product.pictures.first.id if @product.pictures.present?
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render json: @product, status: :created, location: @product }

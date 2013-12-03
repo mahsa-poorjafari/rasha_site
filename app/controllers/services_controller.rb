@@ -28,6 +28,9 @@ class ServicesController < ApplicationController
   # GET /services/new.json
   def new
     @service = Service.new
+    
+    @service.pictures.build
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @service }
@@ -49,7 +52,7 @@ class ServicesController < ApplicationController
         format.html { redirect_to @service, notice: 'Service was successfully created.' }
         format.json { render json: @service, status: :created, location: @service }
       else
-        format.html { render action: "new" }
+        format.html { render action: "new"}
         format.json { render json: @service.errors, status: :unprocessable_entity }
       end
     end

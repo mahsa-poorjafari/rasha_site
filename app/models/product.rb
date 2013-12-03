@@ -1,15 +1,22 @@
+# encoding: UTF-8
 class Product < ActiveRecord::Base
   has_many :pictures, :dependent => :destroy
 
   attr_accessible :description, :title, :pictures_attributes
   accepts_nested_attributes_for :pictures, :allow_destroy => true
  
-  validates :title, :uniqueness => true
-  validates :title, :presence => {:message => 'The product title must be informed.'}
+  validates :title, :uniqueness => {:message => 'عنوان محصول تکراری است'}
+  validates :title, :presence => {:message => 'عنوان محصول را بنویسید'}
   
   extend FriendlyId  
   friendly_id :title
-
+  before_save :check_limit
+  
+  def check_limit
+    if self.Picture.count > PICTURE_LIMIT     
+      return false    
+    end
+  end 
   
   def sample_picture
     Picture.where(product_id:self.id).first

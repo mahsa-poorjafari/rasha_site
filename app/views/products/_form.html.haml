@@ -20,7 +20,7 @@
     =f.fields_for :pictures do |picture|  
       = render "shared/upload_image_form", :picture => picture
   .clrear-float    
-  = f.link_to_add content_tag(:span, "افزودن تصویر"), :pictures, :class => "btn", :id =>"add_new_picture"
+  = f.link_to_add content_tag(:span, "افزودن تصویر", :id => "add_pic"), :pictures, :class => "btn",  :id => "add_new_picture"
   
   .actions
     = f.submit 'ثبت', :class => "btn"
@@ -36,3 +36,10 @@
     $(".enable_file_select").unbind('click');
     window.setTimeout('enable_file_select()', 1000);
   });
+  
+  var count_pic= 1;
+  $("#add_pic").click(function(){
+    count_pic++;
+    alert(count_pic);
+  });
+  

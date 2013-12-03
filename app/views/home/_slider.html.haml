@@ -11,7 +11,7 @@
                 %i.icon-edit
               = link_to  slide, :method => :delete, :data => { :confirm => 'Are you sure?' }  do
                 %i.icon-trash
-          -if slide.description_fa.present?
+          -if slide.description.present?
             .image-des-holder
               = slide.description 
     .carousel-controls
