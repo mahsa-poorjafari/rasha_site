@@ -38,20 +38,13 @@
         .item-company
           .himg
             =image_tag customer.image(:small), :id => customer.id
-          %span.des-logo-company{:id => customer.id}= customer.description
+          %div.des-logo-company{:id => customer.id}= customer.description
         
     
   :javascript 
     $(".item").first().addClass("active");
     $(".slide-indicator").first().addClass("active");
     $('.carousel').carousel();
-        
-        
-    $(".item-company").mouseover(function(){
-      $( this ).find( "span" ).fadeOut("slow").fadeIn();
-    });
+      
     
-    $(".item-company").mouseout(function(){
-      $(this).find("span").fadeOut("slow").remove();
-    });
     

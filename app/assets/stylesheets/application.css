@@ -13,13 +13,12 @@
  */
 .image-des-holder {
   position: relative;
-  color:#fff;
+  color:#000;
   padding:5px;
-  
+  font-family:"Btitr"; font-size:16px;
   top: -40px;  
-  background-color:#D9DDDA;
-  opacity: 0.7;
-  filter: alpha(opacity=70); /* For IE8 and earlier */;
+  background-color:#efe;
+  
   height: 40px;
   p {     
     opacity:1;
@@ -59,7 +58,7 @@
 .td a div.pro-title {margin-top:20px; text-decoration:none; font-family:"Nazli"; font-size:16px;}
 .tr:hover div.pro-title { background:url(slideBg1.png) repeat-x; color:#fff; font-family:"Nazli"; font-size:16px;} 
 .td:hover a {text-decoration:none; }
-.td a.color-green {color:#7ddc1f; }
+.td a.color-green {color:#029743; }
 .show-des-en {width:100%; margin-top:60px;float:right; font-family:"Nazli"; font-size:16px}
 
 .total-division {width:100%; }
