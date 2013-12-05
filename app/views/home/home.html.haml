@@ -46,5 +46,11 @@
     $(".slide-indicator").first().addClass("active");
     $('.carousel').carousel();
       
+    $('.item-company').mouseover(function(){
+      $(this).children(".des-logo-company").css({"display":"block"});    
+    });
     
+    $('.item-company').mouseout(function(){
+      $(this).children(".des-logo-company").css({"display":"none"});    
+    });
     

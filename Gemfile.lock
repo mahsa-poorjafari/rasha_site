@@ -72,6 +72,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta-tags (1.5.0)
+      actionpack
     mime-types (1.25)
     multi_json (1.8.2)
     mysql2 (0.3.13)
@@ -150,6 +152,7 @@ DEPENDENCIES
   friendly_id (~> 4.0.0.beta8)
   haml-rails
   jquery-rails
+  meta-tags
   mysql2
   nav_link_to (~> 0.0.4)
   nested_form

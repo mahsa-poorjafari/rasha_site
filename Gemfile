@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.14'
-ruby "1.9.3"
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -43,6 +43,8 @@ end
 # Deploy with Capistrano
 # gem 'capistrano'
 
+
+gem 'meta-tags', :require => 'meta_tags'
 
 gem "friendly_id", "~> 4.0.0.beta8"
 gem "nav_link_to", "~> 0.0.4"
