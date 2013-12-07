@@ -63,8 +63,8 @@
 
 .total-division {width:100%; }
 
-.above-menu {margin-top:-48px; margin-right:5px;width:62%;height:25px; background:url(bannerBgh.png) repeat-x;position: relative; }
-.below-menu{margin-top:-10px;margin-right:-25px;width:105.5%;height:30px; background-color:#7ddc1f; position: relative; }
+.above-menu {margin-top:-48px; margin-right:50px;width:62%;height:25px; background:url(bannerBgh.png) repeat-x;position: relative; }
+.below-menu{margin-top:-10px;margin-right:48px;width:85%;height:30px; background-color:#7ddc1f; position: relative; }
 
 .text{float:left;margin-right:50px; width:300px}
 .newP_page {margin-top:50px}

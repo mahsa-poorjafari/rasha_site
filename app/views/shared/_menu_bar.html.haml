@@ -3,7 +3,7 @@
     .head_height
       .head-serach
         -if is_admin?         
-          =link_to "صفحه جدید", pages_path, :id => "admin-link", :class => ('active' if current_page?(pages_path))
+          
           =link_to "اسلایدر", slides_path, :id => "admin-link", :class => ('active' if current_page?(slides_path))
           =link_to "مشتری جدید", customers_path, :id => "admin-link", :class => ('active' if current_page?(customers_path))
           =link_to "خروج", delete_session_path, :id => "admin-link", :class => ('active' if current_page?(home_path)) 

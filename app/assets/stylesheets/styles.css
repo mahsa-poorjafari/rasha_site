@@ -17,9 +17,9 @@ li											{list-style:none}
 #head p.search input.txt					{width:125px; height:15px; margin-right:7px; float:left; font-family:"Nazli"; font-size:16px; color:#2c2d2c; border:0; background:url(searchbg.png) no-repeat}
 
 #head p.search input.btn:active				{background-position:2px 2px}
-h1.logo										{width:200px; height:100px; margin-top:5px; float:left; background:url(logo.png) no-repeat}
+h1.logo										{width:150px; height:100px; margin-top:5px; float:left; background:url(logo.png) no-repeat}
 h1.logo a									{width:100%; height:100%; float:left; text-indent:-9999px}
-#head ul									{width:580px;  height:30px; margin-top:53px; float:right;text-align:center; margin-right:65px}
+#head ul									{width:580px;  height:30px; margin-top:53px; float:right;text-align:center; margin-right:110px}
 #head ul li									{width:110px; height:30px; margin-left:1px; float:right; font-family:"Nazli"; font-size:16px; color:#5f5f5f; line-height:20px; text-transform:uppercase; text-align:center}
 #head ul li:first-child						{margin:0}
 #head ul li	a,#head ul li a.active			{width:110px; height:30px; padding:0 13px; float:left; color:inherit; background:#252525; text-align:center}
@@ -156,3 +156,5 @@ scrollbar-shadow-color: #fff; scrollbar-highlight-color: #fff;  width:100%; heig
     width:100%;
 }
 .himg {height:100px; width:100%; text-align:center}
+.form-holder {width:120%; height:560px; margin-right:-60px}
+.cropFrame{width:1200px; height:700px}

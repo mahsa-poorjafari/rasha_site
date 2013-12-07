@@ -7,7 +7,7 @@
     .show-list
       .form-holder    
         = form_for @slide, :html => {:multipart => true} do |f| 
-          = image_tag @slide.image.url(:original), :class => "crop cropImage", :height => "360", :width => "950"
+          = image_tag @slide.image.url(:original), :class => "crop cropImage", :height => "660", :width => "1050"
           = f.hidden_field :crop_x
           = f.hidden_field :crop_y
           = f.hidden_field :crop_w
