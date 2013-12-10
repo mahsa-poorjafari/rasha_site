@@ -43,13 +43,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    columnize (0.3.6)
-    debugger (1.6.1)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.3)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.3)
     diff-lcs (1.2.1)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -84,7 +77,6 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    pg (0.17.0)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -148,7 +140,6 @@ PLATFORMS
 DEPENDENCIES
   ckeditor_rails
   coffee-rails (~> 3.2.1)
-  debugger
   friendly_id (~> 4.0.0.beta8)
   haml-rails
   jquery-rails
@@ -157,7 +148,6 @@ DEPENDENCIES
   nav_link_to (~> 0.0.4)
   nested_form
   paperclip (~> 3.0)
-  pg
   rails (= 3.2.14)
   rspec-rails (~> 2.0)
   sass-rails (~> 3.2.3)
