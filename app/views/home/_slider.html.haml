@@ -1,4 +1,3 @@
-.above-menu
 .hero-unit
   .carousel.slide
     .carousel-inner
@@ -9,7 +8,7 @@
             .row-controls
               = link_to edit_slide_path(slide) do
                 %i.icon-edit
-              = link_to  slide, :method => :delete, :data => { :confirm => 'Are you sure?' }  do
+              = link_to  slide, :method => :delete, :data => { :confirm => 'میخواهید این تصویر را حذف شود؟' }  do
                 %i.icon-trash
           -if slide.description.present?
             .image-des-holder

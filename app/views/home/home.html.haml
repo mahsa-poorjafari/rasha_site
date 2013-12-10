@@ -32,15 +32,15 @@
             %p
               = truncate(strip_tags(service.description), :length => 80)
               =link_to  "ادامه مطلب", service
-    .clrear-float
-    .rezomeh
-      - Customer.all.each do |customer| 
-        .item-company
-          .himg
-            =image_tag customer.image(:small), :id => customer.id
-          %div.des-logo-company{:id => customer.id}= customer.description
-        
-    
+    .clrear-float  
+    .rezomeh    
+      %center
+        - Customer.all.each do |customer| 
+          .item-company
+            .himg
+              =image_tag customer.image(:small), :id => customer.id
+            %div.des-logo-company{:id => customer.id}= customer.description        
+  
   :javascript 
     $(".item").first().addClass("active");
     $(".slide-indicator").first().addClass("active");

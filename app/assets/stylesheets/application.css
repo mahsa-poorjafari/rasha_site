@@ -63,8 +63,8 @@
 
 .total-division {width:100%; }
 
-.above-menu {margin-top:-48px; margin-right:50px;width:62%;height:25px; background:url(bannerBgh.png) repeat-x;position: relative; }
-.below-menu{margin-top:-10px;margin-right:48px;width:85%;height:30px; background-color:#7ddc1f; position: relative; }
+.above-menu {float:left;margin-top:5px; margin-left:-40px; width:80%;height:25px; background:url(bannerBgh.png) repeat-x;position: relative; }
+.below-menu{margin-top:-6px; right:-20px; width:105%;height:30px; background-color:#7ddc1f; position: relative; }
 
 .text{float:left;margin-right:50px; width:300px}
 .newP_page {margin-top:50px}
@@ -73,6 +73,4 @@
 .footer_Link {text-align:center; margin-top:20px; font-family:"Nazli"; font-size:16px}
 
 
-.rezomeh {border-top:#444444 solid 1px;border-right:#444444 solid 1px;border-left:#444444 solid 1px; height:120px; width:90%; margin-right:5%; margin-left:5%; margin-top:100px; }
-.item-company {float:right; width:150px; height:120px; margin:5px;}
-.item-company span {margin-top:-20px; height:20px;  }
+
