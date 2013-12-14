@@ -1,9 +1,10 @@
 .list-div
   #welcom_pan   
     %h2.heading2       
-      = "خدمات"
       %span 
-        = "راشا"        
+        ="خدمات"
+        #{GlobalConstant::COMANYـNAME}
+      = "راشا"        
     .show-list
       = render 'form'
     #quotPan

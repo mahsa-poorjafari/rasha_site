@@ -1,11 +1,11 @@
 .list-div
   #welcom_pan   
     %h2.heading2
-      = "محصولات"
       %span 
-        = "راشا"        
-    .show-list
-      = render 'form'
+        ="محصولات"
+        #{GlobalConstant::COMANYـNAME}
+      = "راشا"       
+    = render 'form'
     #quotPan
       .footer_Link
         = link_to 'بازگشت', products_path

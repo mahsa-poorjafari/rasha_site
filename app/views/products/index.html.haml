@@ -1,9 +1,10 @@
 .list-div
   #welcom_pan
-    %h2.heading2       
-      = "لیست محصولات"
+    %h2.heading2
       %span 
-        = "راشا"        
+        ="محصولات"
+        #{GlobalConstant::COMANYـNAME}
+      = "راشا"        
       
     .show-list
       .table{:class => I18n.locale}

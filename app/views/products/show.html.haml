@@ -1,9 +1,10 @@
 .list-div
   #welcom_pan
     %h2.heading2
-      ="محصولات"
       %span 
-        = "راشا"        
+        ="محصولات"
+        #{GlobalConstant::COMANYـNAME}
+      = "راشا"        
     %h3.t= @product.title
     .clrear-float
     .description
@@ -20,9 +21,9 @@
     -if is_admin?
       #quotPan
         .footer_Link
-          = link_to 'اعمال تغییرات', edit_product_path(@product)
+          = link_to 'ویرایش', edit_product_path(@product)
           \|
           = link_to 'بازگشت', products_path
           \|
-          = link_to 'حذف محصول', @product, method: :delete, data: { confirm: 'آیا میخواهید این محصول را حذف کنید?'}
+          = link_to 'حذف ', @product, method: :delete, data: { confirm: 'آیا میخواهید این محصول را حذف کنید?'}
 
