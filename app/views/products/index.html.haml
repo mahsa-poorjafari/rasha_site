@@ -3,9 +3,7 @@
     %h2.heading2
       %span 
         ="محصولات"
-        #{GlobalConstant::COMANYـNAME}
-      = "راشا"        
-      
+    
     .show-list
       .table{:class => I18n.locale}
         - @products.each do |product|
