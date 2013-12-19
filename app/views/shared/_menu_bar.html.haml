@@ -2,7 +2,9 @@
   #head_cen
     .head_height
       .head-serach
-        -if is_admin? 
+        -if is_admin?           
+          =link_to "مشاهده پیام ها", messages_path, :id => "admin-link", :class => ('active' if current_page?(messages_path))      
+          \|
           =link_to "اسلایدر", slides_path, :id => "admin-link", :class => ('active' if current_page?(slides_path))
           \|
           =link_to "مشتری جدید", customers_path, :id => "admin-link", :class => ('active' if current_page?(customers_path))

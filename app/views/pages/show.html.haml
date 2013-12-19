@@ -4,9 +4,10 @@
       %span 
         = @page.title
          
-    %p#notice= notice
     .show-des-en
       =raw @page.page_html
+    -if @page.read_attribute("title") == "تماس با ما"
+      = render "shared/msg_form"
     -if is_admin?
       #quotPan 
         .footer_Link

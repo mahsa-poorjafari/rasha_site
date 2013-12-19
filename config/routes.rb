@@ -4,6 +4,9 @@ IndustiralSite::Application.routes.draw do
   
 
 
+  resources :messages
+
+
   get 'home' => 'home#home', :as => "home" 
   resources :pages
   resources :services

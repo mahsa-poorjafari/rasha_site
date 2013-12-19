@@ -1,0 +1,29 @@
+.list-div
+  #welcom_pan
+    %h2.heading2
+      %span
+        = "پیام های ارسالی از کاربران"
+    .show-list
+      %table
+        %tr.first-row
+          %thنام
+          %th ایمیل
+          %th تلفن
+          %th متن پیام
+          %th تاریخ ارسال
+
+        - @messages.each do |message|
+          %tr{:class => ('visit-msg' if (message.visited == false))}
+            %th  
+              =link_to message.name, message
+            %th
+              =link_to message.email, message
+            %th
+              =link_to message.phone, message
+            %th
+              = truncate(strip_tags(message.message), :length => 30)
+            %th
+              =message.created_at
+            %th.del-msg
+              =link_to 'حذف پیام', message, :method => :delete, :data => { :confirm => 'آیا می خواهید این پیام حذف شود؟' }
+

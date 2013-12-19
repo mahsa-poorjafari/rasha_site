@@ -8,7 +8,7 @@
   
   .field
     = f.label "عنوان صفحه "
-    = f.text_field :title
+    = f.text_field :title, :disabled => (true if @page.read_attribute("title") == "تماس با ما")
   
   .field
     = f.label "متن صفحه"
