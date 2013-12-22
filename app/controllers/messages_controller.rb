@@ -44,16 +44,11 @@ class MessagesController < ApplicationController
   # POST /messages.json
   def create
     @message = Message.new(params[:message])
-
-    respond_to do |format|
-      if @message.save
-        format.html { redirect_to :back, notice: 'کاربر گرامی پیام شما ارسال گردید.'  }
-        format.json { render json: @message, status: :created, location: @message }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
-      end
+    if @message.save
+      UserMailer.send_user_mail.deliver      
+      flash[:notice] = 'کاربر گرامی پیام شما ارسال گردید.'
     end
+    redirect_to :back, :flash => {:message_obj => @message} 
   end
 
   # PUT /messages/1

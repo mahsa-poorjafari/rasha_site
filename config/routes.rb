@@ -1,9 +1,6 @@
 IndustiralSite::Application.routes.draw do
 
 
-  
-
-
   resources :messages
 
 
@@ -14,7 +11,7 @@ IndustiralSite::Application.routes.draw do
   resources :customers
 
   root :to => 'home#home'
-
+  
 
   resources :users
   resources :slides

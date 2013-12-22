@@ -3,14 +3,16 @@
     %span 
       = "تماس با ما"
     =image_tag "msg-icon.png"
-    -if notice
-      .notice-msg= notice
+    -if flash[:notice]
+      .notice-msg 
+        = flash[:notice]
       .clrear-float 
   .msg-form
-    = form_for @message = Message.new  do |f| 
+    = form_for @message ||= Message.new  do |f|
       - if @message.errors.any?
         #error_explanation
-          %h2= "#{pluralize(@message.errors.count, "error")} prohibited this message from being saved:"
+          %h2 =  "#{pluralize(@message.errors.count, "خطا")}" باعث ارسال نشدن این فرم شده است.
+          
           %ul
             - @message.errors.full_messages.each do |msg|
               %li= msg
@@ -22,10 +24,10 @@
         = f.label "ایمیل: *"
         = f.text_field :email
       .field
-        = f.label "تلفن: "
+        = f.label "تلفن: *"
         = f.text_field :phone
       .field
-        = f.label "متن پیام: *"
+        = f.label "پیام: *"
         = f.text_area :message, :class => "msg-feild"
       
       .actions

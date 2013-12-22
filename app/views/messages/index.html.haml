@@ -19,9 +19,9 @@
             %th
               =link_to message.email, message
             %th
-              =link_to message.phone, message
+              = message.phone
             %th
-              = truncate(strip_tags(message.message), :length => 30)
+              =link_to (truncate(strip_tags(message.message), :length => 30)), message
             %th
               =message.created_at
             %th.del-msg

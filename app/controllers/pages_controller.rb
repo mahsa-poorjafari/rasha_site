@@ -14,6 +14,7 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
+    @message= flash[:message_obj ] if flash[:message_obj ]
     @page = Page.find(params[:id])
 
     respond_to do |format|

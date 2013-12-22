@@ -8,9 +8,13 @@
         - @user.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label "نام کاربری"
+    = f.label "نام کاربری: *"
     %br/
     = f.text_field :name
+  .field
+    = f.label "ایمیل: *"
+    %br/
+    = f.text_field :email  
   .field
     = f.label "رمز عبور"
     %br/
