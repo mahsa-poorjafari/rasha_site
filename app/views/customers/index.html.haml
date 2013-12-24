@@ -1,9 +1,9 @@
 .list-div
   #welcom_pan
     %h2.heading2 
-      ="مشتریان"
       %span 
-        = "راشا"              
+        ="مشتریان"
+         
     .show-list 
       .table        
         - @customers.each do |customer| 
@@ -12,7 +12,7 @@
             .td
               .footer_Link
                
-                = link_to 'اعمال تغییرات', edit_customer_path(customer), :class => "color-green"
+                = link_to 'ویرایش', edit_customer_path(customer), :class => "color-green"
                 \|
                 = link_to 'حذف', customer, :method => :delete, :data => { :confirm => 'آیا می خواهید این آیتم را حذف کنید؟' }, :class => "color-green"     
     .clrear-float

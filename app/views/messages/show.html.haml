@@ -1,0 +1,35 @@
+.list-div
+  #welcom_pan   
+    %h2.heading2
+    
+      = "پیام های ارسالی از کاربران"
+    .show-msg
+      %span
+        %b نام:
+        = @message.name
+        %br
+        %br
+      %span
+        %b ایمیل:
+        = @message.email
+        %br
+        %br 
+      %span
+        %b تلفن:
+        = @message.phone
+        %br
+        %br      
+      %span
+        %b متن پیام:
+        %br
+        .text-msg= @message.message
+        %br
+      
+    #quotPan
+      .footer_Link
+        
+        \|
+        = link_to content_tag("span", "بازگشت"), messages_path
+        \|        
+        
+    

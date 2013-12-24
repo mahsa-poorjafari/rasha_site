@@ -18,31 +18,44 @@ div {
   color: green;
 }
 
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
+
 
 #error_explanation {
-  width: 450px;
-  border: 2px solid red;
+  
+  width: 400px;
+ 
+  -moz-box-shadow:    1px 1px 3px 3px  #ccc;
+  -webkit-box-shadow: 1px 1px 3px 3px  #ccc;
+  box-shadow:         1px 1px 3px 3px  #ccc;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
   h2 {
-    text-align: left;
+    
     font-weight: bold;
     padding: 5px 5px 5px 15px;
-    font-size: 12px;
+    font-size: 16px;
     margin: -7px;
     margin-bottom: 0px;
     background-color: #c00;
     color: #fff;
   }
   ul li {
-    font-size: 12px;
+    font-size: 16px;
     list-style: square;
   }
 }
+.field_with_errors {-moz-box-shadow:    1px 1px 3px 3px red;
+  -webkit-box-shadow: 1px 1px 3px 3px red;
+  box-shadow:         1px 1px 3px 3px red;
+  display: table;
+  height:25px;
+  input, textarea 
+    { 
+      margin-bottom:0px;
+    }
+    
+  }
+
+form.edit_product {margin-top:50px}

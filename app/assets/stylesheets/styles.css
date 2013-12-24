@@ -21,11 +21,7 @@ h1.logo										{margin-bottom:5px; margin-right:20px; width:130px; max-width:1
 h1.logo a									{max-width:600px; height:100%; float:left; text-indent:-9999px}
 #head ul									{max-width:560px;height:50px;float:left;text-align:center; margin-left:80px}
 #head ul li									{max-width:110px; width:110px; height:120px; margin-left:1px; float:right; font-family:"Nazli"; font-size:16px; color:#5f5f5f; line-height:20px; text-transform:uppercase; text-align:center;  background:#272727; }
-#head ul li a {width:110px; top:90px; color:#5F5F5F}
-#head ul li a:hover {color:#7DDC1F;}
-#head ul li:first-child						{margin-left:1px;}
-#head ul li:hover,#head ul li.active			{width:110px; max-width:100%;height:120px; color:#7DDC1F;text-align:center; 
-background-color:#2D2D2D;
+#head ul li a {width:110px; top:90px; color:#5F5F5F; 
 -webkit-transition-property:color, text;
 -webkit-transition-duration: .5s, 1s;
 -webkit-transition-timing-function: linear, ease-in;
@@ -38,7 +34,11 @@ background-color:#2D2D2D;
 -o-transition-duration:.5s;
 -o-transition-timing-function: linear, ease-in;
 }
+#head ul li a:hover {color:#7DDC1F;}
+#head ul li:first-child						{margin-left:1px;}
+#head ul li:hover,#head ul li.active			{width:110px; max-width:100%;height:120px; color:#7DDC1F;text-align:center; background-color:#2D2D2D;}
 #head ul li.active a {color:#7DDC1F;}
+
 #cu3er-container							{width:800px; height:360 px; float:left; outline:0; position:absolute; top:166px; left:0px; z-index:10}
 img.ban_bg									{width:auto; float:left; position:absolute; top:117px; right:200px}
 
@@ -84,27 +84,20 @@ ul#infoPan li p.descrip						{margin-top:13px; font-size:16px; line-height:16px;
 #quotPan a {color:#5f5f5f; font-size:16px;}
 #quotPan a:hover {color:#029743}
 
-.btn							{width:auto; height:40px; color:#3B3B3B;margin-top:20px; font-family:"Nazli"; font-size:17px;font-weight:bold; text-align:center; cursor:pointer; border:0px; 
-background: #52af5c; /* Old browsers */
-background: -moz-linear-gradient(top,  #52af5c 1%, #cdeb8b 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#52af5c), color-stop(100%,#cdeb8b)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #52af5c 1%,#cdeb8b 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #52af5c 1%,#cdeb8b 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #52af5c 1%,#cdeb8b 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #52af5c 1%,#cdeb8b 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52af5c', endColorstr='#cdeb8b',GradientType=0 ); /* IE6-9 */
+.btn							{width:auto; height:auto; color:#3B3B3B;margin-top:20px; font-family:"Nazli"; font-size:17px;font-weight:bold; text-align:center; cursor:pointer; border:0px; 
+ background:url(submit-btn.png) no-repeat;
 
 }
 
-.btn:hover					{   -moz-box-shadow: inset -4px 0px 1px #848484;-webkit-box-shadow: inset -4px 0px 1px #848484;box-shadow: inset -4px 0px 1px #848484;}
+.btn:hover					{   -moz-box-shadow: 1px 1px 2px #888888;-webkit-box-shadow: 1px 1px 2px #888888;box-shadow: 1px 1px 2px #888888;}
 a.btn {height:20px;}
 a.btn span{text-decoration:none; color:#3B3B3B; }
 
-.foot-logo { width:80%; margin-right:20%; margin-top:0px; height:60px; }
+.foot-logo { width:80%; margin-right:20%; margin-top:0px; height:80px; }
 .foot-logo p.h6{background:url(logoft.png) no-repeat; position:relative; height:80px; width:100px; }
-.foot-link { width:80%; margin-right:39%; text-align:left}
+.foot-link { width:80%; margin-right:39%; text-align:left; font-size:12px}
 
-#foot										{width:100%; height:120px; float:left; text-align:center}
+#foot										{width:100%; height:auto; float:left; text-align:center}
 #foot_cen									{width:800px;}
 #foot h6									{width:200px; height:131px; text-indent:-9999px; }
 #foot h6 a									{width:100%; height:100%; float:left}
@@ -112,7 +105,7 @@ a.btn span{text-decoration:none; color:#3B3B3B; }
 #foot ul li									{width:auto; float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:16px; color:#767676; line-height:18px}
 #foot ul li a								{width:auto; float:left; color:inherit}
 #foot ul li.space							{width:auto; float:left; padding:0 6px}
-#foot p										{width:70%; margin-right:100px; margin-top:10px; float:right; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:16px; color:#767676; line-height:18px; text-align:center}
+#foot p										{width:70%; margin-right:100px; margin-top:10px; float:right; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#767676; line-height:18px; text-align:center}
 #foot p	a									{color:inherit}
 
 #service_pan								{width:100%; margin-top:20px;  }
@@ -190,3 +183,20 @@ scrollbar-shadow-color: #fff; scrollbar-highlight-color: #fff;  width:100%; heig
 .himg {height:100px; width:100%; text-align:center}
 .form-holder {width:120%; height:auto; margin-right:-60px}
 .cropFrame{width:966px; height:452px}
+
+
+.msg-div {width:50%; float:right}
+.msg-feild {width:400px; height:200px}
+.text-msg {margin-top:20px; width:90%; margin-right:10px}
+.notice-msg {color:#7ddc1f; font-size:18px;}
+.msg-form input {font-size:18px}
+.visit-msg {font-weight:bold;font-size:20px; color:#333}
+
+.show-list table {width:100%; margin-right:20px; font-family:Nazli, Helvetica, sans-serif; font-size:18px; color:#5f5f5f}
+.show-list table tr{width:100%; height:30px; font-weight:lighter;color:#5f5f5f}
+.show-list table tr.first-row{width:100%; height:30px; border-bottom:#c9c9c9 solid 1px; color:#333}
+.show-list table tr th a{text-decoration:none; color:#5f5f5f}
+.show-list table tr th {color:#5f5f5f}
+.show-list table tr.visit-msg th {color:#333}
+.show-list table tr.visit-msg th a{text-decoration:none; color:#333}
+.show-list table tr th.del-msg a{text-decoration:none; color:#7ddc1f; }

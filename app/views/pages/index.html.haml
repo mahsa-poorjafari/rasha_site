@@ -1,9 +1,10 @@
 .list-div
   #welcom_pan
     %h2.heading2 
-      = "صفحات متنی"
-      %span 
-        = "راشا"              
+    %span
+      ="صفحه"
+        #{GlobalConstant::COMANYـNAME}
+      ="راشا
     .show-list 
       .table        
         - @pages.each do |page| 

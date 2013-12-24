@@ -1,9 +1,9 @@
 .list-div
   #welcom_pan
     %h2.heading2 
-      ="مشتریان"
-      %span 
-        = "راشا"         
+      %span
+        ="مشتریان"
+        
     %p#notice= notice
     %h3.t= @customer.name
         
@@ -14,7 +14,7 @@
     -if is_admin?
       #quotPan 
         .footer_Link
-          = link_to content_tag("span", "اعمال تغییرات"), edit_customer_path(@customer)
+          = link_to content_tag("span", "ویرایش"), edit_customer_path(@customer)
           \|
           = link_to content_tag("span", "بازگشت"), customers_path
   

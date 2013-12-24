@@ -1,10 +1,9 @@
 .list-div
   #welcom_pan
-    %h2.heading2       
-      = "لیست محصولات"
+    %h2.heading2
       %span 
-        = "راشا"        
-      
+        ="محصولات"
+    
     .show-list
       .table{:class => I18n.locale}
         - @products.each do |product|

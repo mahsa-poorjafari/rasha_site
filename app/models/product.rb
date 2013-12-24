@@ -13,7 +13,7 @@ class Product < ActiveRecord::Base
   before_save :check_limit
   
   def check_limit
-    if self.Picture.count > PICTURE_LIMIT     
+    if self.pictures.count > PICTURE_LIMIT     
       return false    
     end
   end 
@@ -21,5 +21,11 @@ class Product < ActiveRecord::Base
   def sample_picture
     Picture.where(product_id:self.id).first
   end
+  
+  private
+  def pictures_limit
+    errors.add(:base, "حداکثر #{MAX_SERVICE_PICTURES} عکس برای هر محصول میتوانید داشته باشید") if self.pictures.size > MAX_SERVICE_PICTURES
+  end
+  
 end
 

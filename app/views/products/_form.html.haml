@@ -8,7 +8,7 @@
   
   .field
     = f.label "عنوان محصول"
-    = f.text_field :title
+    = f.text_field :title, :style => "font-size:20px; width:250px"
 
   .field
     = f.label "توضیحات "
@@ -37,9 +37,4 @@
     window.setTimeout('enable_file_select()', 1000);
   });
   
-  var count_pic= 1;
-  $("#add_pic").click(function(){
-    count_pic++;
-    alert(count_pic);
-  });
   

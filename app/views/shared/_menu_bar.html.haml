@@ -2,7 +2,9 @@
   #head_cen
     .head_height
       .head-serach
-        -if is_admin? 
+        -if is_admin?           
+          =link_to "مشاهده پیام ها", messages_path, :id => "admin-link", :class => ('active' if current_page?(messages_path))      
+          \|
           =link_to "اسلایدر", slides_path, :id => "admin-link", :class => ('active' if current_page?(slides_path))
           \|
           =link_to "مشتری جدید", customers_path, :id => "admin-link", :class => ('active' if current_page?(customers_path))
@@ -16,15 +18,19 @@
         .clrear-float
       #head-menu
         %h1.logo                    
-        %ul
-          %li{:class => ('active' if current_page?( home_path)) }
+        %ul          
+          %li{:class => ("active" if current_page?(:controller => 'home', :action => 'home')) }
+            %h3{:style => "height:60px"}
             = link_to "صفحه اصلی", home_path
           
           -Page.all.each do |page|  
             %li{:class => ('active' if current_page?(page_path(page)))    }
+              %h3{:style => "height:60px"}
               = link_to page.title, page_path(page)
           %li{:class => ('active' if current_page?(Service))    }
+            %h3{:style => "height:60px"}
             = link_to "خدمات", Service
           %li{ :class => ('active' if current_page?(Product))}
+            %h3{:style => "height:60px"}
             = link_to "محصولات", Product
         

@@ -1,10 +1,9 @@
 .list-div
   #welcom_pan
     %h2.heading2       
-      = @service.title
       %span 
-        = "راشا"       
-
+        ="خدمات"
+       
     %h3.t= @service.title
     .clrear-float
     .description
@@ -21,8 +20,8 @@
     -if is_admin?
       #quotPan
         .footer_Link
-          = link_to 'اعمال تغییرات', edit_service_path(@service)
+          = link_to 'ویرایش', edit_service_path(@service)
           \|
           = link_to 'بازگشت', services_path
           \|
-          = link_to 'حذف خدمات', @service, method: :delete, data: { confirm: 'آیا میخواهید این خدمات را حذف کنید?'}
+          = link_to 'حذف ', @service, method: :delete, data: { confirm: 'آیا میخواهید این خدمات را حذف کنید?'}
