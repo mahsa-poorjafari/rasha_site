@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131204133954) do
+ActiveRecord::Schema.define(:version => 20131128091954) do
 
   create_table "customers", :force => true do |t|
     t.string   "name"
@@ -26,11 +26,9 @@ ActiveRecord::Schema.define(:version => 20131204133954) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
-    t.text     "page_html_fa"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-    t.string   "title_fa"
     t.text     "page_html"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "pictures", :force => true do |t|
@@ -43,27 +41,22 @@ ActiveRecord::Schema.define(:version => 20131204133954) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "description_fa"
   end
 
   create_table "products", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-    t.string   "title_fa"
-    t.string   "description_fa"
     t.integer  "sample_pic_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "services", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-    t.string   "title_fa"
-    t.string   "description_fa"
     t.integer  "sample_pic_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "slides", :force => true do |t|
@@ -74,14 +67,13 @@ ActiveRecord::Schema.define(:version => 20131204133954) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "description_fa"
   end
 
   create_table "users", :force => true do |t|
     t.string   "name"
+    t.string   "password"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "password"
   end
 
 end
