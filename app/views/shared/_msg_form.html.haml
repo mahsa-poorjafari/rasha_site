@@ -18,17 +18,20 @@
               %li= msg
 
       .field
-        = f.label "نام: *"
+        = f.label "نام:"
         = f.text_field :name
+        %span.Necessary= "ضروری"
       .field
-        = f.label "ایمیل: *"
+        = f.label "ایمیل:"
         = f.text_field :email
+        %span.Necessary= "ضروری"
       .field
-        = f.label "تلفن: *"
+        = f.label "تلفن:"
         = f.text_field :phone
       .field
-        = f.label "پیام: *"
+        = f.label "پیام:"        
         = f.text_area :message, :class => "msg-feild"
+        %span.Necessary= "ضروری"
       
       .actions
         = f.submit "ارسال", :class=>"btn"

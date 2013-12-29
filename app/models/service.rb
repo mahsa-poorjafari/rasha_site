@@ -9,6 +9,7 @@ class Service < ActiveRecord::Base
   validates :title, :presence => {:message => 'عنوان خدمات را بنویسید'}
   validate :pictures_limit
   
+  
   extend FriendlyId  
   friendly_id :title
   

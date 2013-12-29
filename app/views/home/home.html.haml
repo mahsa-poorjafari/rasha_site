@@ -9,8 +9,8 @@
     
     %h3.heading3
       %span
-        = "محصولات"
-      =image_tag "products-icon.png"
+        = "آموزش"
+      =image_tag "education-icon.png"
     #service_pan
       %ul
         -Product.all.each do |product|
@@ -30,16 +30,15 @@
           %li                                        
             %h5= service.title
             %p
-              = truncate(strip_tags(service.description), :length => 80)
-              =link_to  "ادامه مطلب", service
+              = truncate(strip_tags(service.description.gsub(/&nbsp;/i,"")), :length => 80)
+              =link_to  "دریافت فایل", service
     .clrear-float  
-    .rezomeh    
-      %center
-        - Customer.all.each do |customer| 
-          .item-company
-            .himg
-              =image_tag customer.image(:small), :id => customer.id
-            %div.des-logo-company{:id => customer.id}= customer.description        
+    .rezomeh       
+      - Customer.all.each do |customer| 
+        .item-company
+          .himg
+            =image_tag customer.image(:small), :id => customer.id
+          %div.des-logo-company{:id => customer.id}= customer.name        
   
   :javascript 
     $(".item").first().addClass("active");
