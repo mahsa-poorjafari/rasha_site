@@ -12,7 +12,7 @@
       .sample-pic=link_to (image_tag @service.sample_picture.image(:large)), @service.sample_picture.image(:original), :"data-lightbox" => "image-1"     
       .clrear-float
       .div_pic
-        -@service.pictures.each do |photo|
+        -@service.pictures.offset(1).each do |photo|
           .tr
             =link_to (image_tag photo.image(:medium), :class => "pic_service"), photo.image(:original), :"data-lightbox" => "image-1",   :class => "pic_service", :title => photo.description
             
