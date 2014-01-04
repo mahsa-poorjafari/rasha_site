@@ -4,13 +4,11 @@
       %span 
         #{GlobalConstant::COMANYـNAME}
       ="راشا"
-    %p.homepage 
-      
-    
+    %p.homepage    
     %h3.heading3
       %span
-        = "محصولات"
-      =image_tag "products-icon.png"
+        = "آموزش"
+      =image_tag "education-icon.png"
     #service_pan
       %ul
         -Product.all.each do |product|
@@ -27,19 +25,22 @@
     #service_pan
       %ul
         -Service.all.each do |service|
-          %li                                        
+          %li
             %h5= service.title
             %p
-              = truncate(strip_tags(service.description), :length => 80)
-              =link_to  "ادامه مطلب", service
+              = truncate(strip_tags(service.description.gsub(/&nbsp;/i,"")), :length => 80)
+              - if service.pdf.present?
+                .download-file
+                  =link_to  (image_tag "pdf.png"), service.pdf.url
+                  %br
+                  =link_to  "دریافت فایل", service.pdf.url                
     .clrear-float  
-    .rezomeh    
-      %center
-        - Customer.all.each do |customer| 
-          .item-company
-            .himg
-              =image_tag customer.image(:small), :id => customer.id
-            %div.des-logo-company{:id => customer.id}= customer.description        
+    .rezomeh       
+      - Customer.all.each do |customer| 
+        .item-company
+          .himg
+            =image_tag customer.image(:small), :id => customer.id
+          .des-logo-company{:id => customer.id}= customer.name        
   
   :javascript 
     $(".item").first().addClass("active");

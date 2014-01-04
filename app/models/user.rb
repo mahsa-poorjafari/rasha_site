@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   validates :name, :uniqueness => true
   validates :name, :email,  :presence => {:message => "فیلدهای ستاره دارد را پر کنید."}
   validates :password, :presence =>true,
-                    :length => { :minimum => 5, :maximum => 40 },
+                    :length => { :minimum => 5, :maximum => 40, :message => "فیلدهای ضروری را پر کنید." },
                     :confirmation =>true
   validates_confirmation_of :password,
                               message: 'پسورد را صحیح وارد کنید'

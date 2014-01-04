@@ -7,7 +7,7 @@
           \|
           =link_to "اسلایدر", slides_path, :id => "admin-link", :class => ('active' if current_page?(slides_path))
           \|
-          =link_to "مشتری جدید", customers_path, :id => "admin-link", :class => ('active' if current_page?(customers_path))
+          =link_to "شرکت های همکار", customers_path, :id => "admin-link", :class => ('active' if current_page?(customers_path))
           \|
           =link_to "خروج", delete_session_path, :id => "admin-link", :class => ('active' if current_page?(home_path)) 
           \|
@@ -19,7 +19,7 @@
       #head-menu
         %h1.logo                    
         %ul          
-          %li{:class => ("active" if current_page?(:controller => 'home', :action => 'home')) }
+          %li{:class => ('active' if params[:action]== 'home') }
             %h3{:style => "height:60px"}
             = link_to "صفحه اصلی", home_path
           
@@ -32,5 +32,5 @@
             = link_to "خدمات", Service
           %li{ :class => ('active' if current_page?(Product))}
             %h3{:style => "height:60px"}
-            = link_to "محصولات", Product
+            = link_to "آموزش", Product
         

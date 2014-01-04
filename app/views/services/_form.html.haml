@@ -15,7 +15,9 @@
     %br
       %div.editor
       = f.text_area :description, :class => "ckeditor"          
-      
+  .field
+    = f.label "فایل pdf ضمیمه"
+    = f.file_field :pdf
   .field
     =f.fields_for :pictures do |picture|  
       = render "shared/upload_image_form", :picture => picture

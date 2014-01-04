@@ -11,12 +11,15 @@
  *= require_self
  *= require_tree .
  */
+ 
+ 
+ 
 .image-des-holder {
   
   position: relative;
   color:#FFF;
   padding:5px;
-  font-family:"Btitr"; font-size:16px;
+  font-size:16px;
   top: -50px;  
   background:url(slideBg1.png) repeat-x;
 
@@ -54,17 +57,19 @@
 }
 .list-div {width:85%; margin-top:10px; margin-bottom:20px; margin-left:5%; margin-right:5%;}
 .show-list {margin-top:70px; margin-bottom:20px;  font-size:16px; }
-.show-list .field {font-family:"Nazli"; font-size:16px;}
+.show-list .field {font-size:16px;}
+.show-list .field input {font-size:17px;}
+.show-list .field textarea {font-size:17px;}
 .index_slider {margin-top:100px; margin-bottom:20px; width:100%}
 .clrear-float {clear:both}
-.tr {float:left; width:300px; height:300px; margin-left:10px; text-align:center; font-family:"Nazli"; font-size:16px;}
-.td {width:300px; margin:10px; text-align:center;font-family:"Nazli"; font-size:16px}
-.td div.pro-title {padding-top:10px;padding-bottom:10px;background:url(pat.png) repeat;font-family:"Nazli"; font-size:16px; font-weight:bold; color:#000; width:100%;}
-.td a div.pro-title {margin-top:20px; text-decoration:none; font-family:"Nazli"; font-size:16px;}
-.tr:hover div.pro-title { background:url(slideBg1.png) repeat-x; color:#fff; font-family:"Nazli"; font-size:16px;} 
+.tr {float:left; width:300px; height:300px; margin-left:10px; text-align:centerfont-size:16px;}
+.td {width:300px; margin:10px; text-align:center; font-size:16px}
+.td div.pro-title {padding-top:10px;padding-bottom:10px;background:url(pat.png) repeat; font-size:16px; font-weight:bold; color:#000; width:100%;}
+.td a div.pro-title {margin-top:20px; text-decoration:none;  font-size:16px;}
+.tr:hover div.pro-title { background:url(slideBg1.png) repeat-x; color:#fff;font-size:16px;} 
 .td:hover a {text-decoration:none; }
 .td a.color-green {color:#029743; }
-.show-des-en {width:100%; margin-top:60px;float:right; font-family:"Nazli"; font-size:16px}
+.show-des-en {width:100%; margin-top:60px;float:right; font-size:16px}
 .show-des-en p {width:95%; margin-right:50px}
 
 .total-division {width:100%;}
@@ -76,7 +81,7 @@
 .newP_page {margin-top:50px}
 .t {color:#000}
 .description  {width:100%; }
-.footer_Link {text-align:center; margin-top:20px; font-family:"Nazli"; font-size:16px}
-
+.footer_Link {text-align:center; margin-top:20px; font-size:16px}
+ .center-tag {width:95%; margin-right:auto; margin-left:auto}
 
 
