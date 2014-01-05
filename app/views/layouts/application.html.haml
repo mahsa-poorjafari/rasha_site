@@ -2,9 +2,9 @@
 %html
   %head
     %meta{:charset => "utf-8"}
-    -set_meta_tags :keywords => %w[Rasha WebSite keywords "راشا"]    
-    -set_meta_tags :description => "خانه هوشمند, شرکت راشا, Smart Home"
-    -set_meta_tags :site => 'Site Title', :title => 'Rasha WebSite!', :reverse => true
+    %meta{:name => "keywords", :content => Service.all.collect(&:title) }
+    %meta{:description => "خانه هوشمند, شرکت راشا, Smart Home"}
+    %meta{:site => 'Rasha-smart', :title => 'Rasha smart!', :reverse => true}
     = yield(:refresh_meta) if content_for?(:refresh_meta)
     %title
       ایده پردازان هوشمند راشا  #{@head.fetch(:title, '') if @head}

@@ -42,7 +42,7 @@ h1.logo a									{max-width:600px; height:100%; float:left; text-indent:-9999px
 #cu3er-container							{width:800px; height:360 px; float:left; outline:0; position:absolute; top:166px; left:0px; z-index:10}
 img.ban_bg									{width:auto; float:left; position:absolute; top:117px; right:200px}
 
-#content									{width:100%; float:left; background:#ffffff url(contentBg.png) repeat-x;}
+#content									{min-height:300px;width:100%; float:left; background:#ffffff url(contentBg.png) repeat-x;}
 #content_cen								{width:800px; margin:0 auto}
 #content_sup								{width:800px; float:left; position:relative}
 
@@ -113,10 +113,10 @@ ul#infoPan li p.descrip						{margin-top:13px; font-size:16px; line-height:16px;
 a.btn {height:20px;}
 a.btn span{text-decoration:none; color:#fff; }
 
-.foot-logo { width:80%; margin-right:20%; margin-top:0px; height:80px; }
-.foot-logo p.h6{background:url(logoft.png) no-repeat; position:relative; height:80px; width:100px; }
-.foot-link { width:80%; margin-right:39%; text-align:left; font-size:12px}
-
+.foot-logo { width:100%;  margin-top:0px; height:auto; text-align:center }
+.foot-logo .h6{background:url(logoft.png) no-repeat; position:relative; height:150px; width:10%; margin-right:auto; margin-left:auto }
+.foot-link { width:100%; text-align:center; font-size:12px}
+.foot-link p {width:40%; margin-right:auto; margin-left:auto}
 #foot										{width:100%; height:auto; float:left; text-align:center}
 #foot_cen									{width:800px;}
 #foot h6									{width:200px; height:131px; text-indent:-9999px; }
@@ -125,7 +125,7 @@ a.btn span{text-decoration:none; color:#fff; }
 #foot ul li									{width:auto; float:left;  font-size:16px; color:#767676; line-height:18px}
 #foot ul li a								{width:auto; float:left; color:inherit}
 #foot ul li.space							{width:auto; float:left; padding:0 6px}
-#foot p										{width:70%; margin-right:100px; margin-top:10px; float:right;  font-size:12px; color:#767676; line-height:18px; text-align:center}
+
 #foot p	a									{color:inherit}
 
 #service_pan								{width:100%; margin-top:20px;  }
@@ -177,8 +177,11 @@ scrollbar-shadow-color: #fff; scrollbar-highlight-color: #fff;  width:100%; heig
 .c-logo {float:right}
 
 .rezomeh {height:200px; width:95%; margin-right:auto; margin-left:auto; margin-top:100px; text-align:center}
-.item-company {width:20%; height:auto; float:right}
+.item-company {width:20%; height:auto; float:right; }
+
 .item-company span {margin-top:-20px; height:20px;  }
+.item-company .himg {height:auto; width:100%; text-align:center;}
+.item-company .himg:hover .des-logo-company {display:block}
 
 .des-logo-company {
     background: #333333;
@@ -200,7 +203,7 @@ scrollbar-shadow-color: #fff; scrollbar-highlight-color: #fff;  width:100%; heig
     opacity: 1;
     width:100%;
 }
-.himg {height:auto; width:100%; text-align:center}
+
 .form-holder {width:120%; height:auto; margin-right:-60px}
 .cropFrame{width:966px; height:452px}
 

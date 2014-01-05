@@ -10,8 +10,8 @@ class Service < ActiveRecord::Base
   validate :pictures_limit
   
   has_attached_file :pdf,
-                    :url  => "/assets/products/:id/:style/:basename.:extension",
-                    :path => ":rails_root/public/assets/products/:id/:style/:basename.:extension"
+                    :url  => "/assets/services/:id/:style/:basename.:extension",
+                    :path => ":rails_root/public/assets/services/:id/:style/:basename.:extension"
 
   validates_attachment_content_type :pdf,
       :content_type => [ 'application/pdf' ],
