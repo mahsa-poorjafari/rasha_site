@@ -36,7 +36,9 @@ gem 'rspec-rails', '~> 2.0'
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
+group :development do
+  gem 'capistrano', '~> 2'
+end 
 
 gem 'meta-tags', :require => 'meta_tags'
 

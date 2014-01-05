@@ -30,6 +30,12 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.4)
+    capistrano (2.15.4)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
     ckeditor_rails (4.2.2)
       railties (>= 3.0)
     climate_control (0.0.3)
@@ -55,6 +61,7 @@ GEM
       activesupport (>= 3.1, < 4.1)
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
+    highline (1.6.20)
     hike (1.2.3)
     i18n (0.6.5)
     journey (1.0.4)
@@ -72,6 +79,13 @@ GEM
     mysql2 (0.3.13)
     nav_link_to (0.0.4)
     nested_form (0.3.1)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.7.0)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     paperclip (3.5.2)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -138,6 +152,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capistrano (~> 2)
   ckeditor_rails
   coffee-rails (~> 3.2.1)
   friendly_id (~> 4.0.0.beta8)

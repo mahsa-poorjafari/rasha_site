@@ -15,3 +15,6 @@
 /tmp
 /public/system/
 /public/assets/
+/Capfile
+/config/database.yml
+/config/deploy.rb
