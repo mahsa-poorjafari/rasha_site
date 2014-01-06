@@ -6,18 +6,7 @@
       ="راشا"
     %p.homepage 
        
-    %h3.heading3
-      %span
-        = "آموزش"
-      =image_tag "education-icon.png"
-    #service_pan
-      %ul
-        -Product.all.each do |product|
-          %li                                        
-            %h5= product.title
-            %p
-              = truncate(strip_tags(product.description), :length => 80)
-              =link_to "ادامه مطلب", product
+  
     .clrear-float
     -if Service.all.present?
       %h3.heading3
@@ -41,7 +30,7 @@
       - Customer.all.each do |customer| 
         .item-company
           .himg
-            =image_tag customer.image(:small), :id => customer.id
+            =image_tag customer.image.url(:small), :id => customer.id
             .des-logo-company{:id => customer.id}= customer.name        
   
 :javascript 
@@ -49,11 +38,5 @@
   $(".slide-indicator").first().addClass("active");
   $('.carousel').carousel();
     
-  $('.item-company').mouseover(function(){
-    $(this).children(".des-logo-company").css({"display":"block"});    
-  });
   
-  $('.item-company').mouseout(function(){
-    $(this).children(".des-logo-company").css({"display":"none"});    
-  });
   
