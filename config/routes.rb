@@ -1,4 +1,4 @@
-IndustiralSite::Application.routes.draw do
+Rashasmart::Application.routes.draw do
 
 
   resources :messages
