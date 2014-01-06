@@ -6,7 +6,7 @@ class Picture < ActiveRecord::Base
   belongs_to :service
   
   
-  has_attached_file :image, :styles => { :small => "150x150#", :medium => "200X200#", :large => "350X350#" }
+  has_attached_file :image, :styles => { :small => "150x150>", :medium => "200X200>", :large => "350X350>" }
   
   
 end

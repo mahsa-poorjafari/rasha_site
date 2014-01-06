@@ -5,8 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string   "password"
       t.datetime "created_at", :null => false
       t.datetime "updated_at", :null => false
-      
-      
+      t.string   "email"
     end
   end
 end
