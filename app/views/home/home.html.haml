@@ -8,31 +8,23 @@
        
   
     .clrear-float
-    -if Service.all.present?
-      %h3.heading3
-        %span 
-          = "خدمات"
-        =image_tag "services-icon.png"
-      #service_pan
-        %ul
-          -Service.all.each do |service|
-            %li
-              %h5= service.title
-              %p
-                = truncate(strip_tags(service.description.gsub(/&nbsp;/i,"")), :length => 80)
-                - if service.pdf.present?
-                  .download-file
-                    =link_to  (image_tag "pdf.png"), service.pdf.url, :target => "_blank"
-                    %br
-                    =link_to  "دریافت فایل", service.pdf.url, :target => "_blank"                
-    .clrear-float  
-    .rezomeh       
-      - Customer.all.each do |customer| 
-        .item-company
-          .himg
-            =image_tag customer.image.url(:small), :id => customer.id
-            .des-logo-company{:id => customer.id}= customer.name        
-  
+        
+    .box
+      .title-box="مشتریان راشا "
+      .customers
+        -Customer.all.each do |customer|
+          .logo-img
+            =image_tag customer.image(:small)
+        .clrear-float
+      
+    .box-new
+      .title-box="اخبار راشا"
+      .news
+    .box
+      .title-box="همکاران راشا"
+      .Associates
+    .clrear-float
+   
 :javascript 
   $(".item").first().addClass("active");
   $(".slide-indicator").first().addClass("active");
