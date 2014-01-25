@@ -1,6 +1,12 @@
 Rashasmart::Application.routes.draw do
 
 
+  resources :information
+
+
+  resources :associates
+
+
   resources :messages
 
 

@@ -5,24 +5,34 @@
         #{GlobalConstant::COMANYـNAME}
       ="راشا"
     %p.homepage 
-       
-  
+    
     .clrear-float
         
     .box
-      .title-box="مشتریان راشا "
+      .title-box="مشتریان راشا "    
       .customers
         -Customer.all.each do |customer|
           .logo-img
             =image_tag customer.image(:small)
+            .des-logo-company= customer.name
         .clrear-float
       
     .box-new
-      .title-box="اخبار راشا"
-      .news
+      .title-box= link_to "اخبار راشا", information_index_path, :class => "title-news"
+      %marquee{:behavior => "scroll", :direction => "up", :scrollamount => "2", :onmouseout => "this.start();", :onmouseover => "this.stop();" }    
+        .news
+          -Information.all.each do  |information|
+            .new-title= link_to information.title, information
     .box
       .title-box="همکاران راشا"
       .Associates
+        -Associate.all.each do |associate|
+          .logo-img
+            =image_tag associate.image(:small)
+            .des-logo-company= associate.name
+        .clrear-float
+      
+        
     .clrear-float
    
 :javascript 

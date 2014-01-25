@@ -1,0 +1,20 @@
+.list-div
+  #welcom_pan
+    %h2.heading2 
+      %span
+        ="اخبار راشا"
+        
+    %h3.t=  @information.title
+    .clrear-float
+    .description      
+      = raw @information.description   
+    .clrear-float
+    -if is_admin?
+      #quotPan
+        .footer_Link
+          = link_to 'ویرایش', edit_information_path(@information)
+          \|
+          = link_to 'بازگشت', information_index_path
+          \|
+          = link_to 'حذف ', @information, method: :delete, data: { confirm: 'آیا میخواهید این خبر را حذف کنید?'}
+  

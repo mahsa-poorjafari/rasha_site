@@ -1,0 +1,22 @@
+.list-div
+  #welcom_pan
+    %h2.heading2 
+      %span 
+        ="شرکت های همکار"
+         
+    .show-list 
+      .table        
+        - @associates.each do |associate| 
+          .tr
+            .td= link_to content_tag(:div, associate.name, :class => "pro-title"), associate
+            .td              
+              = image_tag (associate.image.present? ? associate.image(:medium) : "missing.png")   
+            .td
+              .footer_Link
+               
+                = link_to 'ویرایش', edit_associate_path(associate), :class => "color-green"
+                \|
+                = link_to 'حذف', associate, :method => :delete, :data => { :confirm => 'آیا می خواهید این آیتم را حذف کنید؟' }, :class => "color-green"     
+    .clrear-float
+    #quotPan       
+      = link_to content_tag("span", "همکار جدید"), new_associate_path, :class => "btn"

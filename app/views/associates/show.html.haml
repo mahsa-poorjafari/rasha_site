@@ -1,0 +1,20 @@
+.list-div
+  #welcom_pan
+    %h2.heading2 
+      %span
+        ="شرکت های همکار"
+        
+    %p#notice= notice
+    %h3.t= @associate.name
+        
+    .div_pic                       
+      .c-logo
+        = image_tag (@associate.image.present? ? @associate.image(:medium) : "missing.png")
+        .td= @associate.description          
+    -if is_admin?
+      #quotPan 
+        .footer_Link
+          = link_to content_tag("span", "ویرایش"), edit_associate_path(@associate)
+          \|
+          = link_to content_tag("span", "بازگشت"), associates_path
+  

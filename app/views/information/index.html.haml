@@ -1,0 +1,23 @@
+.list-div
+  #welcom_pan
+    %h2.heading2 
+      %span 
+        ="اخبار راشا"
+    .show-news-list     
+      .news-table
+        .first-row
+          .td عنوان خبر
+          .td توضیحات          
+        .clrear-float
+        - @information.each do |information|
+          .rows
+            .td= link_to information.title, information
+            .td.description
+              =truncate( information.description, length: 60)
+              %span= link_to "ادامه مطلب", information
+    .clrear-float
+    -if is_admin?  
+      #quotPan       
+        = link_to content_tag("span", "ثبت خبر جدید"), new_information_path, :class => "btn"
+
+    

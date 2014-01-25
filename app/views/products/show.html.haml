@@ -9,13 +9,13 @@
     .description
       .details
         = raw @product.description    
-      .sample-pic=image_tag @product.sample_picture.image(:large)
+      .sample-pic=link_to (image_tag @product.sample_picture.image(:large)), @product.sample_picture.image(:original), :"data-lightbox" => "image-1"     
       .clrear-float
       .div_pic                
-        -@product.pictures.each do |photo|
+        -@product.pictures.offset(1).each do |photo|
           .tr
-            = image_tag photo.image(:medium), :class => "pic_service"
-            .td= photo.description          
+            =link_to (image_tag photo.image(:medium), :class => "pic_service"), photo.image(:original), :"data-lightbox" => "image-1",  :class => "pic_service", :title => photo.description
+                  
     .clrear-float
     -if is_admin?
       #quotPan

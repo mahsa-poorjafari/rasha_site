@@ -8,7 +8,7 @@
     = f.label "نام کاربری:"
     %span.Necessary= "ضروری"
     %br/
-    = f.text_field :name
+    = f.text_field :name, :disabled => (true if @user.read_attribute("name") == "admin")
   .field
     = f.label "ایمیل:"
     %span.Necessary= "ضروری"

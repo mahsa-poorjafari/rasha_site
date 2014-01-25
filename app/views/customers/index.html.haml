@@ -2,16 +2,18 @@
   #welcom_pan
     %h2.heading2 
       %span 
-        ="شرکت های همکار"
+        ="شرکت های مشتری"
          
     .show-list 
       .table        
         - @customers.each do |customer| 
           .tr
             .td= link_to content_tag(:div, customer.name, :class => "pro-title"), customer          
+            .td              
+              = image_tag (customer.image.present? ? customer.image(:medium) : "missing.png")             
+              
             .td
-              .footer_Link
-               
+              .footer_Link               
                 = link_to 'ویرایش', edit_customer_path(customer), :class => "color-green"
                 \|
                 = link_to 'حذف', customer, :method => :delete, :data => { :confirm => 'آیا می خواهید این آیتم را حذف کنید؟' }, :class => "color-green"     
