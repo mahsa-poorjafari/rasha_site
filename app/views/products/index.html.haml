@@ -1,15 +1,17 @@
 .list-div
   #welcom_pan
     %h2.heading2
-      %span 
+      %span
         = "دوره های آموزشی"
-    
+
     .show-list
       .table{:class => I18n.locale}
         - @products.each do |product|
           .tr
             .td= link_to content_tag(:div, product.title, :class => "pro-title"), product
-            .td= link_to (image_tag product.pictures.first.image(:medium)), product
-    -if is_admin?        
-      #quotPan        
+            .td
+              -unless product.pictures.blank?
+                = link_to (image_tag product.pictures.first.image(:medium)), product
+    -if is_admin?
+      #quotPan
         = link_to content_tag("span", "دوره آموزشی جدید"), new_product_path, :class => "btn"
